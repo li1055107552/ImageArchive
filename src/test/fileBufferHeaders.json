@@ -1,0 +1,7265 @@
+[
+  {
+    "suffix": [
+      ".123"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x1A",
+      "0x00",
+      "0x05",
+      "0x10",
+      "0x04"
+    ],
+    "desc": "Lotus 1-2-3 spreadsheet (v9) file"
+  },
+  {
+    "suffix": [
+      ".3gg",
+      ".3gp",
+      ".3g2"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x00",
+      "0xnn",
+      "0x66",
+      "0x74",
+      "0x79",
+      "0x70",
+      "0x33",
+      "0x67",
+      "0x70"
+    ],
+    "desc": "3rd Generation Partnership Project 3GPP (nn=0x14)\n                            &nbsp; and 3GPP2 (nn=0x20) multimedia files"
+  },
+  {
+    "suffix": [
+      ".7z"
+    ],
+    "bufBegin": [
+      "0x37",
+      "0x7A",
+      "0xBC",
+      "0xAF",
+      "0x27",
+      "0x1C"
+    ],
+    "desc": "7-ZIP compressed file"
+  },
+  {
+    "suffix": [
+      ".aba"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x42",
+      "0x41"
+    ],
+    "desc": "Palm Address Book Archive file"
+  },
+  {
+    "suffix": [
+      ".abi"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x4F",
+      "0x4C",
+      "0x49",
+      "0x4E",
+      "0x44",
+      "0x45",
+      "0x58"
+    ],
+    "desc": "AOL address book index file"
+  },
+  {
+    "suffix": [
+      ".aby",
+      ".idx"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x4F",
+      "0x4C",
+      "0x44",
+      "0x42"
+    ],
+    "desc": "AOL database files: address book (ABY) and user\n                            &nbsp; configuration data (MAIN.IDX)"
+  },
+  {
+    "suffix": [
+      ".accdb"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x00",
+      "0x53",
+      "0x74",
+      "0x61",
+      "0x6E",
+      "0x64",
+      "0x61",
+      "0x72",
+      "0x64",
+      "0x20",
+      "0x41",
+      "0x43",
+      "0x45",
+      "0x20\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x44",
+      "0x42"
+    ],
+    "desc": "Microsoft Access 2007 file"
+  },
+  {
+    "suffix": [
+      ".ACM"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "MS audio compression manager driver"
+  },
+  {
+    "suffix": [
+      ".ADF"
+    ],
+    "bufBegin": [
+      "0x44",
+      "0x4F",
+      "0x53"
+    ],
+    "desc": "Amiga disk file"
+  },
+  {
+    "suffix": [
+      ".adx"
+    ],
+    "bufBegin": [
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x41",
+      "0x50",
+      "0x50",
+      "0x52"
+    ],
+    "desc": "Lotus Approach ADX file"
+  },
+  {
+    "suffix": [
+      ".AIFF"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x4F",
+      "0x52",
+      "0x4D",
+      "0x00"
+    ],
+    "desc": "Audio Interchange File"
+  },
+  {
+    "suffix": [
+      ".ain"
+    ],
+    "bufBegin": [
+      "0x21",
+      "0x12"
+    ],
+    "desc": "AIN Compressed Archive File"
+  },
+  {
+    "suffix": [
+      ".ami"
+    ],
+    "bufBegin": [
+      "0x5B",
+      "0x76",
+      "0x65",
+      "0x72",
+      "0x5D"
+    ],
+    "desc": "Lotus Ami Pro"
+  },
+  {
+    "suffix": [
+      ".amr"
+    ],
+    "bufBegin": [
+      "0x23",
+      "0x21",
+      "0x41",
+      "0x4D",
+      "0x52"
+    ],
+    "desc": "Adaptive Multi-Rate ACELP (Algebraic Code Excited\n                            &nbsp; Linear Prediction) Codec, commonly audio format with GSM\n                            cell phones"
+  },
+  {
+    "suffix": [
+      ".ANI"
+    ],
+    "bufBegin": [
+      "0x52",
+      "0x49",
+      "0x46",
+      "0x46"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".API"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90",
+      "0x00",
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Acrobat plug-in"
+  },
+  {
+    "suffix": [
+      ".arc"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x0x"
+    ],
+    "desc": "LH archive file, old version(where x = 0x2, 0x3,\n                            &nbsp; 0x4, 0x8 or 0x9 for types 1-5, respectively)"
+  },
+  {
+    "suffix": [
+      ".arc"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x72",
+      "0x43",
+      "0x01"
+    ],
+    "desc": "FreeArc compressed file"
+  },
+  {
+    "suffix": [
+      ".arj"
+    ],
+    "bufBegin": [
+      "0x60",
+      "0xEA"
+    ],
+    "desc": "ARJ Compressed Archive"
+  },
+  {
+    "suffix": [
+      ".ARJ"
+    ],
+    "bufBegin": [
+      "0x60",
+      "0xEA",
+      "0x27"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".ART"
+    ],
+    "bufBegin": [
+      "0x4A",
+      "0x47",
+      "0x03",
+      "0x0E",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "AOL ART file"
+  },
+  {
+    "suffix": [
+      ".ART"
+    ],
+    "bufBegin": [
+      "0x4A",
+      "0x47",
+      "0x04",
+      "0x0E",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "AOL ART file"
+  },
+  {
+    "suffix": [
+      ".asf"
+    ],
+    "bufBegin": [
+      "0x30",
+      "0x26",
+      "0xB2",
+      "0x75",
+      "0x8E",
+      "0x66",
+      "0xCF",
+      "0x11"
+    ],
+    "desc": "Windows Media"
+  },
+  {
+    "suffix": [
+      ".asf",
+      ".wma",
+      ".wmv"
+    ],
+    "bufBegin": [
+      "0x30",
+      "0x26",
+      "0xB2",
+      "0x75",
+      "0x8E",
+      "0x66",
+      "0xCF",
+      "0x11",
+      "0xA6",
+      "0xD9",
+      "0x00",
+      "0xAA",
+      "0x00",
+      "0x62",
+      "0xCE",
+      "0x6C"
+    ],
+    "desc": "Microsoft Windows Media Audio/Video File(Advanced\n                            &nbsp; Streaming Format)"
+  },
+  {
+    "suffix": [
+      ".asx"
+    ],
+    "bufBegin": [
+      "0x3C"
+    ],
+    "desc": "Advanced Stream redirector file"
+  },
+  {
+    "suffix": [
+      ".au"
+    ],
+    "bufBegin": [
+      "0x2E",
+      "0x73",
+      "0x6E",
+      "0x64"
+    ],
+    "desc": "SoundMachine Audio File"
+  },
+  {
+    "suffix": [
+      ".avi"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x56",
+      "0x49",
+      "0x20"
+    ],
+    "desc": "Audio Video Interleave (AVI)"
+  },
+  {
+    "suffix": [
+      ".AX"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Library cache file"
+  },
+  {
+    "suffix": [
+      ".AX"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90",
+      "0x00",
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "DirectShow filter"
+  },
+  {
+    "suffix": [
+      ".bag"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x4F",
+      "0x4C",
+      "0x20",
+      "0x46",
+      "0x65",
+      "0x65",
+      "0x64",
+      "0x62",
+      "0x61",
+      "0x67"
+    ],
+    "desc": "AOL and AIM buddy list file"
+  },
+  {
+    "suffix": [
+      ".BAS"
+    ],
+    "bufBegin": [
+      "0x20",
+      "0x20",
+      "0x20"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".bin"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x4C",
+      "0x49",
+      "0x32",
+      "0x32",
+      "0x33",
+      "0x51"
+    ],
+    "desc": "Thomson Speedtouch series WLAN router firmware"
+  },
+  {
+    "suffix": [
+      ".bmp"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x4D"
+    ],
+    "desc": "Windows Bitmap"
+  },
+  {
+    "suffix": [
+      ".BMP"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x4D",
+      "0x3E"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".bz",
+      ".bz2"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x5A",
+      "0x68"
+    ],
+    "desc": "BZIP Archive"
+  },
+  {
+    "suffix": [
+      ".BZ2",
+      ".TAR.BZ2",
+      ".TBZ2",
+      ".TB2"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x5A",
+      "0x68"
+    ],
+    "desc": "bzip2 compressed archive"
+  },
+  {
+    "suffix": [
+      ".CAB"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x53",
+      "0x63"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".CAB",
+      ".HDR"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x53",
+      "0x63",
+      "0x28"
+    ],
+    "desc": "Install Shield v5.x or 6.x compressed file"
+  },
+  {
+    "suffix": [
+      ".CAB"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x53",
+      "0x43",
+      "0x46"
+    ],
+    "desc": "Microsoft CAB File Format"
+  },
+  {
+    "suffix": [
+      ".cat"
+    ],
+    "bufBegin": [
+      "0x30"
+    ],
+    "desc": "Microsoft security catalog file"
+  },
+  {
+    "suffix": [
+      ".CBD"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x42",
+      "0x46",
+      "0x49",
+      "0x4C",
+      "0x45"
+    ],
+    "desc": "WordPerfect dictionary file (unconfirmed)"
+  },
+  {
+    "suffix": [
+      ".CCD"
+    ],
+    "bufBegin": [
+      "0x5B",
+      "0x43",
+      "0x6C"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".cdr"
+    ],
+    "bufBegin": [
+      "0xCDR"
+    ],
+    "desc": "Corel Draw"
+  },
+  {
+    "suffix": [
+      ".CDR"
+    ],
+    "bufBegin": [
+      "0x45",
+      "0x4C",
+      "0x49",
+      "0x54",
+      "0x45",
+      "0x20",
+      "0x43",
+      "0x6F",
+      "0x6D",
+      "0x6D",
+      "0x61",
+      "0x6E",
+      "0x64",
+      "0x65",
+      "0x72",
+      "0x20"
+    ],
+    "desc": "Elite Plus Commander saved game file"
+  },
+  {
+    "suffix": [
+      ".CDR,DVF"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x53",
+      "0x5F",
+      "0x56",
+      "0x4F",
+      "0x49",
+      "0x43",
+      "0x45"
+    ],
+    "desc": "Sony Compressed Voice File"
+  },
+  {
+    "suffix": [
+      ".CHI",
+      ".CHM"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x54",
+      "0x53",
+      "0x46"
+    ],
+    "desc": "Microsoft Compiled HTML Help File"
+  },
+  {
+    "suffix": [
+      ".CHM"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x54",
+      "0x53"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".CLB"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x4D",
+      "0x58",
+      "0x31"
+    ],
+    "desc": "Corel Binary metafile"
+  },
+  {
+    "suffix": [
+      ".CLB"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x4F",
+      "0x4D",
+      "0x2B"
+    ],
+    "desc": "COM+ Catalog file"
+  },
+  {
+    "suffix": [
+      ".cnt"
+    ],
+    "bufBegin": [
+      "0x3A",
+      "0x42",
+      "0x61",
+      "0x73",
+      "0x65"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".COM,DLL,DRV,EXE,PIF,QTS,QTX,SYS"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Windows/DOS executable file"
+  },
+  {
+    "suffix": [
+      ".COM"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0xEE"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".COM"
+    ],
+    "bufBegin": [
+      "0xE9",
+      "0x3B",
+      "0x03"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".CPE"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x41",
+      "0x58",
+      "0x43",
+      "0x4F",
+      "0x56",
+      "0x45",
+      "0x52",
+      "0x2D",
+      "0x56",
+      "0x45",
+      "0x52"
+    ],
+    "desc": "Microsoft Fax Cover Sheet"
+  },
+  {
+    "suffix": [
+      ".CPL"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Control panel application"
+  },
+  {
+    "suffix": [
+      ".CPT"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x50",
+      "0x54",
+      "0x37",
+      "0x46",
+      "0x49",
+      "0x4C",
+      "0x45"
+    ],
+    "desc": "Corel Photopaint file"
+  },
+  {
+    "suffix": [
+      ".CPT"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x50",
+      "0x54",
+      "0x46",
+      "0x49",
+      "0x4C",
+      "0x45"
+    ],
+    "desc": "Corel Photopaint file"
+  },
+  {
+    "suffix": [
+      ".CPX"
+    ],
+    "bufBegin": [
+      "0x5B",
+      "0x57",
+      "0x69"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".cru",
+      ".crush"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x52",
+      "0x55",
+      "0x53",
+      "0x48"
+    ],
+    "desc": "CRUSH Archive File"
+  },
+  {
+    "suffix": [
+      ".CRU"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x52",
+      "0x55",
+      "0x53",
+      "0x48",
+      "0x20",
+      "0x76"
+    ],
+    "desc": "Crush compressed archive"
+  },
+  {
+    "suffix": [
+      ".CRW"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x49",
+      "0x1A",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x48",
+      "0x45",
+      "0x41",
+      "0x50",
+      "0x43",
+      "0x43",
+      "0x44",
+      "0x52",
+      "0x02",
+      "0x00"
+    ],
+    "desc": "Canon digital camera RAW file"
+  },
+  {
+    "suffix": [
+      ".CTF"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x61",
+      "0x74",
+      "0x61",
+      "0x6C",
+      "0x6F",
+      "0x67",
+      "0x20",
+      "0x33",
+      "0x2E",
+      "0x30",
+      "0x30",
+      "0x00"
+    ],
+    "desc": "WhereIsIt Catalog file"
+  },
+  {
+    "suffix": [
+      ".CUR"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x02",
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x20",
+      "0x20"
+    ],
+    "desc": "Windows cursor file"
+  },
+  {
+    "suffix": [
+      ".dat"
+    ],
+    "bufBegin": [
+      "0x03"
+    ],
+    "desc": "MapInfo Native Data Format"
+  },
+  {
+    "suffix": [
+      ".dat"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x52",
+      "0x54",
+      "0x53",
+      "0x20",
+      "0x43",
+      "0x4F",
+      "0x4D",
+      "0x50",
+      "0x52",
+      "0x45",
+      "0x53",
+      "0x53",
+      "0x45",
+      "0x44",
+      "0x20",
+      "0x49\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x4D",
+      "0x41",
+      "0x47",
+      "0x45",
+      "0x20",
+      "0x56",
+      "0x31",
+      "0x2E",
+      "0x30",
+      "0x1A"
+    ],
+    "desc": "Runtime Software disk image"
+  },
+  {
+    "suffix": [
+      ".dat"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x56",
+      "0x47",
+      "0x36",
+      "0x5F",
+      "0x49",
+      "0x6E",
+      "0x74",
+      "0x65",
+      "0x67",
+      "0x72",
+      "0x69",
+      "0x74",
+      "0x79",
+      "0x5F",
+      "0x44",
+      "0x61\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x74",
+      "0x61",
+      "0x62",
+      "0x61",
+      "0x73",
+      "0x65"
+    ],
+    "desc": "AVG6 Integrity database file"
+  },
+  {
+    "suffix": [
+      ".DAT"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x52",
+      "0x45",
+      "0x47"
+    ],
+    "desc": "Windows 9x registry hive"
+  },
+  {
+    "suffix": [
+      ".DAT"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x6C",
+      "0x69",
+      "0x65",
+      "0x6E",
+      "0x74",
+      "0x20",
+      "0x55",
+      "0x72",
+      "0x6C",
+      "0x43",
+      "0x61",
+      "0x63",
+      "0x68",
+      "0x65",
+      "0x20",
+      "0x4D\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x4D",
+      "0x46",
+      "0x20",
+      "0x56",
+      "0x65",
+      "0x72",
+      "0x20"
+    ],
+    "desc": "IE History DAT file"
+  },
+  {
+    "suffix": [
+      ".DAT"
+    ],
+    "bufBegin": [
+      "0x45",
+      "0x52",
+      "0x46",
+      "0x53",
+      "0x53",
+      "0x41",
+      "0x56",
+      "0x45",
+      "0x44",
+      "0x41",
+      "0x54",
+      "0x41",
+      "0x46",
+      "0x49",
+      "0x4C",
+      "0x45"
+    ],
+    "desc": "Kroll EasyRecovery Saved Recovery State file"
+  },
+  {
+    "suffix": [
+      ".DAT"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x6E",
+      "0x6E",
+      "0x6F",
+      "0x20",
+      "0x53",
+      "0x65",
+      "0x74",
+      "0x75",
+      "0x70",
+      "0x20",
+      "0x55",
+      "0x6E",
+      "0x69",
+      "0x6E",
+      "0x73",
+      "0x74\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x61",
+      "0x6C",
+      "0x6C",
+      "0x20",
+      "0x4C",
+      "0x6F",
+      "0x67",
+      "0x20",
+      "0x28",
+      "0x62",
+      "0x29"
+    ],
+    "desc": "Inno Setup Uninstall Log file"
+  },
+  {
+    "suffix": [
+      ".db"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x06",
+      "0x15",
+      "0x61",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x02",
+      "0x00",
+      "0x00",
+      "0x04",
+      "0xD2",
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x00"
+    ],
+    "desc": "Netscape Navigator (v4) database file"
+  },
+  {
+    "suffix": [
+      ".DB"
+    ],
+    "bufBegin": [
+      "0x44",
+      "0x42",
+      "0x46",
+      "0x48"
+    ],
+    "desc": "Palm Zire photo database"
+  },
+  {
+    "suffix": [
+      ".db"
+    ],
+    "bufBegin": [
+      "0x08"
+    ],
+    "desc": "dBASE IV or dBFast configuration file"
+  },
+  {
+    "suffix": [
+      ".db3"
+    ],
+    "bufBegin": [
+      "0x03"
+    ],
+    "desc": "dBASE III file"
+  },
+  {
+    "suffix": [
+      ".db4"
+    ],
+    "bufBegin": [
+      "0x04"
+    ],
+    "desc": "dBASE IV data file"
+  },
+  {
+    "suffix": [
+      ".dba"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x42",
+      "0x44"
+    ],
+    "desc": "Palm DateBook Archive file"
+  },
+  {
+    "suffix": [
+      ".dbx"
+    ],
+    "bufBegin": [
+      "0xCF",
+      "0xAD",
+      "0x12",
+      "0xFE"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".dbx"
+    ],
+    "bufBegin": [
+      "0xCF",
+      "0xAD",
+      "0x12",
+      "0xFE",
+      "0xC5",
+      "0xFD",
+      "0x74",
+      "0x6F"
+    ],
+    "desc": "Outlook Express"
+  },
+  {
+    "suffix": [
+      ".dci"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x21",
+      "0x64",
+      "0x6F",
+      "0x63",
+      "0x74",
+      "0x79",
+      "0x70"
+    ],
+    "desc": "AOL HTML mail file"
+  },
+  {
+    "suffix": [
+      ".dcx"
+    ],
+    "bufBegin": [
+      "0x3A",
+      "0xDE",
+      "0x68",
+      "0xB1"
+    ],
+    "desc": "DCX Graphic File"
+  },
+  {
+    "suffix": [
+      ".DDB"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x00"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".dib"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x4D"
+    ],
+    "desc": "device-independent bitmap image"
+  },
+  {
+    "suffix": [
+      ".DLL"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".DMP"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x44",
+      "0x4D",
+      "0x50",
+      "0x93",
+      "0xA7"
+    ],
+    "desc": "Windows minidump file"
+  },
+  {
+    "suffix": [
+      ".DMS"
+    ],
+    "bufBegin": [
+      "0x44",
+      "0x4D",
+      "0x53",
+      "0x21"
+    ],
+    "desc": "Amiga DiskMasher compressed archive"
+  },
+  {
+    "suffix": [
+      ".doc"
+    ],
+    "bufBegin": [
+      "0x0D",
+      "0x44",
+      "0x4F",
+      "0x43"
+    ],
+    "desc": "DeskMate Document file"
+  },
+  {
+    "suffix": [
+      ".doc"
+    ],
+    "bufBegin": [
+      "0x12",
+      "0x34",
+      "0x56",
+      "0x78",
+      "0x90",
+      "0xFF"
+    ],
+    "desc": "MS Word 6.0"
+  },
+  {
+    "suffix": [
+      ".doc"
+    ],
+    "bufBegin": [
+      "0x31",
+      "0xBE",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0xAB",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "MS Word for DOS 6.0"
+  },
+  {
+    "suffix": [
+      ".doc"
+    ],
+    "bufBegin": [
+      "0x7F",
+      "0xFE",
+      "0x34",
+      "0x0A"
+    ],
+    "desc": "MS Word"
+  },
+  {
+    "suffix": [
+      ".dot",
+      ".ppt",
+      ".xla",
+      ".ppa",
+      ".pps",
+      ".pot",
+      ".msi",
+      ".sdw",
+      ".db"
+    ],
+    "bufBegin": [
+      "0xD0",
+      "0xCF",
+      "0x11",
+      "0xE0"
+    ],
+    "desc": "MS Office/OLE2"
+  },
+  {
+    "suffix": [
+      ".doc",
+      ".dot",
+      ".xls",
+      ".xlt",
+      ".xla",
+      ".ppt",
+      ".apr",
+      ".ppa",
+      ".pps",
+      ".pot",
+      ".msi",
+      ".&nbsp",
+      ".sdw",
+      ".db"
+    ],
+    "bufBegin": [
+      "0xD0",
+      "0xCF",
+      "0x11",
+      "0xE0",
+      "0xA1",
+      "0xB1",
+      "0x1A",
+      "0xE1"
+    ],
+    "desc": "MS Compound Document v1 or Lotus Approach APR file\n                        "
+  },
+  {
+    "suffix": [
+      ".DPL"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x50"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".DRV"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x16"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".drw"
+    ],
+    "bufBegin": [
+      "0x07"
+    ],
+    "desc": "A common signature and file extension for many\n                            &nbsp; drawing programs."
+  },
+  {
+    "suffix": [
+      ".drw"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0xFF",
+      "0x02",
+      "0x04",
+      "0x03",
+      "0x02"
+    ],
+    "desc": "Micrografx vector graphic file"
+  },
+  {
+    "suffix": [
+      ".ds4"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x47",
+      "0x58",
+      "0x20",
+      "0x69",
+      "0x74",
+      "0x70",
+      "0x64"
+    ],
+    "desc": "Micrografix Designer 4"
+  },
+  {
+    "suffix": [
+      ".DSN"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x56"
+    ],
+    "desc": "CD Stomper Pro label file"
+  },
+  {
+    "suffix": [
+      ".dsp"
+    ],
+    "bufBegin": [
+      "0x23",
+      "0x20",
+      "0x4D",
+      "0x69",
+      "0x63",
+      "0x72",
+      "0x6F",
+      "0x73",
+      "0x6F",
+      "0x66",
+      "0x74",
+      "0x20",
+      "0x44",
+      "0x65",
+      "0x76",
+      "0x6",
+      "0x56C\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x6F",
+      "0x70",
+      "0x65",
+      "0x72",
+      "0x20",
+      "0x53",
+      "0x74",
+      "0x75",
+      "0x64",
+      "0x69",
+      "0x6F"
+    ],
+    "desc": "Microsoft Developer Studio project file"
+  },
+  {
+    "suffix": [
+      ".dss"
+    ],
+    "bufBegin": [
+      "0x02",
+      "0x64",
+      "0x73",
+      "0x73"
+    ],
+    "desc": "Digital Speech Standard (Olympus, Grundig, &amp;\n                            &nbsp; Phillips)"
+  },
+  {
+    "suffix": [
+      ".dtd"
+    ],
+    "bufBegin": [
+      "0x07",
+      "0x64",
+      "0x74",
+      "0x32",
+      "0x64",
+      "0x64",
+      "0x74",
+      "0x64"
+    ],
+    "desc": "DesignTools 2D Design file"
+  },
+  {
+    "suffix": [
+      ".dtd"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x21",
+      "0x45",
+      "0x4E",
+      "0x54",
+      "0x49",
+      "0x54",
+      "0x59"
+    ],
+    "desc": "XML DTD"
+  },
+  {
+    "suffix": [
+      ".DVR"
+    ],
+    "bufBegin": [
+      "0x44",
+      "0x56",
+      "0x44"
+    ],
+    "desc": "DVR-Studio stream file"
+  },
+  {
+    "suffix": [
+      ".dwg"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x43",
+      "0x31"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".dwg"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x43",
+      "0x31",
+      "0x30"
+    ],
+    "desc": "Generic AutoCAD drawing"
+  },
+  {
+    "suffix": [
+      ".Enn(wherennarenumbers)"
+    ],
+    "bufBegin": [
+      "0x45",
+      "0x56",
+      "0x46"
+    ],
+    "desc": "EnCase evidence file"
+  },
+  {
+    "suffix": [
+      ".ECO"
+    ],
+    "bufBegin": [
+      "0x2A",
+      "0x50",
+      "0x52"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".elf"
+    ],
+    "bufBegin": [
+      "0x7F",
+      "0x45",
+      "0x4C",
+      "0x46",
+      "0x01",
+      "0x01",
+      "0x01",
+      "0x00"
+    ],
+    "desc": "ELF Executable"
+  },
+  {
+    "suffix": [
+      ".emf"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x58",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Extended (Enhanced) Windows Metafile Format, printer\n                            &nbsp; spool file"
+  },
+  {
+    "suffix": [
+      ".eml"
+    ],
+    "bufBegin": [
+      "0x44",
+      "0x65",
+      "0x6C",
+      "0x69",
+      "0x76",
+      "0x65",
+      "0x72",
+      "0x79",
+      "0x2D",
+      "0x64",
+      "0x61",
+      "0x74",
+      "0x65",
+      "0x3A"
+    ],
+    "desc": "Email"
+  },
+  {
+    "suffix": [
+      ".EML"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x72",
+      "0x6F",
+      "0x6D",
+      "0x20",
+      "0x20",
+      "0x20"
+    ],
+    "desc": "A commmon file extension for e-mail files. &nbsp;\n                            Signatures shown here are for Netscape, Eudora, and a generic\n                            signature, &nbsp; respectively. EML is also used by Outlook\n                            Express and QuickMail."
+  },
+  {
+    "suffix": [
+      ".EML"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x72",
+      "0x6F",
+      "0x6D",
+      "0x20",
+      "0x3F",
+      "0x3F",
+      "0x3F"
+    ],
+    "desc": "A commmon file extension for e-mail files. &nbsp;\n                            Signatures shown here are for Netscape, Eudora, and a generic\n                            signature, &nbsp; respectively. EML is also used by Outlook\n                            Express and QuickMail."
+  },
+  {
+    "suffix": [
+      ".EML"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x72",
+      "0x6F",
+      "0x6D",
+      "0x3A",
+      "0x20"
+    ],
+    "desc": "A commmon file extension for e-mail files. &nbsp;\n                            Signatures shown here are for Netscape, Eudora, and a generic\n                            signature, &nbsp; respectively. EML is also used by Outlook\n                            Express and QuickMail."
+  },
+  {
+    "suffix": [
+      ".EML"
+    ],
+    "bufBegin": [
+      "0x52",
+      "0x65",
+      "0x63"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".enc"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x5C",
+      "0x41",
+      "0xB1",
+      "0xFF"
+    ],
+    "desc": "Mujahideen Secrets 2 encrypted file"
+  },
+  {
+    "suffix": [
+      ".enl"
+    ],
+    "bufBegin": [
+      "0x[32",
+      "0xbyte",
+      "0xoffset]",
+      "0x40",
+      "0x40",
+      "0x40",
+      "0x20",
+      "0x00",
+      "0x00",
+      "0x40",
+      "0x40",
+      "0x40",
+      "0x40"
+    ],
+    "desc": "EndNote Library File"
+  },
+  {
+    "suffix": [
+      ".eps"
+    ],
+    "bufBegin": [
+      "0x25",
+      "0x21",
+      "0x50",
+      "0x53"
+    ],
+    "desc": "Adobe EPS File"
+  },
+  {
+    "suffix": [
+      ".eps"
+    ],
+    "bufBegin": [
+      "0x25",
+      "0x21",
+      "0x50",
+      "0x53",
+      "0x2D",
+      "0x41",
+      "0x64",
+      "0x6F",
+      "0x62",
+      "0x65"
+    ],
+    "desc": "Postscript"
+  },
+  {
+    "suffix": [
+      ".eps"
+    ],
+    "bufBegin": [
+      "0x25",
+      "0x21",
+      "0x50",
+      "0x53",
+      "0x2D",
+      "0x41",
+      "0x64",
+      "0x6F",
+      "0x62",
+      "0x65",
+      "0x2D",
+      "0x33",
+      "0x2E",
+      "0x30",
+      "0x20",
+      "0x45",
+      "0x50\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x53",
+      "0x46",
+      "0x2D",
+      "0x33",
+      "0x20",
+      "0x30"
+    ],
+    "desc": "Adobe encapsulated PostScript file (If this &nbsp;\n                            signature is not at the immediate beginning of the file, it will\n                            occur early in &nbsp; the file, commonly at byte offset 30)"
+  },
+  {
+    "suffix": [
+      ".EPS"
+    ],
+    "bufBegin": [
+      "0xC5",
+      "0xD0",
+      "0xD3"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".eth"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x35",
+      "0x01",
+      "0x00"
+    ],
+    "desc": "GN Nettest WinPharoah capture file"
+  },
+  {
+    "suffix": [
+      ".evt"
+    ],
+    "bufBegin": [
+      "0x30",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x4C",
+      "0x66",
+      "0x4C",
+      "0x65"
+    ],
+    "desc": "Windows Event Viewer file"
+  },
+  {
+    "suffix": [
+      ".evt"
+    ],
+    "bufBegin": [
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0xC4",
+      "0x66",
+      "0xC4",
+      "0x56"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".EVTX"
+    ],
+    "bufBegin": [
+      "0x45",
+      "0x6C",
+      "0x66",
+      "0x46",
+      "0x69",
+      "0x6C",
+      "0x65",
+      "0x00"
+    ],
+    "desc": "Windows Vista event log file"
+  },
+  {
+    "suffix": [
+      ".exe",
+      ".dll",
+      ".drv",
+      ".vxd",
+      ".sys",
+      ".ocx",
+      ".vbx"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Win32 Executable"
+  },
+  {
+    "suffix": [
+      ".exe",
+      ".dll",
+      ".drv",
+      ".vxd",
+      ".sys",
+      ".ocx",
+      ".vbx"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Win16 Executable"
+  },
+  {
+    "suffix": [
+      ".exe",
+      ".com",
+      ".386",
+      ".ax",
+      ".acm",
+      ".sys",
+      ".dll",
+      ".drv",
+      ".flt",
+      ".fon",
+      ".ocx",
+      ".&nbsp",
+      ".scr",
+      ".lrc",
+      ".vxd",
+      ".cpl",
+      ".x32"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Executable File"
+  },
+  {
+    "suffix": [
+      ".EXE,DLL,OCX,OLB,IMM,IME"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".fli"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x11",
+      "0xAF"
+    ],
+    "desc": "FLIC Animation file"
+  },
+  {
+    "suffix": [
+      ".flt"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x01"
+    ],
+    "desc": "OpenFlight 3D file"
+  },
+  {
+    "suffix": [
+      ".FLT"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90",
+      "0x00",
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Audition graphic filter file (Adobe)"
+  },
+  {
+    "suffix": [
+      ".FLV"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x4C",
+      "0x56",
+      "0x01"
+    ],
+    "desc": "Flash video file"
+  },
+  {
+    "suffix": [
+      ".fm"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x4D",
+      "0x61",
+      "0x6B",
+      "0x65",
+      "0x72",
+      "0x46",
+      "0x69",
+      "0x6C",
+      "0x65",
+      "0x20"
+    ],
+    "desc": "Adobe FrameMaker file"
+  },
+  {
+    "suffix": [
+      ".fm3"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x1A",
+      "0x00",
+      "0x07",
+      "0x80",
+      "0x01",
+      "0x00"
+    ],
+    "desc": "Lotus 123 v3 FMT file"
+  },
+  {
+    "suffix": [
+      ".fmt"
+    ],
+    "bufBegin": [
+      "0x20",
+      "0x00",
+      "0x68",
+      "0x00",
+      "0x20",
+      "0x0"
+    ],
+    "desc": "Lotus 123 v4 FMT file"
+  },
+  {
+    "suffix": [
+      ".FNT"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x48",
+      "0x41"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".FON"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Font file"
+  },
+  {
+    "suffix": [
+      ".GBC"
+    ],
+    "bufBegin": [
+      "0x87",
+      "0xF5",
+      "0x3E"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".gid"
+    ],
+    "bufBegin": [
+      "0x3F",
+      "0x5F",
+      "0x03",
+      "0x00"
+    ],
+    "desc": "Windows Help Index File"
+  },
+  {
+    "suffix": [
+      ".GID"
+    ],
+    "bufBegin": [
+      "0x4C",
+      "0x4E",
+      "0x02",
+      "0x00"
+    ],
+    "desc": "Windows Help index file"
+  },
+  {
+    "suffix": [
+      ".GIF"
+    ],
+    "bufBegin": [
+      "0x47",
+      "0x49",
+      "0x46",
+      "0x38"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".gif"
+    ],
+    "bufBegin": [
+      "0x47",
+      "0x49",
+      "0x46",
+      "0x38",
+      "0x37",
+      "0x61"
+    ],
+    "desc": "Graphics interchange format file (GIF 87A)"
+  },
+  {
+    "suffix": [
+      ".gif"
+    ],
+    "bufBegin": [
+      "0x47",
+      "0x49",
+      "0x46",
+      "0x38",
+      "0x39",
+      "0x61"
+    ],
+    "desc": "Graphics interchange format file (GIF89A)"
+  },
+  {
+    "suffix": [
+      ".GTD"
+    ],
+    "bufBegin": [
+      "0x7B",
+      "0x50",
+      "0x72"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".GX2"
+    ],
+    "bufBegin": [
+      "0x47",
+      "0x58",
+      "0x32"
+    ],
+    "desc": "Show Partner graphics file (not confirmed)"
+  },
+  {
+    "suffix": [
+      ".gz",
+      ".tar",
+      ".tgz"
+    ],
+    "bufBegin": [
+      "0x1F",
+      "0x8B"
+    ],
+    "desc": "Gzip Archive File"
+  },
+  {
+    "suffix": [
+      ".gz",
+      ".tgz"
+    ],
+    "bufBegin": [
+      "0x1F",
+      "0x8B",
+      "0x08"
+    ],
+    "desc": "GZ Compressed File"
+  },
+  {
+    "suffix": [
+      ".hap"
+    ],
+    "bufBegin": [
+      "0x91",
+      "0x33",
+      "0x48",
+      "0x46"
+    ],
+    "desc": "HAP Archive File"
+  },
+  {
+    "suffix": [
+      ".HDMP"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x44",
+      "0x4D",
+      "0x50",
+      "0x93",
+      "0xA7"
+    ],
+    "desc": "Windows heap dump file"
+  },
+  {
+    "suffix": [
+      ".hdr"
+    ],
+    "bufBegin": [
+      "0x23",
+      "0x3F",
+      "0x52",
+      "0x41",
+      "0x44",
+      "0x49",
+      "0x41",
+      "0x4E",
+      "0x43",
+      "0x45",
+      "0x0A"
+    ],
+    "desc": "adiance High Dynamic Range image file"
+  },
+  {
+    "suffix": [
+      ".HLP"
+    ],
+    "bufBegin": [
+      "0x3F",
+      "0x5F",
+      "0x03"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".hlp"
+    ],
+    "bufBegin": [
+      "0x3F",
+      "0x5F",
+      "0x03",
+      "0x00"
+    ],
+    "desc": "Windows Help file"
+  },
+  {
+    "suffix": [
+      ".HLP"
+    ],
+    "bufBegin": [
+      "0x4C",
+      "0x4E",
+      "0x02",
+      "0x00"
+    ],
+    "desc": "Windows Help file"
+  },
+  {
+    "suffix": [
+      ".hlp"
+    ],
+    "bufBegin": [
+      "0x[7",
+      "0xbyte",
+      "0xoffset]",
+      "0x00",
+      "0x00",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF"
+    ],
+    "desc": "Windows Help file"
+  },
+  {
+    "suffix": [
+      ".hqx"
+    ],
+    "bufBegin": [
+      "0x28",
+      "0x54",
+      "0x68",
+      "0x69",
+      "0x73",
+      "0x20",
+      "0x66",
+      "0x69",
+      "0x6C",
+      "0x65"
+    ],
+    "desc": "Macintosh BinHex 4 Compressed Archive"
+  },
+  {
+    "suffix": [
+      ".hqx"
+    ],
+    "bufBegin": [
+      "0x28",
+      "0x54",
+      "0x68",
+      "0x69",
+      "0x73",
+      "0x20",
+      "0x66",
+      "0x69",
+      "0x6C",
+      "0x65",
+      "0x20",
+      "0x6D",
+      "0x75",
+      "0x73",
+      "0x74",
+      "0x20",
+      "0x62\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x65",
+      "0x20",
+      "0x63",
+      "0x6F",
+      "0x6E",
+      "0x76",
+      "0x65",
+      "0x72",
+      "0x74",
+      "0x65",
+      "0x64",
+      "0x20",
+      "0x77",
+      "0x69",
+      "0x74",
+      "0x68",
+      "0x20",
+      "0x42",
+      "0x69\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x6E",
+      "0x48",
+      "0x65",
+      "0x78",
+      "0x20"
+    ],
+    "desc": "Macintosh BinHex 4 Compressed Archive"
+  },
+  {
+    "suffix": [
+      ".HTM"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x21",
+      "0x44"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".htm",
+      ".html"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x21",
+      "0x44",
+      "0x4F",
+      "0x43",
+      "0x54"
+    ],
+    "desc": "HyperText Markup Language 3"
+  },
+  {
+    "suffix": [
+      ".htm",
+      ".html"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x48",
+      "0x54",
+      "0x4D",
+      "0x4C",
+      "0x3E"
+    ],
+    "desc": "HyperText Markup Language 2"
+  },
+  {
+    "suffix": [
+      ".htm",
+      ".html"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x68",
+      "0x74",
+      "0x6D",
+      "0x6C",
+      "0x3E"
+    ],
+    "desc": "HyperText Markup Language 1"
+  },
+  {
+    "suffix": [
+      ".html"
+    ],
+    "bufBegin": [
+      "0x68",
+      "0x74",
+      "0x6D",
+      "0x6C",
+      "0x3E"
+    ],
+    "desc": "HTML"
+  },
+  {
+    "suffix": [
+      ".ico"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Icon File"
+  },
+  {
+    "suffix": [
+      ".ico"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x20",
+      "0x20"
+    ],
+    "desc": "Icon File"
+  },
+  {
+    "suffix": [
+      ".IFF"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x4F",
+      "0x52",
+      "0x4D"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".IFO"
+    ],
+    "bufBegin": [
+      "0x44",
+      "0x56",
+      "0x44"
+    ],
+    "desc": "DVD info file"
+  },
+  {
+    "suffix": [
+      ".IME"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".img"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x08",
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x01",
+      "0x01"
+    ],
+    "desc": "Ventura Publisher/GEM VDI Image Format Bitmap file\n                        "
+  },
+  {
+    "suffix": [
+      ".IMG"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0xFF",
+      "0xFF"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".IMM"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".ind"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x4F",
+      "0x4C",
+      "0x49",
+      "0x44",
+      "0x58"
+    ],
+    "desc": "AOL client preferences/settings file (MAIN.IND)"
+  },
+  {
+    "suffix": [
+      ".ISO"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x44",
+      "0x30",
+      "0x30",
+      "0x31"
+    ],
+    "desc": "ISO-9660 CD Disc Image (This signature usually\n                            &nbsp; occurs at byte 8001, 8801, or 9001.)"
+  },
+  {
+    "suffix": [
+      ".ivr"
+    ],
+    "bufBegin": [
+      "0x2E",
+      "0x52",
+      "0x45",
+      "0x43"
+    ],
+    "desc": "RealPlayer video file (V11 and later)"
+  },
+  {
+    "suffix": [
+      ".JAR"
+    ],
+    "bufBegin": [
+      "0x4A",
+      "0x41",
+      "0x52",
+      "0x43",
+      "0x53",
+      "0x00"
+    ],
+    "desc": "JARCS compressed archive"
+  },
+  {
+    "suffix": [
+      ".jar"
+    ],
+    "bufBegin": [
+      "0x5F",
+      "0x27",
+      "0xA8",
+      "0x89"
+    ],
+    "desc": "JAR Archive File"
+  },
+  {
+    "suffix": [
+      ".jpg",
+      ".jpeg"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0xD8",
+      "0xFF"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".jpg",
+      ".jpe",
+      ".jpeg"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0xD8",
+      "0xFF",
+      "0xE0",
+      "0x00"
+    ],
+    "desc": "JPG Graphic File"
+  },
+  {
+    "suffix": [
+      ".jpg",
+      ".jpe",
+      ".jpeg"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0xD8",
+      "0xFF",
+      "0xFE",
+      "0x00"
+    ],
+    "desc": "JPG Graphic File"
+  },
+  {
+    "suffix": [
+      ".KGB"
+    ],
+    "bufBegin": [
+      "0x4B",
+      "0x47",
+      "0x42",
+      "0x5F",
+      "0x61",
+      "0x72",
+      "0x63",
+      "0x68",
+      "0x20",
+      "0x2D"
+    ],
+    "desc": "KGB archive"
+  },
+  {
+    "suffix": [
+      ".KOZ"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x44",
+      "0x33",
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Sprint Music Store audio file (for mobile devices)\n                        "
+  },
+  {
+    "suffix": [
+      ".LDB"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x49",
+      "0x4C"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".lha"
+    ],
+    "bufBegin": [
+      "0x2D",
+      "0x6C",
+      "0x68",
+      "0x35",
+      "0x2D"
+    ],
+    "desc": "LHA Compressed"
+  },
+  {
+    "suffix": [
+      ".lha",
+      ".lzh"
+    ],
+    "bufBegin": [
+      "0x[2",
+      "0xbyte",
+      "0xoffset]",
+      "0x2D",
+      "0x6C",
+      "0x68"
+    ],
+    "desc": "Compressed archive file"
+  },
+  {
+    "suffix": [
+      ".LHP"
+    ],
+    "bufBegin": [
+      "0x3F",
+      "0x5F",
+      "0x03"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".lhp"
+    ],
+    "bufBegin": [
+      "0x3F",
+      "0x5F",
+      "0x03",
+      "0x00"
+    ],
+    "desc": "Windows Help File"
+  },
+  {
+    "suffix": [
+      ".lib"
+    ],
+    "bufBegin": [
+      "0x21",
+      "0x3C",
+      "0x61",
+      "0x72",
+      "0x63",
+      "0x68",
+      "0x3E",
+      "0x0A"
+    ],
+    "desc": "Unix archiver (ar) files and Microsoft Program\n                            &nbsp; Library Common Object File Format (COFF)"
+  },
+  {
+    "suffix": [
+      ".LIB"
+    ],
+    "bufBegin": [
+      "0x2A",
+      "0x24",
+      "0x20"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".LIT"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x54",
+      "0x4F",
+      "0x4C",
+      "0x49",
+      "0x54",
+      "0x4C",
+      "0x53"
+    ],
+    "desc": "Microsoft Reader eBook file"
+  },
+  {
+    "suffix": [
+      ".LNK"
+    ],
+    "bufBegin": [
+      "0x4C",
+      "0x00",
+      "0x00"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".lnk"
+    ],
+    "bufBegin": [
+      "0x4C",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Windows Shortcut (Link File)"
+  },
+  {
+    "suffix": [
+      ".lnk"
+    ],
+    "bufBegin": [
+      "0x4C",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x14",
+      "0x02"
+    ],
+    "desc": "Windows Link File"
+  },
+  {
+    "suffix": [
+      ".LNK"
+    ],
+    "bufBegin": [
+      "0x4C",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x14",
+      "0x02",
+      "0x00"
+    ],
+    "desc": "Windows shortcut file"
+  },
+  {
+    "suffix": [
+      ".log"
+    ],
+    "bufBegin": [
+      "0x2A",
+      "0x2A",
+      "0x2A",
+      "0x20",
+      "0x20",
+      "0x49",
+      "0x6E",
+      "0x73",
+      "0x74",
+      "0x61",
+      "0x6C",
+      "0x6C",
+      "0x61",
+      "0x74",
+      "0x69",
+      "0x6F",
+      "0x6E\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x20",
+      "0x53",
+      "0x74",
+      "0x61",
+      "0x72",
+      "0x74",
+      "0x65",
+      "0x64",
+      "0x20"
+    ],
+    "desc": "Symantec Wise Installer log file"
+  },
+  {
+    "suffix": [
+      ".lzh"
+    ],
+    "bufBegin": [
+      "0xlh"
+    ],
+    "desc": "Lz compression file"
+  },
+  {
+    "suffix": [
+      ".lwp"
+    ],
+    "bufBegin": [
+      "0x57",
+      "0x6F",
+      "0x72",
+      "0x64",
+      "0x50",
+      "0x72",
+      "0x6F"
+    ],
+    "desc": "Lotus WordPro v9"
+  },
+  {
+    "suffix": [
+      ".m3u"
+    ],
+    "bufBegin": [
+      "0x23",
+      "0x45",
+      "0x58"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".m4a"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x20",
+      "0x66",
+      "0x74",
+      "0x79",
+      "0x70",
+      "0x4D",
+      "0x34",
+      "0x41",
+      "0x20",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Apple Lossless Audio Codec file"
+  },
+  {
+    "suffix": [
+      ".m4a",
+      ".m4v"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x20",
+      "0x66",
+      "0x74",
+      "0x79",
+      "0x70",
+      "0x4D",
+      "0x34",
+      "0x41",
+      "0x20",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "QuickTime M4A/M4V file"
+  },
+  {
+    "suffix": [
+      ".manifest"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x3F",
+      "0x78",
+      "0x6D",
+      "0x6C",
+      "0x20",
+      "0x76",
+      "0x65",
+      "0x72",
+      "0x73",
+      "0x69",
+      "0x6F",
+      "0x6E",
+      "0x3D"
+    ],
+    "desc": "Windows Visual Stylesheet XML file"
+  },
+  {
+    "suffix": [
+      ".MAR"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x41",
+      "0x52",
+      "0x31",
+      "0x00"
+    ],
+    "desc": "Mozilla archive"
+  },
+  {
+    "suffix": [
+      ".MAR"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x41",
+      "0x52",
+      "0x43"
+    ],
+    "desc": "Microsoft/MSN MARC archive"
+  },
+  {
+    "suffix": [
+      ".MAR"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x41",
+      "0x72",
+      "0x30",
+      "0x00"
+    ],
+    "desc": "MAr compressed archive"
+  },
+  {
+    "suffix": [
+      ".max"
+    ],
+    "bufBegin": [
+      "0xD0",
+      "0xCF",
+      "0x11"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".mdb"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x00",
+      "0x53",
+      "0x74",
+      "0x61",
+      "0x6E",
+      "0x64",
+      "0x61",
+      "0x72",
+      "0x64",
+      "0x20",
+      "0x4A",
+      "0x65",
+      "0x74",
+      "0x20\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x44",
+      "0x42"
+    ],
+    "desc": "Microsoft Access file"
+  },
+  {
+    "suffix": [
+      ".mdb",
+      ".mda",
+      ".mde",
+      ".mdt"
+    ],
+    "bufBegin": [
+      "0x53",
+      "0x74",
+      "0x61",
+      "0x6E",
+      "0x64",
+      "0x61",
+      "0x72",
+      "0x64",
+      "0x20",
+      "0x4A"
+    ],
+    "desc": "MS Access"
+  },
+  {
+    "suffix": [
+      ".MDF"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0xFF",
+      "0xFF"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".mdf"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0x00",
+      "0x00",
+      "0x02",
+      "0x00",
+      "0x01"
+    ],
+    "desc": "Alcohol 120% CD image"
+  },
+  {
+    "suffix": [
+      ".mdf"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0x0F",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Microsoft SQL Server 2000 database"
+  },
+  {
+    "suffix": [
+      ".MDI"
+    ],
+    "bufBegin": [
+      "0x45",
+      "0x50"
+    ],
+    "desc": "Microsoft Document Imaging file"
+  },
+  {
+    "suffix": [
+      ".MDS"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x45",
+      "0x44"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".MID",
+      ".MIDI"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x54",
+      "0x68",
+      "0x64"
+    ],
+    "desc": "Musical Instrument Digital Interface (MIDI) sound\n                            &nbsp; file"
+  },
+  {
+    "suffix": [
+      ".mkv"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x45",
+      "0xDF",
+      "0xA3",
+      "0x93",
+      "0x42",
+      "0x82",
+      "0x88",
+      "0x6D",
+      "0x61",
+      "0x74",
+      "0x72",
+      "0x6F",
+      "0x73",
+      "0x6B",
+      "0x61"
+    ],
+    "desc": "Matroska stream file"
+  },
+  {
+    "suffix": [
+      ".MLS"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x49",
+      "0x4C",
+      "0x45",
+      "0x53"
+    ],
+    "desc": "Milestones v1.0 project management and scheduling\n                            &nbsp; software (Also see \"MV2C\" and \"MV214\" signatures)"
+  },
+  {
+    "suffix": [
+      ".MLS"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x4C",
+      "0x53",
+      "0x57"
+    ],
+    "desc": "Skype localization data file"
+  },
+  {
+    "suffix": [
+      ".MLS"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x56",
+      "0x32",
+      "0x31",
+      "0x34"
+    ],
+    "desc": "Milestones v2.1b project management and scheduling\n                            &nbsp; software (Also see \"MILES\" and \"MV2C\" signatures)"
+  },
+  {
+    "suffix": [
+      ".MLS"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x56",
+      "0x32",
+      "0x43"
+    ],
+    "desc": "Milestones v2.1a project management and scheduling\n                            &nbsp; software (Also see \"MILES\" and \"MV214\" signatures)"
+  },
+  {
+    "suffix": [
+      ".MMF"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x4D",
+      "0x4D",
+      "0x44",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Yamaha Corp. Synthetic music Mobile Application\n                            &nbsp; Format (SMAF) for multimedia files that can be played on\n                            hand-held devices."
+  },
+  {
+    "suffix": [
+      ".mny"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x00",
+      "0x00",
+      "0x4D",
+      "0x53",
+      "0x49",
+      "0x53",
+      "0x41",
+      "0x4D",
+      "0x20",
+      "0x44",
+      "0x61",
+      "0x74",
+      "0x61",
+      "0x62",
+      "0x61\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x73",
+      "0x65"
+    ],
+    "desc": "Microsoft Money file"
+  },
+  {
+    "suffix": [
+      ".MOV"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x0F"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".MOV"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x77"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".mov"
+    ],
+    "bufBegin": [
+      "0x6D",
+      "0x6F",
+      "0x6F",
+      "0x76"
+    ],
+    "desc": "Quicktime"
+  },
+  {
+    "suffix": [
+      ".mov"
+    ],
+    "bufBegin": [
+      "0x6D",
+      "0x64",
+      "0x61",
+      "0x74"
+    ],
+    "desc": "QuickTime Movie"
+  },
+  {
+    "suffix": [
+      ".mp"
+    ],
+    "bufBegin": [
+      "0x0C",
+      "0xED"
+    ],
+    "desc": "Monochrome Picture TIFF bitmap file (unconfirmed)\n                        "
+  },
+  {
+    "suffix": [
+      ".MP3"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x44",
+      "0x33"
+    ],
+    "desc": "MPEG-1 Audio Layer 3 (MP3) audio file"
+  },
+  {
+    "suffix": [
+      ".MP3"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0xFB",
+      "0x50"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".mp4"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x18",
+      "0x66",
+      "0x74",
+      "0x79",
+      "0x70",
+      "0x33",
+      "0x67",
+      "0x70",
+      "0x35"
+    ],
+    "desc": "MPEG-4 video files"
+  },
+  {
+    "suffix": [
+      ".MPA"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".mpg",
+      ".mpeg"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01",
+      "0xB3"
+    ],
+    "desc": "MPEG Movie"
+  },
+  {
+    "suffix": [
+      ".mpg"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01",
+      "0xBA"
+    ],
+    "desc": "MPEG"
+  },
+  {
+    "suffix": [
+      ".MSC"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x3F",
+      "0x78"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".msc"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x3F",
+      "0x78",
+      "0x6D",
+      "0x6C",
+      "0x20",
+      "0x76",
+      "0x65",
+      "0x72",
+      "0x73",
+      "0x69",
+      "0x6F",
+      "0x6E",
+      "0x3D",
+      "0x22",
+      "0x31",
+      "0x2E\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x30",
+      "0x22",
+      "0x3F",
+      "0x3E",
+      "0x0D",
+      "0x0A",
+      "0x3C",
+      "0x4D",
+      "0x4D",
+      "0x43",
+      "0x5F",
+      "0x43",
+      "0x6F",
+      "0x6E",
+      "0x73",
+      "0x6F",
+      "0x6C",
+      "0x65",
+      "0x46\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x69",
+      "0x6C",
+      "0x65",
+      "0x20",
+      "0x43",
+      "0x6F",
+      "0x6E",
+      "0x&nbsp;",
+      "0x73",
+      "0x6F",
+      "0x6C",
+      "0x65",
+      "0x56",
+      "0x65",
+      "0x72",
+      "0x73",
+      "0x69",
+      "0x6F",
+      "0x6E",
+      "0x3D\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x22"
+    ],
+    "desc": "Microsoft Management Console Snap-in Control file\n                        "
+  },
+  {
+    "suffix": [
+      ".msi"
+    ],
+    "bufBegin": [
+      "0x23",
+      "0x20"
+    ],
+    "desc": "Cerius2 file"
+  },
+  {
+    "suffix": [
+      ".MSV"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x53",
+      "0x5F",
+      "0x56",
+      "0x4F",
+      "0x49",
+      "0x43",
+      "0x45"
+    ],
+    "desc": "Sony Memory Stick Compressed Voice file"
+  },
+  {
+    "suffix": [
+      ".NES"
+    ],
+    "bufBegin": [
+      "0x4E",
+      "0x45",
+      "0x53"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".NLS"
+    ],
+    "bufBegin": [
+      "0xC2",
+      "0x20",
+      "0x20"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".nri"
+    ],
+    "bufBegin": [
+      "0x0E",
+      "0x4E",
+      "0x65",
+      "0x72",
+      "0x6F",
+      "0x49",
+      "0x53",
+      "0x4F"
+    ],
+    "desc": "Nero CD Compilation"
+  },
+  {
+    "suffix": [
+      ".ntf"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Lotus Notes database template"
+  },
+  {
+    "suffix": [
+      ".nsf",
+      ".ntf"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x00",
+      "0x00",
+      "0x03",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Lotus Notes Database/Template"
+  },
+  {
+    "suffix": [
+      ".nsf"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x00",
+      "0x00",
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x11",
+      "0x00"
+    ],
+    "desc": "Notes Database"
+  },
+  {
+    "suffix": [
+      ".nsf"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x00",
+      "0x00",
+      "0x04",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Lotus Notes database"
+  },
+  {
+    "suffix": [
+      ".ntf"
+    ],
+    "bufBegin": [
+      "0x30",
+      "0x31",
+      "0x4F",
+      "0x52",
+      "0x44",
+      "0x4E",
+      "0x41",
+      "0x4E",
+      "0x43",
+      "0x45",
+      "0x20",
+      "0x53",
+      "0x55",
+      "0x52",
+      "0x56",
+      "0x45",
+      "0x59\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x20",
+      "0x20",
+      "0x20",
+      "0x20",
+      "0x20",
+      "0x20",
+      "0x20"
+    ],
+    "desc": "National Transfer Format Map File"
+  },
+  {
+    "suffix": [
+      ".obj"
+    ],
+    "bufBegin": [
+      "0x4C",
+      "0x01"
+    ],
+    "desc": "Microsoft Common Object File Format (COFF) &nbsp;\n                            relocatable object code file for an Intel 386 or\n                            later/compatible processors"
+  },
+  {
+    "suffix": [
+      ".OCX"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "ActiveX or OLE Custom Control"
+  },
+  {
+    "suffix": [
+      ".OCX"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".OLB"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "OLE object library"
+  },
+  {
+    "suffix": [
+      ".OLB"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A",
+      "0x90"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".org",
+      ".pfc"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x4F",
+      "0x4C",
+      "0x56",
+      "0x4D",
+      "0x31",
+      "0x30",
+      "0x30"
+    ],
+    "desc": "AOL personal file cabinet (PFC) file"
+  },
+  {
+    "suffix": [
+      ".pak"
+    ],
+    "bufBegin": [
+      "0x1A",
+      "0x0B"
+    ],
+    "desc": "Compressed archive file"
+  },
+  {
+    "suffix": [
+      ".PAT"
+    ],
+    "bufBegin": [
+      "0x47",
+      "0x46",
+      "0x31",
+      "0x50",
+      "0x41",
+      "0x54",
+      "0x43",
+      "0x48"
+    ],
+    "desc": "Advanced Gravis Ultrasound patch file"
+  },
+  {
+    "suffix": [
+      ".PAT"
+    ],
+    "bufBegin": [
+      "0x47",
+      "0x50",
+      "0x41",
+      "0x54"
+    ],
+    "desc": "GIMP (GNU Image Manipulation Program) pattern file\n                        "
+  },
+  {
+    "suffix": [
+      ".PBK"
+    ],
+    "bufBegin": [
+      "0x5B",
+      "0x41",
+      "0x44"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".PCB"
+    ],
+    "bufBegin": [
+      "0x17",
+      "0xA1",
+      "0x50"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".PCS"
+    ],
+    "bufBegin": [
+      "0x0A",
+      "0x05\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".pcx"
+    ],
+    "bufBegin": [
+      "0x0A",
+      "0xnn",
+      "0x01",
+      "0x01"
+    ],
+    "desc": "ZSOFT Paintbrush file(where nn = 0x02, 0x03, or\n                            &nbsp; 0x05)"
+  },
+  {
+    "suffix": [
+      ".pcx"
+    ],
+    "bufBegin": [
+      "0x0A",
+      "0x05",
+      "0x01",
+      "0x08"
+    ],
+    "desc": "PC Paintbrush(often associated with Quake Engine\n                            &nbsp; games)"
+  },
+  {
+    "suffix": [
+      ".pdb"
+    ],
+    "bufBegin": [
+      "0x[11",
+      "0xbyte",
+      "0xoffset]",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Palmpilot Database/Document File"
+  },
+  {
+    "suffix": [
+      ".PDF"
+    ],
+    "bufBegin": [
+      "0x25",
+      "0x50",
+      "0x44"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".pdf",
+      ".fdf"
+    ],
+    "bufBegin": [
+      "0x25",
+      "0x50",
+      "0x44",
+      "0x46"
+    ],
+    "desc": "Adobe Portable Document Format and Forms Document\n                            &nbsp; file"
+  },
+  {
+    "suffix": [
+      ".pdf"
+    ],
+    "bufBegin": [
+      "0x25",
+      "0x50",
+      "0x44",
+      "0x46",
+      "0x2D",
+      "0x31",
+      "0x2E"
+    ],
+    "desc": "Adobe Acrobat"
+  },
+  {
+    "suffix": [
+      ".PDG"
+    ],
+    "bufBegin": [
+      "0x48",
+      "0x48",
+      "0x02"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".pf"
+    ],
+    "bufBegin": [
+      "0x11",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x53",
+      "0x43",
+      "0x43",
+      "0x41"
+    ],
+    "desc": "Windows prefetch file"
+  },
+  {
+    "suffix": [
+      ".pic"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x01"
+    ],
+    "desc": "Unknown type picture file"
+  },
+  {
+    "suffix": [
+      ".PJT"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x07"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".PLL"
+    ],
+    "bufBegin": [
+      "0x24",
+      "0x53",
+      "0x6F"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".PNG"
+    ],
+    "bufBegin": [
+      "0x89",
+      "0x50",
+      "0x4E"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".PNG"
+    ],
+    "bufBegin": [
+      "0x89",
+      "0x50",
+      "0x4E",
+      "0x47"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".png"
+    ],
+    "bufBegin": [
+      "0x89",
+      "0x50",
+      "0x4E",
+      "0x47",
+      "0x0D",
+      "0x0A"
+    ],
+    "desc": "PNG Image File"
+  },
+  {
+    "suffix": [
+      ".png"
+    ],
+    "bufBegin": [
+      "0x89",
+      "0x50",
+      "0x4E",
+      "0x47",
+      "0x0D",
+      "0x0A",
+      "0x1A",
+      "0x0A"
+    ],
+    "desc": "PNG Image File"
+  },
+  {
+    "suffix": [
+      ".PPC"
+    ],
+    "bufBegin": [
+      "0x52",
+      "0x65",
+      "0x63"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".PPT"
+    ],
+    "bufBegin": [
+      "0xD0",
+      "0xCF",
+      "0x11"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".ppt"
+    ],
+    "bufBegin": [
+      "0x[512",
+      "0xbyte",
+      "0xoffset]",
+      "0x00",
+      "0x6E",
+      "0x1E",
+      "0xF0"
+    ],
+    "desc": "PowerPoint presentation subheader (MS Office)"
+  },
+  {
+    "suffix": [
+      ".ppt"
+    ],
+    "bufBegin": [
+      "0x[512",
+      "0xbyte",
+      "0xoffset]",
+      "0x0F",
+      "0x00",
+      "0xE8",
+      "0x03"
+    ],
+    "desc": "PowerPoint presentation subheader (MS Office)"
+  },
+  {
+    "suffix": [
+      ".PPZ"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x53",
+      "0x43",
+      "0x46"
+    ],
+    "desc": "Powerpoint Packaged Presentation"
+  },
+  {
+    "suffix": [
+      ".prc"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x4F",
+      "0x4F",
+      "0x4B",
+      "0x4D",
+      "0x4F",
+      "0x42",
+      "0x49"
+    ],
+    "desc": "Palmpilot resource file"
+  },
+  {
+    "suffix": [
+      ".PRG"
+    ],
+    "bufBegin": [
+      "0x23",
+      "0x44",
+      "0x45"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".ps"
+    ],
+    "bufBegin": [
+      "0x25",
+      "0x21",
+      "0x50",
+      "0x53",
+      "0x2D",
+      "0x41",
+      "0x64",
+      "0x6F",
+      "0x62",
+      "0x65"
+    ],
+    "desc": "Postscript"
+  },
+  {
+    "suffix": [
+      ".PSD"
+    ],
+    "bufBegin": [
+      "0x38",
+      "0x42",
+      "0x50"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".psd"
+    ],
+    "bufBegin": [
+      "0x38",
+      "0x42",
+      "0x50",
+      "0x53"
+    ],
+    "desc": "Adobe Photoshop image file"
+  },
+  {
+    "suffix": [
+      ".psp"
+    ],
+    "bufBegin": [
+      "0x7E",
+      "0x42",
+      "0x4B",
+      "0x00"
+    ],
+    "desc": "PaintShop Pro Image File"
+  },
+  {
+    "suffix": [
+      ".pst"
+    ],
+    "bufBegin": [
+      "0x21",
+      "0x42",
+      "0x44",
+      "0x4E"
+    ],
+    "desc": "Microsoft Outlook Personal Folder file"
+  },
+  {
+    "suffix": [
+      ".pwl"
+    ],
+    "bufBegin": [
+      "0xE3",
+      "0x82",
+      "0x85",
+      "0x96"
+    ],
+    "desc": "Windows Password"
+  },
+  {
+    "suffix": [
+      ".qbb"
+    ],
+    "bufBegin": [
+      "0x45",
+      "0x86",
+      "0x00",
+      "0x00",
+      "0x06",
+      "0x00"
+    ],
+    "desc": "Intuit QuickBooks Backup file"
+  },
+  {
+    "suffix": [
+      ".qdf"
+    ],
+    "bufBegin": [
+      "0xAC",
+      "0x9E",
+      "0xBD",
+      "0x8F"
+    ],
+    "desc": "Quicken"
+  },
+  {
+    "suffix": [
+      ".qph"
+    ],
+    "bufBegin": [
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Quicken price history file"
+  },
+  {
+    "suffix": [
+      ".qt"
+    ],
+    "bufBegin": [
+      "0x6D",
+      "0x64",
+      "0x61",
+      "0x74"
+    ],
+    "desc": "Quicktime Movie File"
+  },
+  {
+    "suffix": [
+      ".qxd"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x49",
+      "0x49",
+      "0x58",
+      "0x50",
+      "0x52"
+    ],
+    "desc": "Quark Express document (Intel &amp; Motorola, &nbsp;\n                            respectively)"
+  },
+  {
+    "suffix": [
+      ".qxd"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x4D",
+      "0x4D",
+      "0x58",
+      "0x50",
+      "0x52"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".ra"
+    ],
+    "bufBegin": [
+      "0x2E",
+      "0x52",
+      "0x4D",
+      "0x46",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x12",
+      "0x00"
+    ],
+    "desc": "Real Audio file"
+  },
+  {
+    "suffix": [
+      ".ra",
+      ".ram"
+    ],
+    "bufBegin": [
+      "0x2E",
+      "0x72",
+      "0x61",
+      "0xFD"
+    ],
+    "desc": "Real Audio File"
+  },
+  {
+    "suffix": [
+      ".ra"
+    ],
+    "bufBegin": [
+      "0x2E",
+      "0x72",
+      "0x61",
+      "0xFD",
+      "0x00"
+    ],
+    "desc": "RealAudio streaming media file"
+  },
+  {
+    "suffix": [
+      ".RAR"
+    ],
+    "bufBegin": [
+      "0x52",
+      "0x61",
+      "0x72"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".rar"
+    ],
+    "bufBegin": [
+      "0x52",
+      "0x61",
+      "0x72",
+      "0x21"
+    ],
+    "desc": "RAR Archive File"
+  },
+  {
+    "suffix": [
+      ".RAW"
+    ],
+    "bufBegin": [
+      "0x06",
+      "0x05",
+      "0x00"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".reg"
+    ],
+    "bufBegin": [
+      "0x52",
+      "0x45",
+      "0x47",
+      "0x45",
+      "0x44",
+      "0x49",
+      "0x54",
+      "0x34"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".rgb"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0xDA",
+      "0x01",
+      "0x01",
+      "0x00",
+      "0x03"
+    ],
+    "desc": "Silicon Graphics RGB Bitmap"
+  },
+  {
+    "suffix": [
+      ".RM"
+    ],
+    "bufBegin": [
+      "0x2E",
+      "0x52",
+      "0x4D"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".rm",
+      ".rmvb"
+    ],
+    "bufBegin": [
+      "0x2E",
+      "0x52",
+      "0x4D",
+      "0x46"
+    ],
+    "desc": "Real Media streaming media file"
+  },
+  {
+    "suffix": [
+      ".rpm"
+    ],
+    "bufBegin": [
+      "0xED",
+      "0xAB",
+      "0xEE",
+      "0xDB"
+    ],
+    "desc": "RPM Archive File"
+  },
+  {
+    "suffix": [
+      ".RTD"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x23",
+      "0x2B",
+      "0x44",
+      "0xA4",
+      "0x43",
+      "0x4D",
+      "0xA5",
+      "0x48",
+      "0x64",
+      "0x72"
+    ],
+    "desc": "RagTime document file"
+  },
+  {
+    "suffix": [
+      ".RTF"
+    ],
+    "bufBegin": [
+      "0x7B",
+      "0x5C",
+      "0x72"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".rtf"
+    ],
+    "bufBegin": [
+      "0x7B",
+      "0x5C",
+      "0x72",
+      "0x74",
+      "0x66"
+    ],
+    "desc": "Rich Text Format File"
+  },
+  {
+    "suffix": [
+      ".sav"
+    ],
+    "bufBegin": [
+      "0x24",
+      "0x46",
+      "0x4C",
+      "0x32",
+      "0x40",
+      "0x28",
+      "0x23",
+      "0x29",
+      "0x20",
+      "0x53",
+      "0x50",
+      "0x53",
+      "0x53",
+      "0x20",
+      "0x44",
+      "0x41",
+      "0x54\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x41",
+      "0x20",
+      "0x46",
+      "0x49",
+      "0x4C",
+      "0x45"
+    ],
+    "desc": "SPSS Data file"
+  },
+  {
+    "suffix": [
+      ".SBV"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x45",
+      "0x44",
+      "0x46"
+    ],
+    "desc": "(Unknown file type)"
+  },
+  {
+    "suffix": [
+      ".SCH"
+    ],
+    "bufBegin": [
+      "0x2A",
+      "0x76",
+      "0x65"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".scm"
+    ],
+    "bufBegin": [
+      "0x80",
+      "0x53",
+      "0x43"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".SH3"
+    ],
+    "bufBegin": [
+      "0x48",
+      "0x48",
+      "0x47",
+      "0x42",
+      "0x31"
+    ],
+    "desc": "Harvard Graphics presentation file"
+  },
+  {
+    "suffix": [
+      ".SHD"
+    ],
+    "bufBegin": [
+      "0x4B",
+      "0x49",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Windows 9x printer spool file"
+  },
+  {
+    "suffix": [
+      ".sit"
+    ],
+    "bufBegin": [
+      "0x53",
+      "0x49",
+      "0x54",
+      "0x21"
+    ],
+    "desc": "Stuffit v1 Archive File"
+  },
+  {
+    "suffix": [
+      ".sit"
+    ],
+    "bufBegin": [
+      "0x53",
+      "0x74",
+      "0x75",
+      "0x66",
+      "0x66",
+      "0x49",
+      "0x74"
+    ],
+    "desc": "Stuffit v5 Archive File"
+  },
+  {
+    "suffix": [
+      ".sle"
+    ],
+    "bufBegin": [
+      "0x3A",
+      "0x56",
+      "0x45",
+      "0x52",
+      "0x53",
+      "0x49",
+      "0x4F",
+      "0x4E"
+    ],
+    "desc": "Surfplan kite project file"
+  },
+  {
+    "suffix": [
+      ".sle"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x43",
+      "0x76"
+    ],
+    "desc": "teganos Security Suite virtual secure drive"
+  },
+  {
+    "suffix": [
+      ".sly",
+      ".srt",
+      ".slt"
+    ],
+    "bufBegin": [
+      "0x53",
+      "0x52",
+      "0x01",
+      "0x00"
+    ],
+    "desc": "Sage sly.or.srt.or.slt"
+  },
+  {
+    "suffix": [
+      ".SMD"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0xFF",
+      "0xFF"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".snm"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x1E",
+      "0x84",
+      "0x90",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Netscape Communicator (v4) mail folder"
+  },
+  {
+    "suffix": [
+      ".SNP"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x53",
+      "0x43",
+      "0x46"
+    ],
+    "desc": "Microsoft Access Snapshot Viewer file"
+  },
+  {
+    "suffix": [
+      ".sol"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0xBF"
+    ],
+    "desc": "Adobe Flash shared object file (e.g., Flash cookies)\n                        "
+  },
+  {
+    "suffix": [
+      ".spl"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x00"
+    ],
+    "desc": "Windows NT/2000/XP printer spool file"
+  },
+  {
+    "suffix": [
+      ".SCR"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Screen saver"
+  },
+  {
+    "suffix": [
+      ".SUB"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0xFF",
+      "0xFF"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".SWF"
+    ],
+    "bufBegin": [
+      "0x43",
+      "0x57",
+      "0x53"
+    ],
+    "desc": "Shockwave Flash file (v5+)"
+  },
+  {
+    "suffix": [
+      ".SWF"
+    ],
+    "bufBegin": [
+      "0x46",
+      "0x57",
+      "0x53"
+    ],
+    "desc": "Macromedia Shockwave Flash player file"
+  },
+  {
+    "suffix": [
+      ".sxc"
+    ],
+    "bufBegin": [
+      "0xcalc"
+    ],
+    "desc": "OpenOffice Calc"
+  },
+  {
+    "suffix": [
+      ".sxd"
+    ],
+    "bufBegin": [
+      "0xdraw"
+    ],
+    "desc": "OpenOffice Draw"
+  },
+  {
+    "suffix": [
+      ".sxi"
+    ],
+    "bufBegin": [
+      "0ximpress"
+    ],
+    "desc": "OpenOffice Impress"
+  },
+  {
+    "suffix": [
+      ".sxm"
+    ],
+    "bufBegin": [
+      "0xmath"
+    ],
+    "desc": "OpenOffice Math"
+  },
+  {
+    "suffix": [
+      ".sxw"
+    ],
+    "bufBegin": [
+      "0xwriter"
+    ],
+    "desc": "OpenOffice Writer"
+  },
+  {
+    "suffix": [
+      ".syw"
+    ],
+    "bufBegin": [
+      "0x41",
+      "0x4D",
+      "0x59",
+      "0x4F"
+    ],
+    "desc": "Harvard Graphics symbol graphic"
+  },
+  {
+    "suffix": [
+      ".TAG"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x02"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".tar",
+      ".cpio"
+    ],
+    "bufBegin": [
+      "0x30",
+      "0x37",
+      "0x30",
+      "0x37",
+      "0x30",
+      "0x37"
+    ],
+    "desc": "CPIO Archive File"
+  },
+  {
+    "suffix": [
+      ".tar.z"
+    ],
+    "bufBegin": [
+      "0x1F",
+      "0x9D",
+      "0x90"
+    ],
+    "desc": "Compressed tape archive file"
+  },
+  {
+    "suffix": [
+      ".tga"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "RLE压缩的前5字节"
+  },
+  {
+    "suffix": [
+      ".TGA"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x02"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".tga"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x02",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "未压缩的前5字节"
+  },
+  {
+    "suffix": [
+      ".TIF",
+      ".TIFF"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x20",
+      "0x49"
+    ],
+    "desc": "Tagged Image File Format file"
+  },
+  {
+    "suffix": [
+      ".tif",
+      ".tiff"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x49",
+      "0x2A"
+    ],
+    "desc": "TIFF (Intel)"
+  },
+  {
+    "suffix": [
+      ".tif",
+      ".tiff"
+    ],
+    "bufBegin": [
+      "0x49",
+      "0x49",
+      "0x2A",
+      "0x00"
+    ],
+    "desc": "Tagged Image File Format file (little endian, i.e.,\n                            &nbsp; LSB first in the byte; Intel)"
+  },
+  {
+    "suffix": [
+      ".TIF",
+      ".TIFF"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x4D",
+      "0x00",
+      "0x2A"
+    ],
+    "desc": "Tagged Image File Format file (big endian, i.e., LSB\n                            &nbsp; last in the byte; Motorola)"
+  },
+  {
+    "suffix": [
+      ".tif",
+      ".tiff"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x4D",
+      "0x2A"
+    ],
+    "desc": "TIFF (Motorola)"
+  },
+  {
+    "suffix": [
+      ".TIF",
+      ".TIFF"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x4D",
+      "0x00",
+      "0x2B"
+    ],
+    "desc": "BigTIFF files; Tagged Image File Format files &gt;4\n                            &nbsp; GB"
+  },
+  {
+    "suffix": [
+      ".TLB"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x53",
+      "0x46",
+      "0x54",
+      "0x02",
+      "0x00",
+      "0x01",
+      "0x00"
+    ],
+    "desc": "OLE, SPSS, or Visual C++ type library file"
+  },
+  {
+    "suffix": [
+      ".tr1"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0x10"
+    ],
+    "desc": "Novell LANalyzer capture file"
+  },
+  {
+    "suffix": [
+      ".TST"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x00"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".TTF"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x01",
+      "0x00"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".ufa"
+    ],
+    "bufBegin": [
+      "0x55",
+      "0x46",
+      "0x41"
+    ],
+    "desc": "UFA Archive File"
+  },
+  {
+    "suffix": [
+      ".VBX"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "VisualBASIC application"
+  },
+  {
+    "suffix": [
+      ".VCD"
+    ],
+    "bufBegin": [
+      "0x45",
+      "0x4E",
+      "0x54",
+      "0x52",
+      "0x59",
+      "0x56",
+      "0x43",
+      "0x44",
+      "0x02",
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x02",
+      "0x00",
+      "0x18",
+      "0x58"
+    ],
+    "desc": "VideoVCD (GNU VCDImager) file"
+  },
+  {
+    "suffix": [
+      ".vcf"
+    ],
+    "bufBegin": [
+      "0x42",
+      "0x45",
+      "0x47",
+      "0x49",
+      "0x4E",
+      "0x3A",
+      "0x56",
+      "0x43",
+      "0x41",
+      "0x52",
+      "0x44",
+      "0x0D",
+      "0x0A"
+    ],
+    "desc": "vCard file"
+  },
+  {
+    "suffix": [
+      ".vob"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01",
+      "0xBA"
+    ],
+    "desc": "DVD Video Movie File (video/dvd, video/mpeg)"
+  },
+  {
+    "suffix": [
+      ".VXD,386"
+    ],
+    "bufBegin": [
+      "0x4D",
+      "0x5A"
+    ],
+    "desc": "Windows virtual device drivers"
+  },
+  {
+    "suffix": [
+      ".WAV"
+    ],
+    "bufBegin": [
+      "0x52",
+      "0x49",
+      "0x46"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".wav"
+    ],
+    "bufBegin": [
+      "0x57",
+      "0x41",
+      "0x56",
+      "0x45"
+    ],
+    "desc": "Wave"
+  },
+  {
+    "suffix": [
+      ".wav"
+    ],
+    "bufBegin": [
+      "0x57",
+      "0x41",
+      "0x56",
+      "0x45",
+      "0x66",
+      "0x6D",
+      "0x74"
+    ],
+    "desc": "Wave Files"
+  },
+  {
+    "suffix": [
+      ".wb2"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x02",
+      "0x00"
+    ],
+    "desc": "QuattroPro for Windows Spreadsheet file"
+  },
+  {
+    "suffix": [
+      ".wb3"
+    ],
+    "bufBegin": [
+      "0x[24",
+      "0xbyte",
+      "0xoffset]",
+      "0x3E",
+      "0x00",
+      "0x03",
+      "0x00",
+      "0xFE",
+      "0xFF",
+      "0x09",
+      "0x00",
+      "0x06"
+    ],
+    "desc": "Quatro Pro for Windows 7.0 Notebook file"
+  },
+  {
+    "suffix": [
+      ".wk1",
+      ".wks"
+    ],
+    "bufBegin": [
+      "0x20",
+      "0x00",
+      "0x60",
+      "0x40",
+      "0x60"
+    ],
+    "desc": "Lotus 123 v1 Worksheet"
+  },
+  {
+    "suffix": [
+      ".wk1"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x02",
+      "0x00",
+      "0x06",
+      "0x04",
+      "0x06",
+      "0x00",
+      "0x08",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00"
+    ],
+    "desc": "Lotus 1-2-3 spreadsheet (v1) file"
+  },
+  {
+    "suffix": [
+      ".wk3"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x1A",
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x04",
+      "0x00"
+    ],
+    "desc": "Lotus 123 spreadsheet (v3) file"
+  },
+  {
+    "suffix": [
+      ".wk4",
+      ".wk5"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x1A",
+      "0x00",
+      "0x02",
+      "0x10",
+      "0x04",
+      "0x00"
+    ],
+    "desc": "Lotus 1-2-3 spreadsheet (v4, v5) file"
+  },
+  {
+    "suffix": [
+      ".wks"
+    ],
+    "bufBegin": [
+      "0x0E",
+      "0x57",
+      "0x4B",
+      "0x53"
+    ],
+    "desc": "DeskMate Worksheet"
+  },
+  {
+    "suffix": [
+      ".WMA"
+    ],
+    "bufBegin": [
+      "0x30",
+      "0x26",
+      "0xB2"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".wmf"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0x00",
+      "0x09",
+      "0x00"
+    ],
+    "desc": "Graphics Metafile"
+  },
+  {
+    "suffix": [
+      ".wmf"
+    ],
+    "bufBegin": [
+      "0x01",
+      "0x00",
+      "0x09",
+      "0x00",
+      "0x00",
+      "0x03"
+    ],
+    "desc": "Windows Metadata file (Win 3.x format)"
+  },
+  {
+    "suffix": [
+      ".wmf"
+    ],
+    "bufBegin": [
+      "0x02",
+      "0x00",
+      "0x09",
+      "0x00"
+    ],
+    "desc": "Graphics Metafile"
+  },
+  {
+    "suffix": [
+      ".wmf"
+    ],
+    "bufBegin": [
+      "0xD7",
+      "0xCD",
+      "0xC6",
+      "0x9A"
+    ],
+    "desc": "Windows Meta File"
+  },
+  {
+    "suffix": [
+      ".WMV"
+    ],
+    "bufBegin": [
+      "0x30",
+      "0x26",
+      "0xB2"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".wp"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0x57",
+      "0x50",
+      "0x43"
+    ],
+    "desc": "WordPerfect v5 or v6"
+  },
+  {
+    "suffix": [
+      ".wpd"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0x57",
+      "0x50",
+      "0x43"
+    ],
+    "desc": "WordPerfect"
+  },
+  {
+    "suffix": [
+      ".wpg"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0x57",
+      "0x50",
+      "0x47"
+    ],
+    "desc": "WordPerfect Graphics"
+  },
+  {
+    "suffix": [
+      ".wri"
+    ],
+    "bufBegin": [
+      "0x31",
+      "0xBE"
+    ],
+    "desc": "Microsoft Write file"
+  },
+  {
+    "suffix": [
+      ".WRI"
+    ],
+    "bufBegin": [
+      "0x31",
+      "0xBE",
+      "0x00"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".wri"
+    ],
+    "bufBegin": [
+      "0x32",
+      "0xBE"
+    ],
+    "desc": "Microsoft Write file"
+  },
+  {
+    "suffix": [
+      ".ws"
+    ],
+    "bufBegin": [
+      "0x1D",
+      "0x7D"
+    ],
+    "desc": "WordStar Version 5.0/6.0 document"
+  },
+  {
+    "suffix": [
+      ".XBE"
+    ],
+    "bufBegin": [
+      "0x58",
+      "0x42",
+      "0x45"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".xdr"
+    ],
+    "bufBegin": [
+      "0x3C"
+    ],
+    "desc": "BizTalk XML-Data Reduced Schema file"
+  },
+  {
+    "suffix": [
+      ".xls"
+    ],
+    "bufBegin": [
+      "0x09",
+      "0x02",
+      "0x06",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x00",
+      "0xB9",
+      "0x04",
+      "0x5C",
+      "0x00"
+    ],
+    "desc": "MS Excel v2"
+  },
+  {
+    "suffix": [
+      ".xls"
+    ],
+    "bufBegin": [
+      "0x09",
+      "0x04",
+      "0x06",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x00",
+      "0xF6",
+      "0x05",
+      "0x5C",
+      "0x00"
+    ],
+    "desc": "MS Excel v4"
+  },
+  {
+    "suffix": [
+      ".XLS"
+    ],
+    "bufBegin": [
+      "0xD0",
+      "0xCF",
+      "0x11"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".xls"
+    ],
+    "bufBegin": [
+      "0xD0",
+      "0xCF",
+      "0x11",
+      "0xE0"
+    ],
+    "desc": "MS Excel"
+  },
+  {
+    "suffix": [
+      ".xls"
+    ],
+    "bufBegin": [
+      "0x[512",
+      "0xbyte",
+      "0xoffset]",
+      "0x&nbsp;09",
+      "0x08",
+      "0x10",
+      "0x00",
+      "0x00",
+      "0x06",
+      "0x05",
+      "0x00"
+    ],
+    "desc": "Excel spreadsheet subheader (MS Office)"
+  },
+  {
+    "suffix": [
+      ".XML"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x3F",
+      "0x78"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".xml"
+    ],
+    "bufBegin": [
+      "0x3C",
+      "0x3F",
+      "0x78",
+      "0x6D",
+      "0x6C"
+    ],
+    "desc": "XML Document"
+  },
+  {
+    "suffix": [
+      ".xml"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0xFE",
+      "0x3C",
+      "0x00",
+      "0x52",
+      "0x00",
+      "0x4F",
+      "0x00",
+      "0x4F",
+      "0x00",
+      "0x54",
+      "0x00",
+      "0x53",
+      "0x00",
+      "0x54",
+      "0x00",
+      "0x55\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x00",
+      "0x&nbsp;",
+      "0x42",
+      "0x00"
+    ],
+    "desc": "XML Document (ROOTSTUB)"
+  },
+  {
+    "suffix": [
+      ".XMV"
+    ],
+    "bufBegin": [
+      "0x00",
+      "0x50",
+      "0x01"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".XSL"
+    ],
+    "bufBegin": [
+      "0xFF",
+      "0xFE",
+      "0x3C"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".xul"
+    ],
+    "bufBegin": [
+      "0x72",
+      "0x73",
+      "0x69",
+      "0x6F",
+      "0x6E",
+      "0x3D",
+      "0x22",
+      "0x31",
+      "0x3C",
+      "0x3F",
+      "0x78",
+      "0x6D",
+      "0x6C",
+      "0x20",
+      "0x76",
+      "0x65",
+      "0x2E\n",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x",
+      "0x&nbsp;",
+      "0x30",
+      "0x22",
+      "0x3F",
+      "0x3E"
+    ],
+    "desc": "XML User Interface Language file"
+  },
+  {
+    "suffix": [
+      ".z"
+    ],
+    "bufBegin": [
+      "0x1F",
+      "0x9D"
+    ],
+    "desc": "TAR Compressed Archive File"
+  },
+  {
+    "suffix": [
+      ".Z"
+    ],
+    "bufBegin": [
+      "0x1F",
+      "0x9D",
+      "0x8C"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".ZIP"
+    ],
+    "bufBegin": [
+      "0x50",
+      "0x4B",
+      "0x03"
+    ],
+    "desc": ""
+  },
+  {
+    "suffix": [
+      ".zip",
+      ".jar",
+      ".zipx"
+    ],
+    "bufBegin": [
+      "0x50",
+      "0x4B",
+      "0x03",
+      "0x04"
+    ],
+    "desc": "ZIP Archive"
+  },
+  {
+    "suffix": [
+      ".zip"
+    ],
+    "bufBegin": [
+      "0x50",
+      "0x4B",
+      "0x30",
+      "0x30"
+    ],
+    "desc": "ZIP Archive (outdated)"
+  },
+  {
+    "suffix": [
+      ".Zip"
+    ],
+    "bufBegin": [
+      "0x50",
+      "0x4B",
+      "0x30",
+      "0x30",
+      "0x50",
+      "0x4B",
+      "0x03",
+      "0x04"
+    ],
+    "desc": "WINZIP Compressed"
+  },
+  {
+    "suffix": [
+      ".zoo"
+    ],
+    "bufBegin": [
+      "0x5A",
+      "0x4F",
+      "0x4F",
+      "0x20"
+    ],
+    "desc": "ZOO Archive File"
+  },
+  {
+    "bufBegin": [
+      "0xff",
+      "0xd8",
+      "0xff",
+      "0xfe"
+    ],
+    "suffix": [
+      ".jpeg",
+      ".jpe",
+      ".jpg"
+    ],
+    "desc": "JPG Graphic File"
+  },
+  {
+    "bufBegin": [
+      "0xff",
+      "0xd8",
+      "0xff",
+      "0xe0"
+    ],
+    "suffix": [
+      ".jpeg",
+      ".jpe",
+      ".jpg"
+    ],
+    "desc": "JPG Graphic File"
+  },
+  {
+    "bufBegin": [
+      "0x47",
+      "0x49",
+      "0x46",
+      "0x38",
+      "0x39"
+    ],
+    "suffix": [
+      ".gif"
+    ],
+    "desc": "GIF 89A"
+  },
+  {
+    "bufBegin": [
+      "0x47",
+      "0x49",
+      "0x46",
+      "0x38",
+      "0x37"
+    ],
+    "suffix": [
+      ".gif"
+    ],
+    "desc": "GIF 87A"
+  },
+  {
+    "bufBegin": [
+      "0x42"
+    ],
+    "suffix": [
+      ".bmp"
+    ],
+    "desc": "Windows Bitmap"
+  },
+  {
+    "bufBegin": [
+      "0x4d"
+    ],
+    "suffix": [
+      ".exe",
+      ".com",
+      ".386",
+      ".ax",
+      ".acm",
+      ".sys",
+      ".dll",
+      ".drv",
+      ".flt",
+      ".fon",
+      ".ocx",
+      ".scr",
+      ".lrc",
+      ".vxd",
+      ".cpl",
+      ".x32"
+    ],
+    "desc": "Executable File"
+  },
+  {
+    "bufBegin": [
+      "0x50",
+      "0x4b",
+      "0x03"
+    ],
+    "suffix": [
+      ".zip"
+    ],
+    "desc": "Zip Compressed"
+  },
+  {
+    "bufBegin": [
+      "0x3a",
+      "0x42",
+      "0x61",
+      "0x73"
+    ],
+    "suffix": [
+      ".cnt"
+    ],
+    "desc": ""
+  },
+  {
+    "bufBegin": [
+      "0x\n ",
+      "0x  ",
+      "0x  ",
+      "0x  ",
+      "0x  ",
+      "0x  ",
+      "0x d",
+      "0x0c",
+      "0xf1",
+      "0x1e",
+      "0x0a",
+      "0x1b",
+      "0x11",
+      "0xae"
+    ],
+    "suffix": [
+      ".doc",
+      ".xls",
+      ".xlt",
+      ".ppt",
+      ".apr"
+    ],
+    "desc": "MS Compound Document v1 or Lotus Approach APR file\n        "
+  },
+  {
+    "bufBegin": [
+      "0x01",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x58",
+      "0x00",
+      "0x00"
+    ],
+    "suffix": [
+      ".emf"
+    ],
+    "desc": ""
+  },
+  {
+    "bufBegin": [
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0xc4",
+      "0x66",
+      "0xc4"
+    ],
+    "suffix": [
+      ".evt"
+    ],
+    "desc": ""
+  },
+  {
+    "bufBegin": [
+      "0x3f",
+      "0x5f",
+      "0x03"
+    ],
+    "suffix": [
+      ".gid",
+      ".hlp",
+      ".lhp"
+    ],
+    "desc": "Windows Help File"
+  },
+  {
+    "bufBegin": [
+      "0x1f",
+      "0x8b"
+    ],
+    "suffix": [
+      ".gz"
+    ],
+    "desc": "GZ Compressed File"
+  },
+  {
+    "bufBegin": [
+      "0x28",
+      "0x54",
+      "0x68",
+      "0x69",
+      "0x73",
+      "0x20",
+      "0x66",
+      "0x69",
+      "0x6c"
+    ],
+    "suffix": [
+      ".hqx"
+    ],
+    "desc": ""
+  },
+  {
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x00"
+    ],
+    "suffix": [
+      ".ico"
+    ],
+    "desc": "Icon File"
+  },
+  {
+    "bufBegin": [
+      "0x4c",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x01",
+      "0x14"
+    ],
+    "suffix": [
+      ".lnk"
+    ],
+    "desc": "Windows Link File"
+  },
+  {
+    "bufBegin": [
+      "0x25",
+      "0x50",
+      "0x44"
+    ],
+    "suffix": [
+      ".pdf"
+    ],
+    "desc": "Adobe PDF File"
+  },
+  {
+    "bufBegin": [
+      "0x52",
+      "0x45",
+      "0x47",
+      "0x45",
+      "0x44",
+      "0x49",
+      "0x54"
+    ],
+    "suffix": [
+      ".reg"
+    ],
+    "desc": ""
+  },
+  {
+    "bufBegin": [
+      "0x7b",
+      "0x5c",
+      "0x72",
+      "0x74"
+    ],
+    "suffix": [
+      ".rtf"
+    ],
+    "desc": "Rich Text Format File"
+  },
+  {
+    "bufBegin": [],
+    "suffix": [
+      ".lzh"
+    ],
+    "desc": "Lz compression file"
+  },
+  {
+    "bufBegin": [
+      "0xmt"
+    ],
+    "suffix": [
+      ".mid"
+    ],
+    "desc": ""
+  },
+  {
+    "bufBegin": [
+      "0x0a",
+      "0x05",
+      "0x01"
+    ],
+    "suffix": [
+      ".pcx"
+    ],
+    "desc": ""
+  },
+  {
+    "bufBegin": [
+      "0x25",
+      "0x21",
+      "0x50"
+    ],
+    "suffix": [
+      ".eps"
+    ],
+    "desc": "Adobe EPS File"
+  },
+  {
+    "bufBegin": [
+      "0x21"
+    ],
+    "suffix": [
+      ".ain"
+    ],
+    "desc": "AIN Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x1a"
+    ],
+    "suffix": [
+      ".arc"
+    ],
+    "desc": "ARC/PKPAK Compressed 1"
+  },
+  {
+    "bufBegin": [
+      "0x1a"
+    ],
+    "suffix": [
+      ".arc"
+    ],
+    "desc": "ARC/PKPAK Compressed 2"
+  },
+  {
+    "bufBegin": [
+      "0x1a"
+    ],
+    "suffix": [
+      ".arc"
+    ],
+    "desc": "ARC/PKPAK Compressed 3"
+  },
+  {
+    "bufBegin": [
+      "0x1a"
+    ],
+    "suffix": [
+      ".arc"
+    ],
+    "desc": "ARC/PKPAK Compressed 4"
+  },
+  {
+    "bufBegin": [
+      "0x1a"
+    ],
+    "suffix": [
+      ".arc"
+    ],
+    "desc": "ARC/PKPAK Compressed 5"
+  },
+  {
+    "bufBegin": [
+      "0x60"
+    ],
+    "suffix": [
+      ".arj"
+    ],
+    "desc": "ARJ Compressed"
+  },
+  {
+    "bufBegin": [
+      "0x41",
+      "0x56",
+      "0x49"
+    ],
+    "suffix": [
+      ".avi"
+    ],
+    "desc": "Audio Video Interleave(AVI)"
+  },
+  {
+    "bufBegin": [
+      "0x42",
+      "0x5a"
+    ],
+    "suffix": [
+      ".bz",
+      ".bz2"
+    ],
+    "desc": "Bzip Archive"
+  },
+  {
+    "bufBegin": [
+      "0x49",
+      "0x53",
+      "0x63"
+    ],
+    "suffix": [
+      ".cab"
+    ],
+    "desc": "Cabinet File"
+  },
+  {
+    "bufBegin": [
+      "0x4c"
+    ],
+    "suffix": [
+      ".obj"
+    ],
+    "desc": "Compiled Object Module"
+  },
+  {
+    "bufBegin": [
+      "0x30",
+      "0x37",
+      "0x30",
+      "0x37",
+      "0x30"
+    ],
+    "suffix": [
+      ".tar",
+      ".cpio"
+    ],
+    "desc": "CPIO Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x43",
+      "0x52",
+      "0x55",
+      "0x53"
+    ],
+    "suffix": [
+      ".cru",
+      ".crush"
+    ],
+    "desc": "CRUSH Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x3a",
+      "0xde",
+      "0x68"
+    ],
+    "suffix": [
+      ".dcx"
+    ],
+    "desc": "DCX Graphic File"
+  },
+  {
+    "bufBegin": [
+      "0x1f"
+    ],
+    "suffix": [
+      ".gz",
+      ".tar",
+      ".tgz"
+    ],
+    "desc": "Gzip Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x91",
+      "0x33",
+      "0x48"
+    ],
+    "suffix": [
+      ".hap"
+    ],
+    "desc": "HAP Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x3c",
+      "0x68",
+      "0x74",
+      "0x6d",
+      "0x6c"
+    ],
+    "suffix": [
+      ".htm",
+      ".html"
+    ],
+    "desc": "HyperText Markup Language 1"
+  },
+  {
+    "bufBegin": [
+      "0x3c",
+      "0x48",
+      "0x54",
+      "0x4d",
+      "0x4c"
+    ],
+    "suffix": [
+      ".htm",
+      ".html"
+    ],
+    "desc": "HyperText Markup Language 2"
+  },
+  {
+    "bufBegin": [
+      "0x3c",
+      "0x21",
+      "0x44",
+      "0x4f",
+      "0x43"
+    ],
+    "suffix": [
+      ".htm",
+      ".html"
+    ],
+    "desc": "HyperText Markup Language 3"
+  },
+  {
+    "bufBegin": [
+      "0x10"
+    ],
+    "suffix": [
+      ".ico"
+    ],
+    "desc": "ICON File"
+  },
+  {
+    "bufBegin": [
+      "0x5f",
+      "0x27",
+      "0xa8"
+    ],
+    "suffix": [
+      ".jar"
+    ],
+    "desc": "JAR Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x2d",
+      "0x6c",
+      "0x68",
+      "0x35"
+    ],
+    "suffix": [
+      ".lha"
+    ],
+    "desc": "LHA Compressed"
+  },
+  {
+    "bufBegin": [
+      "0x20",
+      "0x00",
+      "0x60",
+      "0x40",
+      "0x60"
+    ],
+    "suffix": [
+      ".wk1",
+      ".wks"
+    ],
+    "desc": "Lotus 123 v1 Worksheet"
+  },
+  {
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x1a",
+      "0x00",
+      "0x07",
+      "0x80",
+      "0x01"
+    ],
+    "suffix": [
+      ".fm3"
+    ],
+    "desc": "Lotus 123 v3 FMT file"
+  },
+  {
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x1a",
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x04"
+    ],
+    "suffix": [
+      ".wk3"
+    ],
+    "desc": "Lotus 123 v3 Worksheet"
+  },
+  {
+    "bufBegin": [
+      "0x20",
+      "0x00",
+      "0x68",
+      "0x00",
+      "0x20"
+    ],
+    "suffix": [
+      ".fmt"
+    ],
+    "desc": "Lotus 123 v4 FMT file"
+  },
+  {
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x1a",
+      "0x00",
+      "0x02",
+      "0x10",
+      "0x04"
+    ],
+    "suffix": [
+      ".wk4"
+    ],
+    "desc": "Lotus 123 v5"
+  },
+  {
+    "bufBegin": [
+      "0x5b",
+      "0x76",
+      "0x65",
+      "0x72"
+    ],
+    "suffix": [
+      ".ami"
+    ],
+    "desc": "Lotus Ami Pro"
+  },
+  {
+    "bufBegin": [
+      "0x30",
+      "0x00",
+      "0x00",
+      "0x04",
+      "0x15",
+      "0x05",
+      "0x05"
+    ],
+    "suffix": [
+      ".adx"
+    ],
+    "desc": "Lotus Approach ADX file"
+  },
+  {
+    "bufBegin": [
+      "0x1a",
+      "0x00",
+      "0x00",
+      "0x03",
+      "0x00"
+    ],
+    "suffix": [
+      ".nsf",
+      ".ntf"
+    ],
+    "desc": "Lotus Notes Database/Template"
+  },
+  {
+    "bufBegin": [
+      "0x4d",
+      "0x47",
+      "0x58",
+      "0x20",
+      "0x69",
+      "0x74",
+      "0x70"
+    ],
+    "suffix": [
+      ".ds4"
+    ],
+    "desc": "Micrografix Designer 4"
+  },
+  {
+    "bufBegin": [
+      "0x4d",
+      "0x53",
+      "0x43"
+    ],
+    "suffix": [
+      ".cab"
+    ],
+    "desc": "Microsoft CAB File Format"
+  },
+  {
+    "bufBegin": [
+      "0x4d",
+      "0x54",
+      "0x68"
+    ],
+    "suffix": [
+      ".mid"
+    ],
+    "desc": "Midi Audio File"
+  },
+  {
+    "bufBegin": [
+      "0x00",
+      "0x00",
+      "0x01"
+    ],
+    "suffix": [
+      ".mpg",
+      ".mpeg"
+    ],
+    "desc": "MPEG Movie"
+  },
+  {
+    "bufBegin": [
+      "0x09",
+      "0x02",
+      "0x06",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x00",
+      "0xb9",
+      "0x04",
+      "0x5c"
+    ],
+    "suffix": [
+      ".xls"
+    ],
+    "desc": "MS Excel v2"
+  },
+  {
+    "bufBegin": [
+      "0x09",
+      "0x04",
+      "0x06",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x10",
+      "0x00",
+      "0xf6",
+      "0x05",
+      "0x5c"
+    ],
+    "suffix": [
+      ".xls"
+    ],
+    "desc": "MS Excel v4"
+  },
+  {
+    "bufBegin": [
+      "0x7f",
+      "0xfe",
+      "0x34"
+    ],
+    "suffix": [
+      ".doc"
+    ],
+    "desc": "MS Word"
+  },
+  {
+    "bufBegin": [
+      "0x12",
+      "0x34",
+      "0x56",
+      "0x78",
+      "0x90"
+    ],
+    "suffix": [
+      ".doc"
+    ],
+    "desc": "MS Word 6.0"
+  },
+  {
+    "bufBegin": [
+      "0x31",
+      "0xbe",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0xab",
+      "0x00"
+    ],
+    "suffix": [
+      ".doc"
+    ],
+    "desc": "MS Word for DOS 6.0"
+  },
+  {
+    "bufBegin": [
+      "0x1a",
+      "0x00",
+      "0x00",
+      "0x03",
+      "0x00",
+      "0x00",
+      "0x11"
+    ],
+    "suffix": [
+      ".nsf"
+    ],
+    "desc": "Notes Database"
+  },
+  {
+    "bufBegin": [
+      "0x7e",
+      "0x42",
+      "0x4b"
+    ],
+    "suffix": [
+      ".psp"
+    ],
+    "desc": "PaintShop Pro Image File"
+  },
+  {
+    "bufBegin": [
+      "0x50",
+      "0x4b",
+      "0x03"
+    ],
+    "suffix": [
+      ".zip"
+    ],
+    "desc": "PKZIP Compressed"
+  },
+  {
+    "bufBegin": [
+      "0x89",
+      "0x50",
+      "0x4e",
+      "0x47",
+      "0x0d"
+    ],
+    "suffix": [
+      ".png"
+    ],
+    "desc": "PNG Image File"
+  },
+  {
+    "bufBegin": [
+      "0x6d",
+      "0x64",
+      "0x61"
+    ],
+    "suffix": [
+      ".mov"
+    ],
+    "desc": "QuickTime Movie"
+  },
+  {
+    "bufBegin": [
+      "0x6d",
+      "0x64",
+      "0x61"
+    ],
+    "suffix": [
+      ".qt"
+    ],
+    "desc": "Quicktime Movie File"
+  },
+  {
+    "bufBegin": [
+      "0x52",
+      "0x61",
+      "0x72"
+    ],
+    "suffix": [
+      ".rar"
+    ],
+    "desc": "RAR Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x2e",
+      "0x72",
+      "0x61"
+    ],
+    "suffix": [
+      ".ra",
+      ".ram"
+    ],
+    "desc": "Real Audio File"
+  },
+  {
+    "bufBegin": [
+      "0xed",
+      "0xab",
+      "0xee"
+    ],
+    "suffix": [
+      ".rpm"
+    ],
+    "desc": "RPM Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x2e",
+      "0x73",
+      "0x6e"
+    ],
+    "suffix": [
+      ".au"
+    ],
+    "desc": "SoundMachine Audio File"
+  },
+  {
+    "bufBegin": [
+      "0x53",
+      "0x49",
+      "0x54"
+    ],
+    "suffix": [
+      ".sit"
+    ],
+    "desc": "Stuffit v1 Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x53",
+      "0x74",
+      "0x75",
+      "0x66",
+      "0x66",
+      "0x49"
+    ],
+    "suffix": [
+      ".sit"
+    ],
+    "desc": "Stuffit v5 Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x1f"
+    ],
+    "suffix": [
+      ".z"
+    ],
+    "desc": "TAR Compressed Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x49",
+      "0x49"
+    ],
+    "suffix": [
+      ".tif",
+      ".tiff"
+    ],
+    "desc": "TIFF(Intel)"
+  },
+  {
+    "bufBegin": [
+      "0x4d",
+      "0x4d"
+    ],
+    "suffix": [
+      ".tif",
+      ".tiff"
+    ],
+    "desc": "TIFF(Motorola)"
+  },
+  {
+    "bufBegin": [
+      "0x55",
+      "0x46"
+    ],
+    "suffix": [
+      ".ufa"
+    ],
+    "desc": "UFA Archive File"
+  },
+  {
+    "bufBegin": [
+      "0x57",
+      "0x41",
+      "0x56",
+      "0x45",
+      "0x66",
+      "0x6d"
+    ],
+    "suffix": [
+      ".wav"
+    ],
+    "desc": "Wave Files"
+  },
+  {
+    "bufBegin": [
+      "0xd7",
+      "0xcd",
+      "0xc6"
+    ],
+    "suffix": [
+      ".wmf"
+    ],
+    "desc": "Windows Meta File"
+  },
+  {
+    "bufBegin": [
+      "0x4c",
+      "0x00",
+      "0x00"
+    ],
+    "suffix": [
+      ".lnk"
+    ],
+    "desc": "Windows Shortcut(Link File)"
+  },
+  {
+    "bufBegin": [
+      "0x50",
+      "0x4b",
+      "0x30",
+      "0x30",
+      "0x50",
+      "0x4b",
+      "0x03"
+    ],
+    "suffix": [
+      ".zip"
+    ],
+    "desc": "WINZIP Compressed"
+  },
+  {
+    "bufBegin": [
+      "0xff",
+      "0x57",
+      "0x50"
+    ],
+    "suffix": [
+      ".wpg"
+    ],
+    "desc": "WordPerfect Graphics"
+  },
+  {
+    "bufBegin": [
+      "0xff",
+      "0x57",
+      "0x50"
+    ],
+    "suffix": [
+      ".wp"
+    ],
+    "desc": "WordPerfect v5 or v6"
+  },
+  {
+    "bufBegin": [
+      "0x3c",
+      "0x3f",
+      "0x78",
+      "0x6d"
+    ],
+    "suffix": [
+      ".xml"
+    ],
+    "desc": "XML Document"
+  },
+  {
+    "bufBegin": [
+      "0xff",
+      "0xfe",
+      "0x3c",
+      "0x00",
+      "0x52",
+      "0x00",
+      "0x4f",
+      "0x00",
+      "0x4f",
+      "0x00",
+      "0x54",
+      "0x00",
+      "0x53",
+      "0x00",
+      "0x54",
+      "0x00",
+      "0x55",
+      "0x00",
+      "0x42"
+    ],
+    "suffix": [
+      ".xml"
+    ],
+    "desc": "XML Document(ROOTSTUB)\n        "
+  },
+  {
+    "bufBegin": [
+      "0x3c",
+      "0x21",
+      "0x45",
+      "0x4e",
+      "0x54",
+      "0x49",
+      "0x54"
+    ],
+    "suffix": [
+      ".dtd"
+    ],
+    "desc": "XML DTD"
+  },
+  {
+    "bufBegin": [
+      "0x5a",
+      "0x4f",
+      "0x4f"
+    ],
+    "suffix": [
+      ".zoo"
+    ],
+    "desc": "ZOO Archive File"
+  }
+]
