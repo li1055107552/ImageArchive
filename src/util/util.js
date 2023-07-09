@@ -61,7 +61,7 @@ function getImageSuffix(fileBuffer) {
  * @param {String} filepath - 文件路径
  * @returns {Promise} 返回该文件的md5
  */
-function getFileMD5(filepath,test) {
+function getFileMD5(filepath, test) {
     const fs = require('fs');
     const crypto = require('crypto');
     return new Promise((resolve, reject) => {
@@ -86,17 +86,22 @@ function getFileMD5(filepath,test) {
  */
 function accessingPath(path) {
     const fs = require('fs')
+    const p = require('path')
     if (!fs.existsSync(path)) {
         console.log(`${path} 该路径不存在`);
-        const arr = path.split('/');
+        const arr = path.split(p.sep);
         let dir = arr[0];
-        for (let i = 1; i < arr.length; i++) {
+        let dirCache = {}
+        for (let i = 0; i < arr.length; i++) {
             if (!dirCache[dir] && !fs.existsSync(dir)) {
                 dirCache[dir] = true;
                 fs.mkdirSync(dir);
+                console.log(`${dir} 创建成功`);
             }
-            dir = dir + '/' + arr[i];
+            if (i + 1 < arr.length)
+                dir = dir + '/' + arr[i + 1];
         }
+        return true
     }
     else {
         console.log(`${path} 已存在`)
