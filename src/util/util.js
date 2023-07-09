@@ -99,7 +99,7 @@ function accessingPath(path) {
                 console.log(`${dir} 创建成功`);
             }
             if (i + 1 < arr.length)
-                dir = dir + '/' + arr[i + 1];
+                dir = dir + p.sep + arr[i + 1];
         }
         return true
     }
