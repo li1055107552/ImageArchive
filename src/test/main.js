@@ -104,7 +104,7 @@ function init() {
     util.accessingPath(JSON_Databases)
 
     // 归档目录/JSON数据库/count.js文件，不存在则创建
-    let countFilePath = path.join(JSON_Databases, 'count.js')
+    let countFilePath = path.join(JSON_Databases, 'count.json')
     if (!fs.existsSync(countFilePath)) {
         console.log(`${countFilePath} 不存在`);
         fs.writeFileSync(countFilePath, "{}")
@@ -216,11 +216,14 @@ function archiveHandle(fileJSON) {
         fs.writeFileSync(yyyymmpath, "{}")
     }
 
-    // 拷贝文件到 归档目录/YYYY年/MM月/时间戳-归档名
-    fs.writeFileSync(path.join(fileJSON.archivePath, `${fileJSON.modify}-${fileJSON.archiveName}`), fs.readFileSync(fileJSON.originPath))
+    // 拷贝文件到 归档目录/YYYY年/MM月/时间戳-md5-归档名
+    fs.writeFileSync(path.join(fileJSON.archivePath, `${fileJSON.modify}-${fileJSON.md5}-${fileJSON.archiveName}`), fs.readFileSync(fileJSON.originPath))
 
     // 更新 归档目录/JSON数据库/YYYYMM.json
     fn.updateFileJSON(yyyymmpath, fileJSON)
+
+    // 更新 归档目录/JSON数据库/count.json
+    fn.updateCountJSON(path.join(ARCHIVE_DIR, 'JSON_Databases', 'count.json'), fileJSON)
 
     // 归档完成后的勾子
     // archived(fileJSON)
@@ -242,7 +245,7 @@ async function archived(fileJSON) {
 function main() {
     WORKING_DIR = path.normalize(WORKING_DIR)
     console.log(WORKING_DIR)
-    
+
     init()                  // 初始化
     listfile(WORKING_DIR)   // 遍历整个工作目录，即源资源的存放目录
 
