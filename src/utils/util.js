@@ -9,6 +9,7 @@ function getImageSuffix(fileBuffer) {
     const imageBufferHeaders = [
         { bufBegin: [0xff, 0xd8], bufEnd: [0xff, 0xd9], suffix: '.jpg' },
         { bufBegin: [0xff, 0xd8], bufEnd: [0x15, 0x14], suffix: '.jpg' },
+        { bufBegin: [0xff, 0xd8, 0xff, 0xe1], suffix: '.jpg' },
         { bufBegin: [0x00, 0x00, 0x02, 0x00, 0x00], suffix: '.tga' },
         { bufBegin: [0x00, 0x00, 0x10, 0x00, 0x00], suffix: '.rle' },
         {
@@ -32,6 +33,8 @@ function getImageSuffix(fileBuffer) {
         { bufBegin: [0x46, 0x4f, 0x52, 0x4d], suffix: '.iff' },
         { bufBegin: [0x52, 0x49, 0x46, 0x46], suffix: '.ani' }
     ]
+    // console.log("bufBegin", fileBuffer.slice(0, 6));
+    // console.log("bufEnd", fileBuffer.slice(-6));
     for (const imageBufferHeader of imageBufferHeaders) {
         let isEqual
         // 判断标识头前缀
@@ -80,38 +83,47 @@ function getFileMD5(filepath, test) {
 }
 
 /**
- * @description 尝试访问路径。若路劲不存在，则自动创建，创建成功则返回true；若路劲存在，则直接返回true
- * @param {String} path - 访问路径 
- * @returns Boolean 
+ * @description 传入时间戳差值，返回xx h xx m xx s xxx ms
+ * @param {Number} timeStamp - 时间戳
+ * @returns {String} xx h xx m xx s xxx ms
  */
-function accessingPath(path) {
-    const fs = require('fs')
-    const p = require('path')
-    if (!fs.existsSync(path)) {
-        console.log(`${path} 该路径不存在`);
-        const arr = path.split(p.sep);
-        let dir = arr[0];
-        let dirCache = {}
-        for (let i = 0; i < arr.length; i++) {
-            if (!dirCache[dir] && !fs.existsSync(dir)) {
-                dirCache[dir] = true;
-                fs.mkdirSync(dir);
-                console.log(`${dir} 创建成功`);
-            }
-            if (i + 1 < arr.length)
-                dir = dir + p.sep + arr[i + 1];
-        }
-        return true
+function formatTimeStamp(timeStamp){
+    let d = h = m =s = ms = 0
+    let res = ""
+    
+    function fill(s) {
+        return s < 10 ? "0" + s : s
     }
-    else {
-        console.log(`${path} 已存在`)
-        return true
+    if (timeStamp > 1000 * 60 * 60 * 24) {
+        d = Math.floor(timeStamp / (1000 * 60 * 60 * 24))
+        timeStamp = timeStamp - (1000 * 60 * 60 * 24)
+        res += d > 0 ? d + "天" : ""
     }
+    if (timeStamp > 1000 * 60 * 60) {
+        h = Math.floor(timeStamp / (1000 * 60 * 60))
+        timeStamp = timeStamp - (1000 * 60 * 60)
+        res += h > 0 ? fill(h) + "小时" : ""
+    }
+    if (timeStamp > 1000 * 60) {
+        m = Math.floor(timeStamp / (1000 * 60))
+        timeStamp = timeStamp - (1000 * 60)
+        res += m > 0 ? fill(m) + "分钟" : ""
+    }
+    if (timeStamp > 1000) {
+        s = Math.floor(timeStamp / 1000)
+        timeStamp = timeStamp - 1000
+        res += s > 0 ? fill(s) + "秒" : ""
+    }
+    if (timeStamp > 0) {
+        ms = timeStamp
+        res += ms > 0 ? ms + "毫秒" : ""
+    }
+    return res
 }
 
 
-module.exports = {
+export default {
     getImageSuffix,
     getFileMD5,
-    accessingPath
+    formatTimeStamp
 }

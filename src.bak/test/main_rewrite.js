@@ -3,9 +3,13 @@ const fn = require('../fn/handle')
 const fs = require('fs')
 const path = require('path')
 
-let ignore = [".git", "node_modules", "back", "font"]
-let WORKING_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/img/"
-let ARCHIVE_DIR = "archive_test"
+let ignore = ["Music", "音频", "视频", "压缩包", "分类整理", "$RECYCLE.BIN", "System Volume Information", ".git", "node_modules", "back", "font"]
+// let WORKING_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/img/"
+// let ARCHIVE_DIR = "archive_test"
+
+let WORKING_DIR = "H:/"
+let ARCHIVE_DIR = "G:/图片-视频归档"
+
 let path_arr = []
 let isDelOriginFile = false     // 归档后是否删除源文件
 
@@ -117,23 +121,30 @@ async function listfile(dir) {
     // 读取当前目录下的所有 文件/文件夹 名
     const arr = fs.readdirSync(dir)
 
-    arr.forEach(async element => {
-        // 路径拼接
-        let fullpath = path.join(dir, element)
-        let stats = fs.statSync(fullpath)
-        // 判断拼接后的路径是否为文件夹
-        if (stats.isDirectory()) {
-            // 是文件夹，且不在 ignore 数组中，则把 该文件夹路径 push到 path_arr 中
-            !ignore.includes(element) && path_arr.push(fullpath)
-        }
-        else {
-            // 是文件，则处理文件
-            let file = await fileHandle(fullpath)
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        try {
+            // 路径拼接
+            let fullpath = path.join(dir, element)
+            let stats = fs.statSync(fullpath)
+            // 判断拼接后的路径是否为文件夹
+            if (stats.isDirectory()) {
+                // 是文件夹，且不在 ignore 数组中，则把 该文件夹路径 push到 path_arr 中
+                !ignore.includes(element) && path_arr.push(fullpath)
+            }
+            else {
+                // 是文件，则处理文件
+                let file = await fileHandle(fullpath)
 
-            // 文件归档
-            archiveHandle(file)
+                // 文件归档
+                archiveHandle(file)
+
+            }
+        } catch (error) {
+            continue
         }
-    })
+
+    }
 
     // 判断是否有新的文件夹（递归文件夹，广度优先搜索）
     if (path_arr.length != 0) {
@@ -146,6 +157,16 @@ async function listfile(dir) {
 async function fileHandle(fullpath) {
     let file = {}
 
+    if (RegExp(/已归档 - .+/).test(path.basename(fullpath))) {
+        console.log(`已归档: ${fullpath}`);
+        return file
+    }
+    if (fs.statSync(fullpath).size > 1024 * 1024 * 20) {
+        console.log(`文件过大: ${fullpath}`);
+        return file
+    }
+
+    console.log(fullpath);
     // 根据二进制判断文件后缀名
     let tail = util.getImageSuffix(fs.readFileSync(fullpath))
 
@@ -194,12 +215,26 @@ async function fileHandle(fullpath) {
         return file
     }
 }
-
+archiveHandle()
 // 处理归档
+/**
+ * @description 文件归档，传入 处理后的文件的对象，依据传入的值进行归档
+ * @param {Object} fileJSON 
+ * @param {String} fileJSON.originName - 原命名 
+ * @param {String} fileJSON.archiveName - 现命名（归档命名）
+ * @param {String} fileJSON.originPath - 原路径
+ * @param {String} fileJSON.archivePath - 归档路径
+ * @param {String} fileJSON.lables - 标签
+ * @param {String} fileJSON.md5 - MD5
+ * @param {String} fileJSON.type - 文件类型
+ * @param {String} fileJSON.modify - 时间戳
+ * @param {String} fileJSON.date - 日期，年月
+ * @returns void
+ */
 function archiveHandle(fileJSON) {
 
     if (Object.keys(fileJSON).length == 0) {
-        console.log(`文件不处理`);
+        // console.log(`文件不处理`);
         return ""
     }
 
@@ -216,17 +251,22 @@ function archiveHandle(fileJSON) {
         fs.writeFileSync(yyyymmpath, "{}")
     }
 
-    // 拷贝文件到 归档目录/YYYY年/MM月/时间戳-md5-归档名
-    fs.writeFileSync(path.join(fileJSON.archivePath, `${fileJSON.modify}-${fileJSON.md5}-${fileJSON.archiveName}`), fs.readFileSync(fileJSON.originPath))
+    // 归档文件路径名   `归档目录/YYYY年/MM月/时间戳-[标签]-md5-归档名`
+    let savePath = path.join(fileJSON.archivePath,
+        [fileJSON.modify, `[${fileJSON.lables.join(",")}]`, fileJSON.md5, fileJSON.archiveName].join("-")
+    )
+    if (!fs.existsSync(savePath)) {
+        // 拷贝文件
+        fs.writeFileSync(savePath, fs.readFileSync(fileJSON.originPath))
+        // 更新 归档目录/JSON数据库/YYYYMM.json
+        fn.updateFileJSON(yyyymmpath, fileJSON)
+        // 更新 归档目录/JSON数据库/count.json
+        fn.updateCountJSON(path.join(ARCHIVE_DIR, 'JSON_Databases', 'count.json'), fileJSON)
+    }
 
-    // 更新 归档目录/JSON数据库/YYYYMM.json
-    fn.updateFileJSON(yyyymmpath, fileJSON)
-
-    // 更新 归档目录/JSON数据库/count.json
-    fn.updateCountJSON(path.join(ARCHIVE_DIR, 'JSON_Databases', 'count.json'), fileJSON)
 
     // 归档完成后的勾子
-    // archived(fileJSON)
+    archived(fileJSON)
 }
 
 /**
@@ -234,35 +274,51 @@ function archiveHandle(fileJSON) {
  * @param {Object} fileJSON - 归档文件对象
  */
 async function archived(fileJSON) {
-    console.log('archived start')
+    // console.log('archived start')
+
     // 判断是否删除源文件
-    if (isDelOriginFile == true) {
-        console.log(`删除源文件`);
-    }
-    console.log('archived finish')
+    // if (isDelOriginFile == true) {
+    //     console.log(`删除源文件`);
+    // }
+
+    // 已归档的文件，对源文件的命名进行更改 以便区分 暂不删除源文件
+    let dirName = path.dirname(fileJSON.originPath)
+    let newName = `已归档 - ${fileJSON.originName}`
+    let newPath = path.join(dirName, newName)
+    fs.renameSync(fileJSON.originPath, newPath)
+
+    // console.log('archived finish')
 }
 
-function main() {
+async function main() {
+    let start = Date.now()
     WORKING_DIR = path.normalize(WORKING_DIR)
     console.log(WORKING_DIR)
 
     init()                  // 初始化
-    listfile(WORKING_DIR)   // 遍历整个工作目录，即源资源的存放目录
+    await listfile(WORKING_DIR)   // 遍历整个工作目录，即源资源的存放目录
+
+    console.log(`耗时: `, util.formatTimeStamp(Date.now() - start));
 
     console.log('finish')
 }
 main()
 
 function test() {
-    // let file = fs.readFileSync('E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img\\IMG20210112164421.jpg')
-    // let hex = file.toString('hex')
-    // console.log(hex.slice(0, 10))
-    // console.log(hex.slice(hex.length - 10, hex.length))
-    // console.log(util.getImageSuffix(file));
+    let imgpath = 'E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img\\已归档 - IMG20210112164421.jpg'
 
+    console.log(fs.statSync(imgpath));
     console.log(fs.existsSync("2021/01/"));
     console.log(fs.existsSync(WORKING_DIR));
     console.log(path.sep);
-    util.accessingPath('test')
+
+    let dirname = path.dirname(imgpath)
+    console.log(dirname);
+
+    fs.readdirSync(WORKING_DIR)
+    // fs.linkSync(imgpath, `./testshotcut.jpg`)
+
+    // let f1 = fs.readFileSync('./testshotcut.jpg')
+    // util.accessingPath('test')
 }
 // test()
