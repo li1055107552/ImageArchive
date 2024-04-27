@@ -41,7 +41,10 @@ function init() {
 async function fileHandle(fullpath) {
     
     let myFile = new fileClass()
-
+    if(fileClass.isShotLink(fullpath)){
+        console.log(`快捷方式: ${fullpath}`);
+        return myFile
+    }
     if (fileClass.isArchived(fullpath)) {
         console.log(`已归档: ${fullpath}`);
         return myFile
@@ -140,14 +143,15 @@ function afterArchive(myfile){
     console.log(myfile)
     // 是否删除源文件
     if(DelOriginFile){
-        
+        fs.rmSync(myfile.rawData.filePath)
+        console.log(`已删除源文件: ${myfile.rawData.filePath}`)
     }
     // 是否生成快捷方式
     if(CreateShortcut){
-
+        archive.createShortcuts(myfile.archiveData.filePath, myfile.rawData.filePath + ".lnk")
     }
     // 是否改名
-    if(changeRawName){
+    if(!DelOriginFile && changeRawName){
         // 已归档的文件，对源文件的命名进行更改 以便区分 暂不删除源文件
         let dirName = path.dirname(myfile.rawData.filePath)
         let newName = `已归档 - ${myfile.rawData.fileName}`

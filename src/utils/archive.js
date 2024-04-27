@@ -66,11 +66,12 @@ function copyFile(raw, archive) {
 
 /**
  * @description 获取快捷方式的信息（windows）
- * @param {Path} lnkFilePath 快捷方式绝对路径
+ * @param {path} lnkFilePath 快捷方式绝对路径
  * @returns {Promise}
  */
 function getShortcutsMsg(lnkFilePath) {
-    return new Promise((resolve, reject) => {
+    return process.platform === 'win32' 
+    ? new Promise((resolve, reject) => {
         // 读取.lnk文件
         ws.query(lnkFilePath, (err, shortcut) => {
             if (err) {
@@ -89,17 +90,18 @@ function getShortcutsMsg(lnkFilePath) {
             // console.log('Working Directory:', shortcut.workingDir);
         });
     })
-
+    : Promise.reject("OS is not win32")
 }
 
 /**
  * @description 创建快捷方式（windows）
  * @param {path} targetFilePath 源目标文件路径
- * @param {path} shortcutPath 快捷方式路径(需要带.link)
+ * @param {path} shortcutPath 快捷方式路径(需要带.lnk)
  * @returns {Promise}
  */
 function createShortcuts(targetFilePath, shortcutPath) {
-    return new Promise((resolve, reject) => {
+    return process.platform === 'win32' 
+    ? new Promise((resolve, reject) => {
         ws.create(shortcutPath, {
             target: targetFilePath,
             args: "",
@@ -112,9 +114,10 @@ function createShortcuts(targetFilePath, shortcutPath) {
                 return
             }
             console.log(`Shortcut '${shortcutPath}' created!`);
-            resolve()
+            resolve(true)
         });
     })
+    : Promise.reject("OS is not win32")
 }
 
 export default {

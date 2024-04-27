@@ -1,4 +1,4 @@
-import P from "path"
+import path from "path"
 import fs from "fs"
 import crypto from "crypto"
 import utils from "./util.js"
@@ -92,15 +92,15 @@ class fileClass {
 
     /**
      * @description 初始化一个文件
-     * @param {Path} fullpath 文件路径
+     * @param {path} fullpath 文件路径
      */
     createFile(fullpath) {
 
         this._isInit = true
         // this.rawData.dir = ""                        // 根目录路径(WORKING_DIR)
         this.rawData.filePath = fullpath                // 文件绝对路径
-        this.rawData.fileName = P.basename(fullpath)    // 文件名(含后缀)
-        this.rawData.extName = P.extname(fullpath)      // 后缀名
+        this.rawData.fileName = path.basename(fullpath)    // 文件名(含后缀)
+        this.rawData.extName = path.extname(fullpath)      // 后缀名
 
         // this.archiveData.dir = ""                    // 归档文件夹
         // this.archiveData.filePath = ""               // 文件归档绝对路径
@@ -125,16 +125,33 @@ class fileClass {
 
     /**
      * @description 判断文件是否已归档
-     * @param {Path} fullpath 文件路径
+     * @param {path} fullpath 文件路径
      * @returns Boolean
      */
     static isArchived(fullpath) {
-        return RegExp(/已归档 - .+/).test(P.basename(fullpath))
+        return RegExp(/已归档 - .+/).test(path.basename(fullpath))
+            || RegExp(/[\d^0]{13}-\[.*?\]-[a-f0-9]{32}-.+/).test(path.basename(fullpath))
+    }
+
+    /**
+     * @description 判断文件是否为快捷方式
+     * @param {path} fullpath 文件路径
+     * @returns Boolean
+     */
+    static isShotLink(fullpath){
+        const ext = path.extname(fullpath);
+        if (process.platform === 'win32') {
+          return ext.toLowerCase() === '.lnk';
+        } else if (process.platform === 'darwin') {
+          return fs.readFileSync(fullpath, 'utf8').trim().startsWith('<?xml');
+        }
+        // 其他平台暂不处理
+        return false;
     }
 
     /**
      * @description 判断文件大小是否超过阈值
-     * @param {Path} fullpath 文件路径
+     * @param {path} fullpath 文件路径
      * @returns Boolean
      */
     static isExceedMaxSize(fullpath) {
