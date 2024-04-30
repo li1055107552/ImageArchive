@@ -73,7 +73,7 @@ async function listfile(dir, deep = false, ignore = [], callback = (fullpath, is
     // 判断是否有新的文件夹（递归文件夹，广度优先搜索）
     if (deep && path_arr.length != 0) {
         // 进入到新的文件夹里 重复上述操作
-        listfile(path_arr.shift())
+        listfile(path_arr.shift(), deep, ignore, callback)
     }
 
     return res
@@ -86,6 +86,9 @@ async function listfile(dir, deep = false, ignore = [], callback = (fullpath, is
  * @returns {Array} 经过的各级文件夹名称
  */
 function getChildPath(basePath, targetPath) {
+    basePath = P.normalize(basePath)
+    targetPath = P.normalize(targetPath)
+
     let lables = targetPath.replace(basePath, "").split(P.sep)
     // shift()、pop()有返回值，不能连着写
     lables[0] || lables.shift() // 第一项为空则弹出来（工作目录填写时 末尾不带分隔符时出现）

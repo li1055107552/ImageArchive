@@ -4,11 +4,11 @@ const fs = require('fs')
 const path = require('path')
 
 let ignore = ["Music", "音频", "视频", "压缩包", "分类整理", "$RECYCLE.BIN", "System Volume Information", ".git", "node_modules", "back", "font"]
-// let WORKING_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/img/"
-// let ARCHIVE_DIR = "archive_test"
+let WORKING_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/img/"
+let ARCHIVE_DIR = "archive_test"
 
-let WORKING_DIR = "H:/"
-let ARCHIVE_DIR = "G:/图片-视频归档"
+// let WORKING_DIR = "H:/"
+// let ARCHIVE_DIR = "G:/图片-视频归档"
 
 let path_arr = []
 let isDelOriginFile = false     // 归档后是否删除源文件
@@ -285,7 +285,7 @@ async function main() {
 
     console.log('finish')
 }
-main()
+// main()
 
 function test() {
     let imgpath = 'E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img\\已归档 - IMG20210112164421.jpg'
@@ -346,4 +346,4 @@ async function rename(dir) {
         rename(path_arr.shift())
     }
 }
-// rename(WORKING_DIR)
+rename(WORKING_DIR)

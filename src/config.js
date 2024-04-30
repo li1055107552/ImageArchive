@@ -11,16 +11,21 @@
  */
 const conf = {
     /** 工作目录 */
-    WORKING_DIR: "H:/",
+    // WORKING_DIR: "H:/",
+    WORKING_DIR: "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/img/",
 
     /** 归档目录 */
-    ARCHIVE_DIR: "G:/图片-视频归档",
+    // ARCHIVE_DIR: "G:/图片-视频归档",
+    ARCHIVE_DIR: "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test",
 
     /** 归档后是否删除源文件 */
     DelOriginFile: false,
 
     /** 是否创建快捷方式 */
-    CreateShortcut: true
+    CreateShortcut: true,
+
+    /** 是否改名 */
+    ChangeRawName: false
 }
 
 export default conf

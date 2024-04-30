@@ -10,7 +10,8 @@ let {
     WORKING_DIR,
     ARCHIVE_DIR,
     DelOriginFile,
-    CreateShortcut
+    CreateShortcut,
+    ChangeRawName,
 } = conf
 
 console.log(process.version)
@@ -53,20 +54,21 @@ async function fileHandle(fullpath) {
         console.log(`文件过大: ${fullpath}`);
         return myFile
     }
-    if (myFile.tailName == "") {
+
+    myFile.createFile(fullpath)
+    if (myFile.archiveData.extName == "") {
         // 文件为音频/视频文件
 
         // console.log(fs.statSync(fullpath, {bigint:true}))
         // let file = fs.statSync(fullpath)
         // console.log(file,fullpath)
+
+        /** 判断不出是什么类型的，直接跳过 不做处理 */
+        myFile._isInit = false
         return myFile
     }
 
-    console.log(fullpath);
-
     // 文件为图片，则执行以下操作
-    myFile.createFile(fullpath)
-
     let startDate = new Date(myFile.modify)
     let YYYY = utils.time.getYYYY(startDate)
     let MM = utils.time.getMM(startDate)
@@ -151,7 +153,7 @@ function afterArchive(myfile){
         archive.createShortcuts(myfile.archiveData.filePath, myfile.rawData.filePath + ".lnk")
     }
     // 是否改名
-    if(!DelOriginFile && changeRawName){
+    if(!DelOriginFile && ChangeRawName){
         // 已归档的文件，对源文件的命名进行更改 以便区分 暂不删除源文件
         let dirName = path.dirname(myfile.rawData.filePath)
         let newName = `已归档 - ${myfile.rawData.fileName}`
@@ -165,6 +167,7 @@ async function main() {
     /** 忽略的文件夹 */
     const ignore = ["Music", "音频", "视频", "压缩包", "分类整理", "$RECYCLE.BIN", "System Volume Information", ".git", "node_modules", "back", "font"]
 
+    /** 进行归档的 */
     init()
     let files = folder.listfile(WORKING_DIR, true, ignore, async (fullpath, isDirectory) => {
         if (isDirectory) return null
@@ -174,9 +177,11 @@ async function main() {
         archiveHandle(myfile, afterArchive)
     })
 
+    /** 归档还原 从归档目录+名字还原 || 从Databases+归档目录还原 */
+
 }
 
-// main()
+main()
 // WORKING_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img"
 // ARCHIVE_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\archive_test"
 // fileHandle("E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img\\wmr\\jk\\微信图片_20221214213634.png")
