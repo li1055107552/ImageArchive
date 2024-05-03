@@ -24,7 +24,7 @@ function accessingPath(path) {
         return true
     }
     else {
-        console.log(`${path} 已存在`)
+        // console.log(`${path} 已存在`)
         return true
     }
 }
@@ -37,7 +37,7 @@ function accessingPath(path) {
  * @param {Function} [callback=(fullpath,isDirectory)=>{}] 遍历到文件时触发的回调
  * @returns {Array} 目录下所有文件的绝对路径
  */
-async function listfile(dir, deep = false, ignore = [], callback = (fullpath, isDirectory) => { }) {
+function listfile(dir, deep = false, ignore = [], callback = (fullpath, isDirectory) => { }) {
     /** 返回结果 */
     const res = []
     /** 文件夹路径 */

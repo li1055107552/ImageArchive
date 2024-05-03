@@ -12,7 +12,7 @@
 const conf = {
     /** 工作目录 */
     // WORKING_DIR: "H:/",
-    WORKING_DIR: "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/img/",
+    WORKING_DIR: "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/img",
 
     /** 归档目录 */
     // ARCHIVE_DIR: "G:/图片-视频归档",
