@@ -19,7 +19,7 @@ const conf = {
     ARCHIVE_DIR: "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test",
 
     /** 归档后是否删除源文件 */
-    DelOriginFile: false,
+    DelOriginFile: true,
 
     /** 是否创建快捷方式 */
     CreateShortcut: true,

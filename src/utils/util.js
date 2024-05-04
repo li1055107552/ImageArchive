@@ -1,4 +1,5 @@
 import fs from "fs"
+import crypto from "crypto"
 
 /**
  * @function 判断是否为图片类型，识别图片的后缀名
@@ -65,10 +66,10 @@ function getImageSuffix(fileBuffer) {
  * @param {Number} timeStamp - 时间戳
  * @returns {String} xx h xx m xx s xxx ms
  */
-function formatTimeStamp(timeStamp){
-    let d = h = m =s = ms = 0
+function formatTimeStamp(timeStamp) {
+    let d = h = m = s = ms = 0
     let res = ""
-    
+
     function fill(s) {
         return s < 10 ? "0" + s : s
     }
@@ -189,7 +190,7 @@ function getTimeStamp(filename, fullpath) {
  * @param {Date} date Date对象
  * @returns YYYY
  */
-function getYYYY(date){
+function getYYYY(date) {
     return date.getFullYear().toString()
 }
 /**
@@ -197,8 +198,19 @@ function getYYYY(date){
  * @param {Date} date Date对象
  * @returns MM
  */
-function getMM(date){
-    return((date.getMonth() + 1) < 10 ? "0" : "") + (date.getMonth() + 1).toString()
+function getMM(date) {
+    return ((date.getMonth() + 1) < 10 ? "0" : "") + (date.getMonth() + 1).toString()
+}
+
+/**
+ * @description 计算字符串MD5
+ * @param {String} inputString 字符串
+ * @returns {String} md5
+ */
+function calculateMD5(inputString) {
+    const md5Hash = crypto.createHash('md5');
+    md5Hash.update(inputString);
+    return md5Hash.digest('hex');
 }
 
 const time = {
@@ -216,5 +228,7 @@ export default {
     /** 判断是否为图片类型 */
     getImageSuffix,
     /** 时间相关函数 */
-    time
+    time,
+    /** 计算字符串md5 */
+    calculateMD5
 }

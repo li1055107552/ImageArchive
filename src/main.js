@@ -7,7 +7,7 @@ import {
     fileHandle,
     archiveHandle,
     afterArchive
-} from "./revert/revert.js"
+} from "./archive/archive.js"
 
 let {
     WORKING_DIR,
