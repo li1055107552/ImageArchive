@@ -121,13 +121,13 @@ function import_One_JSON_Databases(jsonfilepath){
 
 function main(){
     // 初始化 创建数据库
-    // init()
+    init()
 
     // 导入所有JSON数据
     import_All_JSON_Databases()
 
     // 导入指定JSON数据
-    import_One_JSON_Databases("E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test/JSON_Databases/201912.json")
+    // import_One_JSON_Databases("E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test/JSON_Databases/201912.json")
 }
 
 main()

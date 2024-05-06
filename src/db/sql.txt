@@ -1,6 +1,5 @@
--- database: E:\_Project\_git仓库\li1055107552-ImageArchive\ImageArchive\archive_test\images.db
 -- database: E:\_Project\_git仓库\li1055107552-ImageArchive\ImageArchive\archive_test\images2.db
-
+-- database: E:\_Project\_git仓库\li1055107552-ImageArchive\ImageArchive\archive_test\images.db
 -- 要运行整个文件，请按窗口右上角的▷按钮。
 
 -- SELECT `id`, `md5`, `fileName_raw`, `lables`, `modify`, `date`, `compressed_md5`;
@@ -32,6 +31,17 @@ FROM images WHERE lables LIKE '%phone%';
 
 -- 查找所有不同的md5
 SELECT DISTINCT md5 FROM images;
+
+-- 返回所有具有重复的值
+SELECT i1.*
+FROM images i1
+INNER JOIN (
+    SELECT md5
+    FROM images
+    GROUP BY md5
+    HAVING COUNT(*) > 1
+) i2 ON i1.md5 = i2.md5;
+
 
 -- 查找所有不同的md5，统计md5出现次数，返回次数>1的，按次数升序返回
 SELECT md5, COUNT(md5) AS occurrences

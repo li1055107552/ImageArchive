@@ -116,7 +116,7 @@ async function main() {
     // archiveStart()
 
     /** 归档还原 从归档目录+名字还原 || 从Databases+归档目录还原 */
-    // revertStart()
+    revertStart()
 
 }
 
