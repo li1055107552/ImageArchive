@@ -43,7 +43,8 @@ function updateFileJSON(yyyymmpath, fileJSON) {
 function updateCountJSON(countpath, fileJSON) {
     let count = JSON.parse(fs.readFileSync(countpath, 'utf8'))
     if (count.hasOwnProperty(fileJSON.date)) {
-        count[fileJSON.date].push(fileJSON.md5)
+        !count[fileJSON.date].includes(fileJSON.md5)
+        && count[fileJSON.date].push(fileJSON.md5)
     }
     else {
         count[fileJSON.date] = [fileJSON.md5]

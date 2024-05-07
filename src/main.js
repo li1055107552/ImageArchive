@@ -16,6 +16,34 @@ let {
 
 console.log(process.version)
 
+/**
+ * @description 读取所有json文件(除count.json), 得到每个md下的 每一个数组对象
+ * @param {function} handle 处理每一个对象的函数
+ */
+function readJSON(handle){
+    const JSON_Databases = path.join(ARCHIVE_DIR, "JSON_Databases")
+    let fileList = folder.listfile(JSON_Databases, true, ignore)
+    console.log(fileList)
+
+    fileList.pop() // 把count.js剔除
+    for (let i = 0; i < fileList.length; i++) {
+        // JSON文件的路径
+        const filepath = fileList[i];
+        let obj = JSON.parse(fs.readFileSync(filepath))
+
+        // 该JSON文件包含的所有md5字段
+        for (const md5 in obj) {
+
+            let files = obj[md5]
+            // console.log(files)
+            // 同个md5下的所有item  obj[md5]是一个对象数组
+            for (const item of files) {
+                handle(item)
+            }
+        }
+    }
+}
+
 /** 项目初始化 */
 function init() {
     // 归档目录，不存在则创建
@@ -47,64 +75,34 @@ function archiveStart() {
 
 /** 归档还原 */
 function revertStart() {
-    const JSON_Databases = path.join(ARCHIVE_DIR, "JSON_Databases")
-    let fileList = folder.listfile(JSON_Databases, true, ignore,
-        // async (fullpath, isDirectory) => {
-        //     if (isDirectory) return null
-        //     // 处理文件，得到文件对象
-        //     const myfile = await fileHandle(fullpath)
-        //     // 将文件对象进行归档
-        //     archiveHandle(myfile, afterArchive)
-        // }
-    )
-    console.log(fileList)
-    const data = new Map()
 
-    fileList.pop() // 把count.js剔除
-    for (let i = 0; i < fileList.length; i++) {
-        // JSON文件的路径
-        const filepath = fileList[i];
-        let obj = JSON.parse(fs.readFileSync(filepath))
-
-        // 该JSON文件包含的所有md5字段
-        for (const md5 in obj) {
-
-            let files = obj[md5]
-            // console.log(files)
-            // 同个md5下的所有item  obj[md5]是一个对象数组
-            for (const item of files) {
-
-                // console.log(item)
-
-                // 归档文件存在 && 回档文件夹存在
-                if (fs.existsSync(item.archiveData.filePath)) {
-    
-                    let index = 2
-                    let dir = path.join(WORKING_DIR, ...item.lables)
-                    let ext = item.rawData.extName
-                    let name = path.basename(item.rawData.fileName).replace(ext,"")
-                    console.log(dir)
-                    folder.accessingPath(dir)
-                    let save_filePath = path.join(dir, name + ext)
-                    while(fs.existsSync(save_filePath)){
-                        save_filePath = path.join(dir, name + `(${index++})` + ext)
-                    }
-                    archive.copyFile(item.archiveData.filePath, save_filePath)
-                    console.log("revert: ", item.archiveData.filePath, "--->", save_filePath)
-                }
-                continue
-            }
-
-            // if(data.has(md5)){
-            //     data.set(md5, data.get(md5).push(detail))
-            // } else {
-            //     data.set(md5, detail)
-            // }
+    readJSON((item) => {
+        let index = 2
+        let dir = path.join(WORKING_DIR, ...item.lables)
+        let ext = item.rawData.extName
+        let name = path.basename(item.rawData.fileName).replace(ext,"")
+        console.log(dir)
+        folder.accessingPath(dir)
+        let save_filePath = path.join(dir, name + ext)
+        while(fs.existsSync(save_filePath)){
+            save_filePath = path.join(dir, name + `(${index++})` + ext)
         }
-    }
-    console.log(data)
-
+        archive.copyFile(item.archiveData.filePath, save_filePath)
+        console.log("revert: ", item.archiveData.filePath, "--->", save_filePath)
+    })
+    
     console.log('finish')
+}
+
+function revertShotLink(){
+    readJSON((item) => {
+        if (fs.existsSync(item.archiveData.filePath)) {
+            let dir = path.join(WORKING_DIR, ...item.lables)
+            folder.accessingPath(dir)
+            let save_filePath = path.join(dir, item.rawData.fileName + '.lnk')
+            archive.createShortcuts(item.archiveData.filePath, save_filePath)
+        }
+    })
 }
 
 async function main() {
@@ -116,8 +114,10 @@ async function main() {
     // archiveStart()
 
     /** 归档还原 从归档目录+名字还原 || 从Databases+归档目录还原 */
-    revertStart()
+    // revertStart()
 
+    /** 从归档还原出所有快捷方式 */
+    revertShotLink()
 }
 
 main()

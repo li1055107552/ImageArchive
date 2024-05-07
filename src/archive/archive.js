@@ -64,7 +64,7 @@ async function fileHandle(fullpath) {
     /** 时间戳-[标签]-md5-归档名 */
     myFile.archiveData.fileName = [
         myFile.modify,
-        `[${myFile.lables.join(",")}]`, // [标签1,标签2,标签3]
+        // `[${myFile.lables.join(",")}]`, // [标签1,标签2,标签3]   // 这个注释掉，即可实现归档目录下的去重
         myFile.md5,
         myFile.rawData.fileName.replace(myFile.rawData.extName, myFile.archiveData.extName)
     ].join("-")
