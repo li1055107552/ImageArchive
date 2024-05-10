@@ -1,4 +1,6 @@
 node_modules
+dist
+output
+archive_test
 img
 *.mp4
-archive_test

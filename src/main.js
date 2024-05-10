@@ -1,13 +1,22 @@
 import fs from 'fs'
 import path from 'path'
 import conf from './config.js'
-import folder from './utils/folder.js'
-import archive from './utils/archive.js'
-import {
-    fileHandle,
-    archiveHandle,
-    afterArchive
-} from "./archive/archive.js"
+// import folder from './utils/folder.js'
+// import archive from './utils/archive.js'
+
+// import ws from "windows-shortcuts"
+// import * as ws from "./utils/windows-shortcuts.js"
+import ws from "./utils/windows-shortcuts.js"
+
+console.log(ws)
+
+// import {
+//     fileHandle,
+//     archiveHandle,
+//     afterArchive
+// } from "./archive/archive.js"
+
+// const __dirname = path.resolve();
 
 let {
     WORKING_DIR,
@@ -117,10 +126,48 @@ async function main() {
     // revertStart()
 
     /** 从归档还原出所有快捷方式 */
-    revertShotLink()
+    // revertShotLink()
+
+    test()
 }
 
 main()
+function test(){
+    let textpath = path.join(path.resolve(), "./test.txt")
+    fs.appendFileSync(textpath, "test" + Date.now() + "\n", "utf-8")
+    let targetFilePath = textpath
+    let shortcutPath = targetFilePath + ".lnk"
+
+    ws.query(shortcutPath, (err, shortcut) => {
+        if (err) {
+            console.error('Error:', err);
+        }
+
+        // 输出解析结果
+        console.log("$$$",shortcut);
+        // console.log('Target:', shortcut.target);
+        // console.log('Arguments:', shortcut.args);
+        // console.log('Description:', shortcut.desc);
+        // console.log('Icon Path:', shortcut.icon);
+        // console.log('Working Directory:', shortcut.workingDir);
+    });
+
+    // ws.create(shortcutPath, {
+    //     target: targetFilePath,
+    //     args: "",
+    //     runStyle: 1,
+    //     desc: "123"
+    // }, function (err) {
+    //     if (err) {
+    //         console.log(err)
+    //         return
+    //     }
+    //     console.log(`Shortcut '${shortcutPath}' created!`);
+    // });
+    setTimeout(() => {
+        
+    }, 3000);
+}
 // WORKING_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img"
 // ARCHIVE_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\archive_test"
 // fileHandle("E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img\\wmr\\jk\\微信图片_20221214213634.png")

@@ -82,4 +82,6 @@ async function main() {
     old_to_new()
 }
 
-main()
+// main()
+
+folder.accessingPath("C://snapshot//ImageArchive//node_modules//windows-shortcuts//lib//shortcut")
