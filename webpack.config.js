@@ -38,16 +38,21 @@ export default {
     },
     target: "node",
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            // dry: true,
+            cleanStaleWebpackAssets: true,
+            protectWebpackAssets: false,
+            cleanAfterEveryBuildPatterns: ['*.txt'],
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {
                     from: './**/*.exe', // 输入路径
                     to: 'win-tools/[name].exe', // 输出路径，相对于输出目录
                     globOptions: {
-                        ignore: [
-                            "./dist/**",
-                        ]
+                        dot: true,
+                        gitignore: true,
+                        ignore: ["**/dist/**"],
                     }
                 }
             ],
