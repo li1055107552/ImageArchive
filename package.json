@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "babel": "npx babel src --out-dir tmp",
-    "build": "npx webpack && pkg ."
+    "build": "npx webpack --mode production && pkg .",
+    "start": " --mode development"
   },
   "dependencies": {
     "sqlite3": "^5.1.7",
@@ -29,6 +30,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.24.1",
     "@babel/preset-env": "^7.24.5",
     "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^12.0.2",
     "file-loader": "^6.2.0",
     "webpack": "^5.91.0",

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename);
 
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 
@@ -37,6 +38,7 @@ export default {
     },
     target: "node",
     plugins: [
+        new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
                 {
@@ -44,7 +46,7 @@ export default {
                     to: 'win-tools/[name].exe', // 输出路径，相对于输出目录
                     globOptions: {
                         ignore: [
-                            "./output/**",
+                            "./dist/**",
                         ]
                     }
                 }

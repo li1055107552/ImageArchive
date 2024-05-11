@@ -6,9 +6,10 @@ import conf from './config.js'
 
 // import ws from "windows-shortcuts"
 // import * as ws from "./utils/windows-shortcuts.js"
-import ws from "./utils/windows-shortcuts.js"
+// import ws from "./utils/windows-shortcuts.js"
+import { openDialog } from './utils/dialog.js'
 
-console.log(ws)
+// console.log(ws)
 
 // import {
 //     fileHandle,
@@ -29,7 +30,7 @@ console.log(process.version)
  * @description 读取所有json文件(除count.json), 得到每个md下的 每一个数组对象
  * @param {function} handle 处理每一个对象的函数
  */
-function readJSON(handle){
+function readJSON(handle) {
     const JSON_Databases = path.join(ARCHIVE_DIR, "JSON_Databases")
     let fileList = folder.listfile(JSON_Databases, true, ignore)
     console.log(fileList)
@@ -89,21 +90,21 @@ function revertStart() {
         let index = 2
         let dir = path.join(WORKING_DIR, ...item.lables)
         let ext = item.rawData.extName
-        let name = path.basename(item.rawData.fileName).replace(ext,"")
+        let name = path.basename(item.rawData.fileName).replace(ext, "")
         console.log(dir)
         folder.accessingPath(dir)
         let save_filePath = path.join(dir, name + ext)
-        while(fs.existsSync(save_filePath)){
+        while (fs.existsSync(save_filePath)) {
             save_filePath = path.join(dir, name + `(${index++})` + ext)
         }
         archive.copyFile(item.archiveData.filePath, save_filePath)
         console.log("revert: ", item.archiveData.filePath, "--->", save_filePath)
     })
-    
+
     console.log('finish')
 }
 
-function revertShotLink(){
+function revertShotLink() {
     readJSON((item) => {
         if (fs.existsSync(item.archiveData.filePath)) {
             let dir = path.join(WORKING_DIR, ...item.lables)
@@ -128,15 +129,28 @@ async function main() {
     /** 从归档还原出所有快捷方式 */
     // revertShotLink()
 
-    test()
+    await test_dialog()
 }
 
 main()
-function test(){
+function test_ws() {
     let textpath = path.join(path.resolve(), "./test.txt")
     fs.appendFileSync(textpath, "test" + Date.now() + "\n", "utf-8")
     let targetFilePath = textpath
     let shortcutPath = targetFilePath + ".lnk"
+
+    ws.create(shortcutPath, {
+        target: targetFilePath,
+        args: "",
+        runStyle: 1,
+        desc: ""
+    }, function (err) {
+        if (err) {
+            console.log(err)
+            return
+        }
+        console.log(`Shortcut '${shortcutPath}' created!`);
+    });
 
     ws.query(shortcutPath, (err, shortcut) => {
         if (err) {
@@ -144,7 +158,7 @@ function test(){
         }
 
         // 输出解析结果
-        console.log("$$$",shortcut);
+        console.log("$$$", shortcut);
         // console.log('Target:', shortcut.target);
         // console.log('Arguments:', shortcut.args);
         // console.log('Description:', shortcut.desc);
@@ -152,21 +166,15 @@ function test(){
         // console.log('Working Directory:', shortcut.workingDir);
     });
 
-    // ws.create(shortcutPath, {
-    //     target: targetFilePath,
-    //     args: "",
-    //     runStyle: 1,
-    //     desc: "123"
-    // }, function (err) {
-    //     if (err) {
-    //         console.log(err)
-    //         return
-    //     }
-    //     console.log(`Shortcut '${shortcutPath}' created!`);
-    // });
+
     setTimeout(() => {
-        
+
     }, 3000);
+}
+async function test_dialog() {
+    let a = await openDialog()
+    console.log(a)
+    console.log('finish')
 }
 // WORKING_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img"
 // ARCHIVE_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\archive_test"
