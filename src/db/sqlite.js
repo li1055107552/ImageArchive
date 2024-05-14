@@ -1,12 +1,12 @@
 import fs from "fs"
 import crypto from "crypto"
-import sqlite3 from"sqlite3"
+import sqlite3 from "sqlite3"
 import folder from "../utils/folder.js";
 
 const sqlite = sqlite3.verbose();
 
-const ARCHIVE_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test"
-function init() {
+// const ARCHIVE_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test"
+export function init(ARCHIVE_DIR) {
 
     // 连接数据库
     const db = new sqlite.Database(`${ARCHIVE_DIR}/images.db`);
@@ -31,7 +31,7 @@ function init() {
             compressed_md5 TEXT UNIQUE
         )`);
 
-            // 为 date、md5 和 lables 字段创建索引
+        // 为 date、md5 和 lables 字段创建索引
         db.run(`CREATE INDEX IF NOT EXISTS idx_date ON images (date)`);
         db.run(`CREATE INDEX IF NOT EXISTS idx_md5 ON images (md5)`);
         db.run(`CREATE INDEX IF NOT EXISTS idx_lables ON images (lables)`);
@@ -43,53 +43,16 @@ function init() {
 
 }
 
-function import_All_JSON_Databases(){
-        // 连接数据库
-        const db = new sqlite.Database(`${ARCHIVE_DIR}/images.db`);
-
-        const jsonFiles = folder.listfile(`${ARCHIVE_DIR}/JSON_Databases/`)
-        jsonFiles.pop()
-
-        db.serialize(() => {
-            for (let i = 0; i < jsonFiles.length; i++) {
-                const jsonfilepath = jsonFiles[i];
-                const jsonData = JSON.parse(fs.readFileSync(jsonfilepath))// 读取 JSON 数据并插入数据库
-                for (const md5 in jsonData) {
-                    if (jsonData.hasOwnProperty(md5)) {
-                        const imgList = jsonData[md5];
-                        imgList.forEach(imgInfo => {
-
-                            const lables = imgInfo.lables.join(',');
-
-                            const infoString = JSON.stringify(imgInfo);
-                            const compressed_md5 = crypto.createHash('md5').update(infoString).digest('hex');
-                            db.run(`INSERT OR IGNORE INTO images (
-                                md5, 
-                                dir_raw, filePath_raw, fileName_raw, extName_raw,
-                                dir_archive, filePath_archive, fileName_archive, extName_archive,
-                                lables, modify, date, type, compressed_md5)
-                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-                                [imgInfo.md5, imgInfo.rawData.dir, imgInfo.rawData.filePath, imgInfo.rawData.fileName,
-                                imgInfo.rawData.extName, imgInfo.archiveData.dir, imgInfo.archiveData.filePath,
-                                imgInfo.archiveData.fileName, imgInfo.archiveData.extName, lables,
-                                imgInfo.modify, imgInfo.date, imgInfo.type, compressed_md5]);
-                        });
-                    }
-                }
-            }
-            
-        });
-    
-        // 关闭数据库连接
-        db.close();
-}
-
-function import_One_JSON_Databases(jsonfilepath){
+export function import_All_JSON_Databases(ARCHIVE_DIR) {
     // 连接数据库
     const db = new sqlite.Database(`${ARCHIVE_DIR}/images.db`);
 
+    const jsonFiles = folder.listfile(`${ARCHIVE_DIR}/JSON_Databases/`)
+    jsonFiles.pop()
+
     db.serialize(() => {
-        
+        for (let i = 0; i < jsonFiles.length; i++) {
+            const jsonfilepath = jsonFiles[i];
             const jsonData = JSON.parse(fs.readFileSync(jsonfilepath))// 读取 JSON 数据并插入数据库
             for (const md5 in jsonData) {
                 if (jsonData.hasOwnProperty(md5)) {
@@ -101,33 +64,90 @@ function import_One_JSON_Databases(jsonfilepath){
                         const infoString = JSON.stringify(imgInfo);
                         const compressed_md5 = crypto.createHash('md5').update(infoString).digest('hex');
                         db.run(`INSERT OR IGNORE INTO images (
-                            md5, 
-                            dir_raw, filePath_raw, fileName_raw, extName_raw,
-                            dir_archive, filePath_archive, fileName_archive, extName_archive,
-                            lables, modify, date, type, compressed_md5)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                                md5, 
+                                dir_raw, filePath_raw, fileName_raw, extName_raw,
+                                dir_archive, filePath_archive, fileName_archive, extName_archive,
+                                lables, modify, date, type, compressed_md5)
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                             [imgInfo.md5, imgInfo.rawData.dir, imgInfo.rawData.filePath, imgInfo.rawData.fileName,
                             imgInfo.rawData.extName, imgInfo.archiveData.dir, imgInfo.archiveData.filePath,
                             imgInfo.archiveData.fileName, imgInfo.archiveData.extName, lables,
                             imgInfo.modify, imgInfo.date, imgInfo.type, compressed_md5]);
                     });
                 }
-            }        
+            }
+        }
+
     });
 
     // 关闭数据库连接
     db.close();
 }
 
-function main(){
-    // 初始化 创建数据库
-    init()
+export function import_One_JSON_Databases(ARCHIVE_DIR, jsonfilepath) {
+    // 连接数据库
+    const db = new sqlite.Database(`${ARCHIVE_DIR}/images.db`);
 
-    // 导入所有JSON数据
-    import_All_JSON_Databases()
+    db.serialize(() => {
 
-    // 导入指定JSON数据
-    // import_One_JSON_Databases("E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test/JSON_Databases/201912.json")
+        const jsonData = JSON.parse(fs.readFileSync(jsonfilepath))// 读取 JSON 数据并插入数据库
+        for (const md5 in jsonData) {
+            if (jsonData.hasOwnProperty(md5)) {
+                const imgList = jsonData[md5];
+                imgList.forEach(imgInfo => {
+
+                    const lables = imgInfo.lables.join(',');
+
+                    const infoString = JSON.stringify(imgInfo);
+                    const compressed_md5 = crypto.createHash('md5').update(infoString).digest('hex');
+                    db.run(`INSERT OR IGNORE INTO images (
+                            md5, 
+                            dir_raw, filePath_raw, fileName_raw, extName_raw,
+                            dir_archive, filePath_archive, fileName_archive, extName_archive,
+                            lables, modify, date, type, compressed_md5)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                        [imgInfo.md5, imgInfo.rawData.dir, imgInfo.rawData.filePath, imgInfo.rawData.fileName,
+                        imgInfo.rawData.extName, imgInfo.archiveData.dir, imgInfo.archiveData.filePath,
+                        imgInfo.archiveData.fileName, imgInfo.archiveData.extName, lables,
+                        imgInfo.modify, imgInfo.date, imgInfo.type, compressed_md5]);
+                });
+            }
+        }
+    });
+
+    // 关闭数据库连接
+    db.close();
 }
 
-main()
+export default class Sqlite {
+    constructor(archive_dir = "") {
+        this.archive_dir = archive_dir
+    }
+    getConnection(archive_dir = "") {
+        if (archive_dir != "") {
+            this.archive_dir = archive_dir
+        }
+        this.db = new sqlite.Database(`${this.archive_dir}/images.db`);
+        return this.db
+    }
+
+    /**
+     * 
+     * @param {fileClass} imgInfo 
+     */
+    insertOne(imgInfo) {
+        this.db.run(`INSERT OR IGNORE INTO images (
+            md5, 
+            dir_raw, filePath_raw, fileName_raw, extName_raw,
+            dir_archive, filePath_archive, fileName_archive, extName_archive,
+            lables, modify, date, type, compressed_md5)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            [imgInfo.md5, imgInfo.rawData.dir, imgInfo.rawData.filePath, imgInfo.rawData.fileName,
+            imgInfo.rawData.extName, imgInfo.archiveData.dir, imgInfo.archiveData.filePath,
+            imgInfo.archiveData.fileName, imgInfo.archiveData.extName, lables,
+            imgInfo.modify, imgInfo.date, imgInfo.type, compressed_md5]
+        )
+        
+    }
+
+}
