@@ -1,5 +1,6 @@
 import fs from "fs"
 import P from "path"
+import { openDialog } from "../tools/dialog/dialog";
 
 /**
  * @description 尝试访问路径。若路劲不存在，则自动创建，创建成功则返回true；若路劲存在，则直接返回true
@@ -100,3 +101,13 @@ function getChildPath(basePath, targetPath) {
 }
 
 
+export default {
+    /** 尝试访问路径，不存在则自动创建 */
+    accessingPath,
+    /** 遍历目录下所有的文件 */
+    listfile,
+    /** 获取文件经过的各级文件夹 */
+    getChildPath,
+    /** 打开文件对话框 */
+    openDialog
+}
