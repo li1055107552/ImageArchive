@@ -1,3 +1,11 @@
+import path from "path"
+import file from "../file/file.js"
+import fileClass from "../file/fileClass.js";
+import folder from "../utils/folder.js";
+import time from "../utils/time.js"
+import conf from "../config.js"
+const {WORKING_DIR, ARCHIVE_DIR} = conf
+
 /**
  * @description 处理文件
  * @param {path} fullpath 文件绝对路径
@@ -6,11 +14,11 @@
 async function fileHandle(fullpath) {
 
     let myFile = new fileClass()
-    if (fileClass.isShotLink(fullpath)) {
+    if (file.isShotLink(fullpath)) {
         console.log(`快捷方式: ${fullpath}`);
         return myFile
     }
-    if (fileClass.isArchived(fullpath)) {
+    if (file.isArchived(fullpath)) {
         console.log(`已归档: ${fullpath}`);
         return myFile
     }
@@ -23,10 +31,6 @@ async function fileHandle(fullpath) {
     if (myFile.archiveData.extName == "") {
         // 文件为音频/视频文件
 
-        // console.log(fs.statSync(fullpath, {bigint:true}))
-        // let file = fs.statSync(fullpath)
-        // console.log(file,fullpath)
-
         /** 判断不出是什么类型的，直接跳过 不做处理 */
         myFile._isInit = false
         return myFile
@@ -34,15 +38,15 @@ async function fileHandle(fullpath) {
 
     // 文件为图片，则执行以下操作
     let startDate = new Date(myFile.modify)
-    let YYYY = utils.time.getYYYY(startDate)
-    let MM = utils.time.getMM(startDate)
+    let YYYY = time.getYYYY(startDate)
+    let MM = time.getMM(startDate)
 
     myFile.rawData.dir = WORKING_DIR
     myFile.archiveData.dir = path.join(ARCHIVE_DIR, YYYY, MM)
     // myFile.archiveData.filePath = ""   // 文件归档绝对路径
     // myFile.archiveData.fileName = ""   // 文件名(含后缀)
     myFile.labels = folder.getChildPath(WORKING_DIR, fullpath)
-    myFile.md5 = await fileClass.getFileMD5(fullpath)
+    myFile.md5 = await file.getFileMD5(fullpath)
     myFile.type = `Image`
     myFile.date = YYYY + MM
 

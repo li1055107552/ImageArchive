@@ -4,7 +4,7 @@ import path from 'path';
 
 const dialogexe = path.join(process.cwd(), "src", "tools", "dialog", "dialog.exe")
 
-export function openDialog(){
+export default function openDialog(){
 
     return new Promise((resolve, reject) => {
         const childProcess = spawn(dialogexe)

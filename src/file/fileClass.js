@@ -1,3 +1,7 @@
+import fs from "fs"
+import path from "path"
+import file from "./file.js"
+import time from "../utils/time.js"
 
 /**
  * @class
@@ -70,9 +74,9 @@ class fileClass {
         // this.archiveData.dir = ""                    // 归档文件夹
         // this.archiveData.filePath = ""               // 文件归档绝对路径
         // this.archiveData.fileName = ""               // 文件名(含后缀)
-        this.archiveData.extName = utils.getImageSuffix(fs.readFileSync(fullpath))  // 后缀名(根据二进制判断的)
+        this.archiveData.extName = file.getImageSuffix(fs.readFileSync(fullpath))  // 后缀名(根据二进制判断的)
 
-        this.modify = new Date(utils.time.getTimeStamp(this.rawData.fileName, fullpath)).getTime()        // 最早的时间
+        this.modify = new Date(time.getTimeStamp(this.rawData.fileName, fullpath)).getTime()        // 最早的时间
         // this.labels = []                             // 文件标签(绝对路径 - 根目录路径)
         // this.md5 = ""                                // 文件md5
         // this.type = ""                               // 文件类型

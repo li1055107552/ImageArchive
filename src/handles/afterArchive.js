@@ -1,3 +1,6 @@
+import fs from "fs"
+import path from "path"
+import file from "../file/file.js"
 
 /**
  * @description 文件归档后的 后处理
@@ -12,7 +15,7 @@ function afterArchive(myfile) {
     }
     // 是否生成快捷方式
     if (CreateShortcut) {
-        archive.createShortcuts(myfile.archiveData.filePath, myfile.rawData.filePath + ".lnk")
+        file.createShortcuts(myfile.archiveData.filePath, myfile.rawData.filePath + ".lnk")
     }
     // 是否改名
     if (!DelOriginFile && ChangeRawName) {

@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import folder from '../../utils/folder.js'
 
 /**
  * @description 读取所有json文件(除count.json), 得到每个md下的 每一个数组对象

@@ -1,4 +1,5 @@
-
+import path from "path"
+import folder from "../utils/folder.js"
 
 /** 项目初始化 */
 function init() {
@@ -16,6 +17,9 @@ function init() {
         fs.writeFileSync(countFilePath, "{}")
         console.log(`${countFilePath} 创建成功`);
     }
+
+    // 初始化数据库
+
 }
 
 export default init

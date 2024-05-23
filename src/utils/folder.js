@@ -1,6 +1,6 @@
 import fs from "fs"
 import P from "path"
-import { openDialog } from "../tools/dialog/dialog";
+import openDialog from "../tools/dialog/dialog.js";
 
 /**
  * @description 尝试访问路径。若路劲不存在，则自动创建，创建成功则返回true；若路劲存在，则直接返回true
@@ -32,7 +32,7 @@ function accessingPath(path) {
 
 /**
  * @description 遍历目录下所有的文件
- * @param {Path} dir 文件夹路径
+ * @param {path} dir 文件夹路径
  * @param {Boolean} [deep=false] 是否深度遍历，默认 false
  * @param {Array} [ignore=[]] 忽略的[文件/]文件夹
  * @param {Function} [callback=(fullpath,isDirectory)=>{}] 遍历到文件时触发的回调
@@ -85,8 +85,8 @@ function listfile(dir, deep = false, ignore = [], callback = (fullpath, isDirect
 
 /**
  * @description 获取文件经过的各级文件夹
- * @param {Path} basePath 根路径
- * @param {Path} targetPath 文件路径
+ * @param {path} basePath 根路径
+ * @param {path} targetPath 文件路径
  * @returns {Array} 经过的各级文件夹名称
  */
 function getChildPath(basePath, targetPath) {

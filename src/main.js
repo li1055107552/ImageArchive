@@ -1,78 +1,27 @@
 import fs from 'fs'
 import path from 'path'
-import conf from './config.js'
-import folder from './utils/folder.js'
-// import archive from './utils/archive.js'
-
-// import ws from "windows-shortcuts"
-// import * as ws from "./utils/windows-shortcuts.js"
-import ws from "./utils/windows-shortcuts.js"
-import { openDialog } from './utils/dialog.js'
-
 import readline from "readline"
 
-// console.log(ws)
+// import {WORKING_DIR, ARCHIVE_DIR} from './config.js'
+import conf from './config.js'
 
-import {
-    fileHandle,
-    archiveHandle,
-    afterArchive
-} from "./archive/archive.js"
+import folder from './utils/folder.js'
+import json from "./archive/json/json.js"
 
+import init from "./handles/init.js"
+import fileHandle from "./handles/fileHandle.js"
+import archiveHandle from "./handles/archiveHandle.js"
+import afterArchive from "./handles/afterArchive.js"
+
+import ws from "./tools/shortcut/windows-shortcuts.js"
+
+const { readJSON } = json
 // const __dirname = path.resolve();
 
-let {
-    WORKING_DIR,
-    ARCHIVE_DIR,
-} = conf
+let { WORKING_DIR, ARCHIVE_DIR } = conf
 
 console.log(process.version)
 
-/**
- * @description 读取所有json文件(除count.json), 得到每个md下的 每一个数组对象
- * @param {function} handle 处理每一个对象的函数
- */
-function readJSON(handle) {
-    const JSON_Databases = path.join(ARCHIVE_DIR, "JSON_Databases")
-    let fileList = folder.listfile(JSON_Databases, true, ignore)
-    console.log(fileList)
-
-    fileList.pop() // 把count.js剔除
-    for (let i = 0; i < fileList.length; i++) {
-        // JSON文件的路径
-        const filepath = fileList[i];
-        let obj = JSON.parse(fs.readFileSync(filepath))
-
-        // 该JSON文件包含的所有md5字段
-        for (const md5 in obj) {
-
-            let files = obj[md5]
-            // console.log(files)
-            // 同个md5下的所有item  obj[md5]是一个对象数组
-            for (const item of files) {
-                handle(item)
-            }
-        }
-    }
-}
-
-/** 项目初始化 */
-function init() {
-    // 归档目录，不存在则创建
-    folder.accessingPath(ARCHIVE_DIR)
-
-    // 归档目录/JSON数据库/ 不存在则创建
-    let JSON_Databases = path.join(ARCHIVE_DIR, 'JSON_Databases')
-    folder.accessingPath(JSON_Databases)
-
-    // 归档目录/JSON数据库/count.js文件，不存在则创建
-    let countFilePath = path.join(JSON_Databases, 'count.json')
-    if (!fs.existsSync(countFilePath)) {
-        console.log(`${countFilePath} 不存在`);
-        fs.writeFileSync(countFilePath, "{}")
-        console.log(`${countFilePath} 创建成功`);
-    }
-}
 
 /** 进行归档的 */
 async function archiveStart() {
@@ -86,7 +35,7 @@ async function archiveStart() {
         // // 将文件对象进行归档
         // archiveHandle(myfile, afterArchive)
     })
-    console.log("文件数量：",WORKING_DIR_FILES.length)
+    console.log("文件数量：", WORKING_DIR_FILES.length)
     console.log(Date.now() - t1 + "ms")
     const myfile = await fileHandle(WORKING_DIR_FILES[0])
     archiveHandle(myfile)
@@ -131,7 +80,7 @@ async function main() {
 
     /** 进行归档的 */
     // init()
-    archiveStart()
+    // archiveStart()
 
     /** 归档还原 从归档目录+名字还原 || 从Databases+归档目录还原 */
     // revertStart()
@@ -139,7 +88,7 @@ async function main() {
     /** 从归档还原出所有快捷方式 */
     // revertShotLink()
 
-    // await test_dialog()
+    await test_dialog()
     // test_stdio()
 }
 
@@ -183,7 +132,7 @@ function test_ws() {
     }, 3000);
 }
 async function test_dialog() {
-    let a = await openDialog()
+    let a = await folder.openDialog()
     console.log(a)
     console.log('finish')
 }
@@ -197,7 +146,7 @@ async function test_stdio() {
 
     rl.setPrompt("请选择归档目录：")
     rl.prompt()
-    let archive_dir = await openDialog()
+    let archive_dir = await folder.openDialog()
 
     rl.write(archive_dir)
 

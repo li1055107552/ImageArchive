@@ -1,4 +1,10 @@
+import fs from "fs"
 import path from "path"
+import crypto from "crypto"
+import sqlite3 from "sqlite3"
+import folder from "../utils/folder.js";
+
+const sqlite = sqlite3.verbose();
 
 /**
  * @description 判断文件是否已归档

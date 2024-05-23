@@ -5,7 +5,7 @@ import pathUtils from "path"
 import { execFile } from "child_process"
 
 
-const shortcutexe = pathUtils.join(process.cwd(), "src", "win-tools", "Shortcut.exe")
+const shortcutexe = pathUtils.join(process.cwd(), "src", "tools", "shortcut","Shortcut.exe")
 console.log(shortcutexe)
 const ws = {}
 

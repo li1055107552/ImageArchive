@@ -2,7 +2,8 @@ import fs from "fs"
 import path from "path"
 import crypto from "crypto"
 
-import ws from "./windows-shortcuts.js"
+import ws from "../tools/shortcut/windows-shortcuts.js"
+import archive from "../archive/archive.js"
 
 /**
  * @description 复制文件
@@ -300,24 +301,24 @@ function isShotLink(fullpath) {
  * @returns {Promise}
  */
 function createShortcuts(targetFilePath, shortcutPath) {
-    return process.platform === 'win32' 
-    ? new Promise((resolve, reject) => {
-        ws.create(shortcutPath, {
-            target: targetFilePath,
-            args: "",
-            runStyle: 1 || ws.MAX, // 打开窗口状态，ws.NORMAL(1) 普通, ws.MAX (3) 最大化, or ws.MIN (7) 最小化
-            desc: ""
-        }, function (err) {
-            if (err) {
-                console.log(err)
-                reject(err)
-                return
-            }
-            console.log(`Shortcut '${shortcutPath}' created!`);
-            resolve(true)
-        });
-    })
-    : Promise.reject("OS is not win32")
+    return process.platform === 'win32'
+        ? new Promise((resolve, reject) => {
+            ws.create(shortcutPath, {
+                target: targetFilePath,
+                args: "",
+                runStyle: 1 || ws.MAX, // 打开窗口状态，ws.NORMAL(1) 普通, ws.MAX (3) 最大化, or ws.MIN (7) 最小化
+                desc: ""
+            }, function (err) {
+                if (err) {
+                    console.log(err)
+                    reject(err)
+                    return
+                }
+                console.log(`Shortcut '${shortcutPath}' created!`);
+                resolve(true)
+            });
+        })
+        : Promise.reject("OS is not win32")
 }
 
 /**
@@ -326,27 +327,27 @@ function createShortcuts(targetFilePath, shortcutPath) {
  * @returns {Promise}
  */
 function getShortcutsMsg(lnkFilePath) {
-    return process.platform === 'win32' 
-    ? new Promise((resolve, reject) => {
-        // 读取.lnk文件
-        ws.query(lnkFilePath, (err, shortcut) => {
-            if (err) {
-                console.error('Error:', err);
-                reject(err)
-                return
-            }
-            resolve(shortcut)
+    return process.platform === 'win32'
+        ? new Promise((resolve, reject) => {
+            // 读取.lnk文件
+            ws.query(lnkFilePath, (err, shortcut) => {
+                if (err) {
+                    console.error('Error:', err);
+                    reject(err)
+                    return
+                }
+                resolve(shortcut)
 
-            // 输出解析结果
-            // console.log(shortcut);
-            // console.log('Target:', shortcut.target);
-            // console.log('Arguments:', shortcut.args);
-            // console.log('Description:', shortcut.desc);
-            // console.log('Icon Path:', shortcut.icon);
-            // console.log('Working Directory:', shortcut.workingDir);
-        });
-    })
-    : Promise.reject("OS is not win32")
+                // 输出解析结果
+                // console.log(shortcut);
+                // console.log('Target:', shortcut.target);
+                // console.log('Arguments:', shortcut.args);
+                // console.log('Description:', shortcut.desc);
+                // console.log('Icon Path:', shortcut.icon);
+                // console.log('Working Directory:', shortcut.workingDir);
+            });
+        })
+        : Promise.reject("OS is not win32")
 }
 
 export default {
@@ -362,4 +363,6 @@ export default {
     getShortcutsMsg,
     /** 创建快捷方式（windows） */
     createShortcuts,
+    /** 判断文件是否已归档 */
+    isArchived: archive.isArchived
 }
