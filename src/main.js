@@ -1,21 +1,23 @@
 import fs from 'fs'
 import path from 'path'
 import conf from './config.js'
-// import folder from './utils/folder.js'
+import folder from './utils/folder.js'
 // import archive from './utils/archive.js'
 
 // import ws from "windows-shortcuts"
 // import * as ws from "./utils/windows-shortcuts.js"
-// import ws from "./utils/windows-shortcuts.js"
+import ws from "./utils/windows-shortcuts.js"
 import { openDialog } from './utils/dialog.js'
+
+import readline from "readline"
 
 // console.log(ws)
 
-// import {
-//     fileHandle,
-//     archiveHandle,
-//     afterArchive
-// } from "./archive/archive.js"
+import {
+    fileHandle,
+    archiveHandle,
+    afterArchive
+} from "./archive/archive.js"
 
 // const __dirname = path.resolve();
 
@@ -73,14 +75,22 @@ function init() {
 }
 
 /** 进行归档的 */
-function archiveStart() {
+async function archiveStart() {
+    WORKING_DIR = "F:\\E\\Phone\\照片"
+    let t1 = Date.now()
+    console.log(t1)
     let WORKING_DIR_FILES = folder.listfile(WORKING_DIR, true, ignore, async (fullpath, isDirectory) => {
-        if (isDirectory) return null
-        // 处理文件，得到文件对象
-        const myfile = await fileHandle(fullpath)
-        // 将文件对象进行归档
-        archiveHandle(myfile, afterArchive)
+        // if (isDirectory) return null
+        // // 处理文件，得到文件对象
+        // const myfile = await fileHandle(fullpath)
+        // // 将文件对象进行归档
+        // archiveHandle(myfile, afterArchive)
     })
+    console.log("文件数量：",WORKING_DIR_FILES.length)
+    console.log(Date.now() - t1 + "ms")
+    const myfile = await fileHandle(WORKING_DIR_FILES[0])
+    archiveHandle(myfile)
+    console.log('finish')
 }
 
 /** 归档还原 */
@@ -88,7 +98,7 @@ function revertStart() {
 
     readJSON((item) => {
         let index = 2
-        let dir = path.join(WORKING_DIR, ...item.lables)
+        let dir = path.join(WORKING_DIR, ...item.labels)
         let ext = item.rawData.extName
         let name = path.basename(item.rawData.fileName).replace(ext, "")
         console.log(dir)
@@ -107,7 +117,7 @@ function revertStart() {
 function revertShotLink() {
     readJSON((item) => {
         if (fs.existsSync(item.archiveData.filePath)) {
-            let dir = path.join(WORKING_DIR, ...item.lables)
+            let dir = path.join(WORKING_DIR, ...item.labels)
             folder.accessingPath(dir)
             let save_filePath = path.join(dir, item.rawData.fileName + '.lnk')
             archive.createShortcuts(item.archiveData.filePath, save_filePath)
@@ -121,7 +131,7 @@ async function main() {
 
     /** 进行归档的 */
     // init()
-    // archiveStart()
+    archiveStart()
 
     /** 归档还原 从归档目录+名字还原 || 从Databases+归档目录还原 */
     // revertStart()
@@ -129,7 +139,8 @@ async function main() {
     /** 从归档还原出所有快捷方式 */
     // revertShotLink()
 
-    await test_dialog()
+    // await test_dialog()
+    // test_stdio()
 }
 
 main()
@@ -175,6 +186,26 @@ async function test_dialog() {
     let a = await openDialog()
     console.log(a)
     console.log('finish')
+}
+
+async function test_stdio() {
+
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
+
+    rl.setPrompt("请选择归档目录：")
+    rl.prompt()
+    let archive_dir = await openDialog()
+
+    rl.write(archive_dir)
+
+    rl.question("请选择归档目录：", (answer) => {
+        console.log(`归档目录：${answer}`);
+        rl.close();
+    });
+
 }
 // WORKING_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img"
 // ARCHIVE_DIR = "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\archive_test"
