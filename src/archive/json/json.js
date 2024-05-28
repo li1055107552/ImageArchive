@@ -6,7 +6,7 @@ import folder from '../../utils/folder.js'
  * @description 读取所有json文件(除count.json), 得到每个md下的 每一个数组对象
  * @param {function} handle 处理每一个对象的函数
  */
-function readJSON(handle) {
+export function readJSON(handle) {
     const JSON_Databases = path.join(ARCHIVE_DIR, "JSON_Databases")
     let fileList = folder.listfile(JSON_Databases, true, ignore)
     console.log(fileList)
@@ -37,7 +37,7 @@ function readJSON(handle) {
  * @param {Object} fileJSON - 需要更新的信息（新文件的JSON数据）
  * @returns {Boolean} 是否更新成功
  */
-function updateFileJSON(yyyymmpath, fileJSON) {
+export function updateFileJSON(yyyymmpath, fileJSON) {
 
     try {
         let yyyymm = JSON.parse(fs.readFileSync(yyyymmpath, 'utf8'))
@@ -68,7 +68,7 @@ function updateFileJSON(yyyymmpath, fileJSON) {
  * @param {Object} fileJSON - 需要更新的信息（新文件的JSON数据）
  * @returns {void} 
  */
-function updateCountJSON(countpath, fileJSON) {
+export function updateCountJSON(countpath, fileJSON) {
     let count = JSON.parse(fs.readFileSync(countpath, 'utf8'))
     if (count.hasOwnProperty(fileJSON.date)) {
         !count[fileJSON.date].includes(fileJSON.md5)

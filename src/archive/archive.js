@@ -11,7 +11,7 @@ const sqlite = sqlite3.verbose();
  * @param {path} fullpath 文件路径
  * @returns Boolean
  */
-function isArchived(fullpath) {
+export function isArchived(fullpath) {
     return RegExp(/已归档 - .+/).test(path.basename(fullpath))
         || RegExp(/[\d^0]{13}-\[.*?\]-[a-f0-9]{32}-.+/).test(path.basename(fullpath))
 }
@@ -20,7 +20,7 @@ function isArchived(fullpath) {
  * @description 将所有json导入到sqlite
  * @param {String} ARCHIVE_DIR 归档目录
  */
-function import_All_JSON_Databases(ARCHIVE_DIR) {
+export function import_All_JSON_Databases(ARCHIVE_DIR) {
     // 连接数据库
     const db = new sqlite.Database(`${ARCHIVE_DIR}/images.db`);
 
@@ -66,7 +66,7 @@ function import_All_JSON_Databases(ARCHIVE_DIR) {
  * @param {String} ARCHIVE_DIR 归档目录
  * @param {path} jsonfilepath json文件路径
  */
-function import_One_JSON_Databases(ARCHIVE_DIR, jsonfilepath) {
+export function import_One_JSON_Databases(ARCHIVE_DIR, jsonfilepath) {
     // 连接数据库
     const db = new sqlite.Database(`${ARCHIVE_DIR}/images.db`);
 

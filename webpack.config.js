@@ -48,7 +48,7 @@ export default {
             patterns: [
                 {
                     from: './**/*.exe', // 输入路径
-                    to: 'win-tools/[name].exe', // 输出路径，相对于输出目录
+                    to: 'tools/[name]/[name].exe', // 输出路径，相对于输出目录
                     globOptions: {
                         dot: true,
                         gitignore: true,

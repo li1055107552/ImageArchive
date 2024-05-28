@@ -21,7 +21,7 @@ import sqlite from "../archive/sqlite/sqlite.js"
  * @param {String} fileJSON.date - 日期，年月
  * @returns {void}
  */
-function archiveHandle(myfile, callback = () => { }) {
+export function archiveHandle(myfile, callback = () => { }) {
 
     if (!myfile._isInit) return ""
     console.log(myfile)
@@ -50,4 +50,26 @@ function archiveHandle(myfile, callback = () => { }) {
     callback(myfile)
 }
 
-export default archiveHandle
+/** 进行归档的 */
+export async function archiveStart() {
+    WORKING_DIR = "F:\\E\\Phone\\照片"
+    let t1 = Date.now()
+    console.log(t1)
+    let WORKING_DIR_FILES = folder.listfile(WORKING_DIR, true, ignore || [], async (fullpath, isDirectory) => {
+        // if (isDirectory) return null
+        // // 处理文件，得到文件对象
+        // const myfile = await fileHandle(fullpath)
+        // // 将文件对象进行归档
+        // archiveHandle(myfile, afterArchive)
+    })
+    console.log("文件数量：", WORKING_DIR_FILES.length)
+    console.log(Date.now() - t1 + "ms")
+    const myfile = await fileHandle(WORKING_DIR_FILES[0])
+    archiveHandle(myfile)
+    console.log('finish')
+}
+
+export default {
+    archiveStart,
+    archiveHandle
+}

@@ -3,7 +3,7 @@ import path from "path"
 import crypto from "crypto"
 
 import ws from "../tools/shortcut/windows-shortcuts.js"
-import archive from "../archive/archive.js"
+import { isArchived } from "../archive/archive.js"
 
 /**
  * @description 复制文件
@@ -364,5 +364,5 @@ export default {
     /** 创建快捷方式（windows） */
     createShortcuts,
     /** 判断文件是否已归档 */
-    isArchived: archive.isArchived
+    isArchived
 }

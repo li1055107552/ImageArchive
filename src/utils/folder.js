@@ -7,7 +7,7 @@ import openDialog from "../tools/dialog/dialog.js";
  * @param {String} path - 访问路径 
  * @returns Boolean 
  */
-function accessingPath(path) {
+export function accessingPath(path) {
     if (!fs.existsSync(path)) {
         console.log(`${path} 该路径不存在`);
         const arr = path.split(P.sep);
@@ -38,7 +38,7 @@ function accessingPath(path) {
  * @param {Function} [callback=(fullpath,isDirectory)=>{}] 遍历到文件时触发的回调
  * @returns {Array} 目录下所有文件的绝对路径
  */
-function listfile(dir, deep = false, ignore = [], callback = (fullpath, isDirectory) => { }) {
+export function listfile(dir, deep = false, ignore = [], callback = (fullpath, isDirectory) => { }) {
     /** 返回结果 */
     const res = []
     /** 文件夹路径 */
@@ -89,7 +89,7 @@ function listfile(dir, deep = false, ignore = [], callback = (fullpath, isDirect
  * @param {path} targetPath 文件路径
  * @returns {Array} 经过的各级文件夹名称
  */
-function getChildPath(basePath, targetPath) {
+export function getChildPath(basePath, targetPath) {
     basePath = P.normalize(basePath)
     targetPath = P.normalize(targetPath)
 

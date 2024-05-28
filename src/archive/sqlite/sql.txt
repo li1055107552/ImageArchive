@@ -1,5 +1,7 @@
+-- database: E:\_Project\_git仓库\li1055107552-ImageArchive\ImageArchive\archive_test\images.db
 -- database: E:\_Project\_git仓库\li1055107552-ImageArchive\ImageArchive\archive_test\images2.db
 -- database: E:\_Project\_git仓库\li1055107552-ImageArchive\ImageArchive\archive_test\images.db
+
 -- 要运行整个文件，请按窗口右上角的▷按钮。
 
 -- SELECT `id`, `md5`, `fileName_raw`, `labels`, `modify`, `date`, `compressed_md5`;
