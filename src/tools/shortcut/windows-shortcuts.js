@@ -3,9 +3,10 @@
 
 import pathUtils from "path"
 import { execFile } from "child_process"
+import iconv from "iconv-lite"
 
 
-const shortcutexe = pathUtils.join(process.cwd(), "src", "tools", "shortcut","Shortcut.exe")
+const shortcutexe = pathUtils.join(process.cwd(), "src", "tools", "shortcut", "Shortcut.exe")
 console.log(shortcutexe)
 const ws = {}
 
@@ -90,8 +91,11 @@ function isString(x) {
 // export function query(path, callback) {
 ws.query = function (path, callback) {
 	execFile(shortcutexe,
-		['/A:Q', '/F:' + expandEnv(path)],
+		['/A:Q', '/F:' + expandEnv(path)], { encoding: "gkb" },
 		function (error, stdout, stderr) {
+			error = error ? iconv.decode(error, 'gbk') : error
+			stdout = stdout ? iconv.decode(stdout, 'gbk') : stdout
+			stderr = stderr ? iconv.decode(stderr, 'gbk') : stderr
 			var result = parseQuery(stdout);
 			callback(error ? stderr || stdout : null, result);
 		});
@@ -114,8 +118,11 @@ ws.create = function (path, optionsOrCallbackOrTarget, callback) {
 	}
 
 	execFile(shortcutexe,
-		commandArgs('C', path, options),
+		commandArgs('C', path, options), { encoding: "gkb" },
 		function (error, stdout, stderr) {
+			error = error ? iconv.decode(error, 'gbk') : error
+			stdout = stdout ? iconv.decode(stdout, 'gbk') : stdout
+			stderr = stderr ? iconv.decode(stderr, 'gbk') : stderr
 			if (callback)
 				callback(error ? stderr || stdout : null);
 		});
@@ -123,8 +130,11 @@ ws.create = function (path, optionsOrCallbackOrTarget, callback) {
 
 ws.edit = function (path, options, callback) {
 	execFile(shortcutexe,
-		commandArgs('E', path, options),
+		commandArgs('E', path, options), { encoding: "gkb" },
 		function (error, stdout, stderr) {
+			error = error ? iconv.decode(error, 'gbk') : error
+			stdout = stdout ? iconv.decode(stdout, 'gbk') : stdout
+			stderr = stderr ? iconv.decode(stderr, 'gbk') : stderr
 			if (callback)
 				callback(error ? stderr || stdout : null);
 		});
@@ -132,7 +142,7 @@ ws.edit = function (path, options, callback) {
 
 // Shortcut open states
 ws.NORMAL = 1
-ws.MAX = 1
-ws.MIN = 1
+ws.MAX = 3
+ws.MIN = 7
 
 export default ws
