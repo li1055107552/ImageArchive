@@ -6,7 +6,7 @@ import fs from "fs"
  * @returns {String} xx h xx m xx s xxx ms
  */
 function formatTimeStamp(timeStamp) {
-    let d = h = m = s = ms = 0
+    let d = 0, h = 0, m = 0, s = 0, ms = 0;
     let res = ""
 
     function fill(s) {

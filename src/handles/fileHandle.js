@@ -3,8 +3,7 @@ import file from "../file/file.js"
 import fileClass from "../file/fileClass.js";
 import folder from "../utils/folder.js";
 import time from "../utils/time.js"
-import conf from "../config.js"
-const {WORKING_DIR, ARCHIVE_DIR} = conf
+import {WORKING_DIR, ARCHIVE_DIR} from "../config.js"
 
 /**
  * @description 处理文件

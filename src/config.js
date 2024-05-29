@@ -7,7 +7,7 @@ export const WORKING_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/Ima
 export const ARCHIVE_DIR = "E:/_Project/_git仓库/li1055107552-ImageArchive/ImageArchive/archive_test"
 
 /** 归档后是否删除源文件 */
-export const DelOriginFile = true
+export const DelOriginFile = false
 
 /** 是否创建快捷方式 */
 export const CreateShortcut = true

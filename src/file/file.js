@@ -11,11 +11,13 @@ import { isArchived } from "../archive/archive.js"
  * @param {path} archive 复制的目标路径
  */
 function copyFile(raw, archive) {
+    if(!fs.existsSync(raw)) return `${raw} is not existed.`
     // fs.writeFileSync(file.archiveData.filePath, fs.readFileSync(file.rawData.filePath))
     // fs.copyFileSync(raw, archive)
     fs.cpSync(raw, archive, {
         preserveTimestamps: true,    // 当为 true 时，则 raw 的时间戳将被保留。
     })
+    return true
 }
 
 /**
@@ -314,7 +316,7 @@ function createShortcuts(targetFilePath, shortcutPath) {
                     reject(err)
                     return
                 }
-                console.log(`Shortcut '${shortcutPath}' created!`);
+                console.log(`created '${shortcutPath}'`);
                 resolve(true)
             });
         })

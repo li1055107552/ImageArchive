@@ -1,6 +1,23 @@
 import fs from 'fs'
 import path from 'path'
 import folder from '../../utils/folder.js'
+import { ARCHIVE_DIR } from '../../config.js'
+
+/** 初始化 */
+export function init() {
+
+    // 归档目录/JSON数据库/ 不存在则创建
+    let JSON_Databases = path.join(ARCHIVE_DIR, 'JSON_Databases')
+    folder.accessingPath(JSON_Databases)
+
+    // 归档目录/JSON数据库/count.js文件，不存在则创建
+    let countFilePath = path.join(JSON_Databases, 'count.json')
+    if (!fs.existsSync(countFilePath)) {
+        console.log(`${countFilePath} 不存在`);
+        fs.writeFileSync(countFilePath, "{}")
+        console.log(`${countFilePath} 创建成功`);
+    }
+}
 
 /**
  * @description 读取所有json文件(除count.json), 得到每个md下的 每一个数组对象
@@ -72,7 +89,7 @@ export function updateCountJSON(countpath, fileJSON) {
     let count = JSON.parse(fs.readFileSync(countpath, 'utf8'))
     if (count.hasOwnProperty(fileJSON.date)) {
         !count[fileJSON.date].includes(fileJSON.md5)
-        && count[fileJSON.date].push(fileJSON.md5)
+            && count[fileJSON.date].push(fileJSON.md5)
     }
     else {
         count[fileJSON.date] = [fileJSON.md5]
@@ -81,6 +98,8 @@ export function updateCountJSON(countpath, fileJSON) {
 }
 
 export default {
+    /** 初始化 */
+    init,
     /** 读取所有json文件(除count.json), 得到每个md下的 每一个数组对象 */
     readJSON,
     /** 更新YYYYMM.json */

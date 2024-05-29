@@ -1,13 +1,14 @@
 import fs from "fs"
 import path from "path"
 import file from "../file/file.js"
+import { DelOriginFile, CreateShortcut, ChangeRawName } from "../config.js"
 
 /**
  * @description 文件归档后的 后处理
  * @param {fileClass} myfile fileClass
  */
 function afterArchive(myfile) {
-    console.log(myfile)
+    // console.log("afterArchive", myfile)
     // 是否删除源文件
     if (DelOriginFile) {
         fs.rmSync(myfile.rawData.filePath)

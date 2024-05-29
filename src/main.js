@@ -2,22 +2,23 @@ import fs from 'fs'
 import path from 'path'
 import readline from "readline"
 
-import {WORKING_DIR, ARCHIVE_DIR} from './config.js'
-
 import folder from './utils/folder.js'
 import ws from "./tools/shortcut/windows-shortcuts.js"
+import init from "./handles/init.js"
+
+import { archiveStart } from './handles/archiveHandle.js'
 
 // const __dirname = path.resolve();
 
-console.log(process.version)
+console.log(`node version: ${process.version}`)
 
 async function main() {
     /** 忽略的文件夹 */
     global.ignore = ["Music", "音频", "视频", "压缩包", "分类整理", "$RECYCLE.BIN", "System Volume Information", ".git", "node_modules", "back", "font"]
 
     /** 进行归档的 */
-    // init()
-    // archiveStart()
+    init()
+    archiveStart()
 
     /** 归档还原 从归档目录+名字还原 || 从Databases+归档目录还原 */
     // revertStart()
@@ -26,10 +27,11 @@ async function main() {
     // revertShotLink()
 
     // await test_dialog()
-    test_stdio()
+    // test_stdio()
 }
 
 main()
+// revertStart()
 function test_ws() {
     let textpath = path.join(path.resolve(), "./test.txt")
     fs.appendFileSync(textpath, "test" + Date.now() + "\n", "utf-8")
@@ -71,7 +73,7 @@ function test_ws() {
 async function test_dialog() {
     let a = await folder.openDialog()
     console.log(a)
-    
+
     console.log('finish')
 }
 

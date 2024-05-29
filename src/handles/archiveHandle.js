@@ -5,6 +5,11 @@ import file from "../file/file.js"
 import folder from "../utils/folder.js"
 import json from "../archive/json/json.js"
 import sqlite from "../archive/sqlite/sqlite.js"
+import fileHandle from "./fileHandle.js"
+import afterArchive from "./afterArchive.js"
+
+import { ARCHIVE_DIR, WORKING_DIR } from "../config.js"
+import time from "../utils/time.js"
 
 /**
  * @description 文件归档，传入 处理后的文件的对象，依据传入的值进行归档
@@ -23,28 +28,30 @@ import sqlite from "../archive/sqlite/sqlite.js"
  */
 export function archiveHandle(myfile, callback = () => { }) {
 
-    if (!myfile._isInit) return ""
-    console.log(myfile)
-    let fileObject = myfile.toObject()
+    // console.log("archiveHandle", myfile)
 
-    /** `归档目录/JSON数据库/YYYYMM.json` 文件路径 */
-    let yyyymmpath = path.join(ARCHIVE_DIR, 'JSON_Databases', `${myfile.date}.json`)
+    if (!myfile._isInit) return ""
+
+    // let fileObject = myfile.toObject()
+
+    // /** `归档目录/JSON数据库/YYYYMM.json` 文件路径 */
+    // let yyyymmpath = path.join(ARCHIVE_DIR, 'JSON_Databases', `${myfile.date}.json`)
 
     // 判断是否有归档目录，没有则初始化
     if (!fs.existsSync(myfile.archiveData.dir)) {
         folder.accessingPath(myfile.archiveData.dir)
-        fs.writeFileSync(yyyymmpath, "{}")
+        // fs.writeFileSync(yyyymmpath, "{}")
     }
 
     if (!fs.existsSync(myfile.archiveData.filePath)) {
         // 拷贝文件
         file.copyFile(myfile.rawData.filePath, myfile.archiveData.filePath)
     }
-    // 更新 归档目录/JSON数据库/YYYYMM.json
-    json.updateFileJSON(yyyymmpath, fileObject)
-    // 更新 归档目录/JSON数据库/count.json
-    json.updateCountJSON(path.join(ARCHIVE_DIR, 'JSON_Databases', 'count.json'), fileObject)
-    sqlite.insertOne(ARCHIVE_DIR, myfile)
+    // // 更新 归档目录/JSON数据库/YYYYMM.json
+    // json.updateFileJSON(yyyymmpath, fileObject)
+    // // 更新 归档目录/JSON数据库/count.json
+    // json.updateCountJSON(path.join(ARCHIVE_DIR, 'JSON_Databases', 'count.json'), fileObject)
+    sqlite.insertOneImages(myfile)
     
     // 归档完成后的勾子
     callback(myfile)
@@ -52,9 +59,8 @@ export function archiveHandle(myfile, callback = () => { }) {
 
 /** 进行归档的 */
 export async function archiveStart() {
-    WORKING_DIR = "F:\\E\\Phone\\照片"
     let t1 = Date.now()
-    console.log(t1)
+    console.log("startTime: ", t1)
     let WORKING_DIR_FILES = folder.listfile(WORKING_DIR, true, ignore || [], async (fullpath, isDirectory) => {
         // if (isDirectory) return null
         // // 处理文件，得到文件对象
@@ -63,10 +69,14 @@ export async function archiveStart() {
         // archiveHandle(myfile, afterArchive)
     })
     console.log("文件数量：", WORKING_DIR_FILES.length)
-    console.log(Date.now() - t1 + "ms")
-    const myfile = await fileHandle(WORKING_DIR_FILES[0])
-    archiveHandle(myfile)
-    console.log('finish')
+
+    for (let i = 0; i < WORKING_DIR_FILES.length; i++) {
+        const fullpath = WORKING_DIR_FILES[i];
+        const myfile = await fileHandle(fullpath)
+        archiveHandle(myfile, afterArchive)
+    }
+    console.log("总耗时:", time.formatTimeStamp(Date.now() - t1))
+    
 }
 
 export default {
