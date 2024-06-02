@@ -2,6 +2,7 @@ import fs from "fs"
 import path from "path"
 import file from "../file/file.js"
 import { DelOriginFile, CreateShortcut, ChangeRawName } from "../config.js"
+import {insertOneShortcut} from "../archive/sqlite/sqlite.js"
 
 /**
  * @description 文件归档后的 后处理
@@ -17,6 +18,16 @@ function afterArchive(myfile) {
     // 是否生成快捷方式
     if (CreateShortcut) {
         file.createShortcuts(myfile.archiveData.filePath, myfile.rawData.filePath + ".lnk")
+        insertOneShortcut({
+            md5: myfile.md5,
+            origin: myfile.rawData.filePath + ".lnk",
+            target: myfile.archiveData.filePath,
+            hotkey: 0,
+            runStyle: 1,
+            icon: "",
+            desc: "",
+            workingDir: path.dirname(myfile.rawData.filePath)
+        })
     }
     // 是否改名
     if (!DelOriginFile && ChangeRawName) {

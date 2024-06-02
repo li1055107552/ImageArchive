@@ -94,5 +94,19 @@ function byexec() {
 
 
 
-import listenShortCut from "./handles/shortcutHandle.js";
-listenShortCut()
+// import listenShortCut from "./handles/shortcutHandle.js";
+// listenShortCut()
+
+import fs from "fs"
+let res = (()=>{
+    try {
+        fs.cpSync("E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\img\\微信图片_20221214213634212.png", "E:\\_Project\\_git仓库\\li1055107552-ImageArchive\\ImageArchive\\test.png", {
+            preserveTimestamps: true,    // 当为 true 时，则 raw 的时间戳将被保留。
+        })
+        return true
+    } catch (error) {
+        console.log(error.message)
+        return error.message
+    }
+})()
+console.log(res)

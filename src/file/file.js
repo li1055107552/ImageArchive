@@ -14,10 +14,14 @@ function copyFile(raw, archive) {
     if(!fs.existsSync(raw)) return `${raw} is not existed.`
     // fs.writeFileSync(file.archiveData.filePath, fs.readFileSync(file.rawData.filePath))
     // fs.copyFileSync(raw, archive)
-    fs.cpSync(raw, archive, {
-        preserveTimestamps: true,    // 当为 true 时，则 raw 的时间戳将被保留。
-    })
-    return true
+    try {
+        fs.cpSync(raw, archive, {
+            preserveTimestamps: true,    // 当为 true 时，则 raw 的时间戳将被保留。
+        })
+        return true
+    } catch (error) {
+        return `copyFile error: ${error.message}.`
+    }
 }
 
 /**
@@ -309,7 +313,8 @@ function createShortcuts(targetFilePath, shortcutPath) {
                 target: targetFilePath,
                 args: "",
                 runStyle: 1 || ws.MAX, // 打开窗口状态，ws.NORMAL(1) 普通, ws.MAX (3) 最大化, or ws.MIN (7) 最小化
-                desc: ""
+                desc: "",
+                workingDir: path.dirname(shortcutPath)
             }, function (err) {
                 if (err) {
                     console.log(err)
@@ -338,6 +343,7 @@ function getShortcutsMsg(lnkFilePath) {
                     reject(err)
                     return
                 }
+                shortcut['origin'] = lnkFilePath
                 resolve(shortcut)
 
                 // 输出解析结果

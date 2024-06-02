@@ -54,16 +54,31 @@ export function init() {
 
     });
 
-    // 创建shortlink表
+    // 创建shortcut表
     dbInit.serialize(() => {
-
-        dbInit.run(`CREATE TABLE IF NOT EXISTS shortlink (
+        // id INTEGER PRIMARY KEY AUTOINCREMENT,
+        // md5 TEXT,            // 源文件的md5
+        // origin TEXT,         // 快捷方式所在的绝对路径
+        // target TEXT,         // 源文件的绝对路径
+        // hotkey INTEGER,      // 热键
+        // runStyle INTEGER,    // 运行方式
+        // icon TEXT,           // 图标
+        // desc TEXT,           // 描述
+        // workingDir TEXT      // 快捷方式 上次保存/创建 所在的文件夹，变更的时候可以根据这个/origin判断
+        dbInit.run(`CREATE TABLE IF NOT EXISTS shortcut (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             md5 TEXT,
-            filePath_archive TEXT,
-            shortlinkPath TEXT
+            origin TEXT,
+            target TEXT,
+            hotkey INTEGER,
+            runStyle INTEGER,
+            icon TEXT,
+            desc TEXT,
+            workingDir TEXT
         )`);
-        dbInit.run(`CREATE INDEX IF NOT EXISTS idx_md5 ON shortlink (md5)`);
+        dbInit.run(`CREATE INDEX IF NOT EXISTS idx_md5 ON shortcut (md5)`);
+        dbInit.run(`CREATE INDEX IF NOT EXISTS idx_target ON shortcut (target)`);
+        dbInit.run(`CREATE INDEX IF NOT EXISTS idx_workingDir ON shortcut (workingDir)`);
     })
 
     // 关闭数据库连接
@@ -96,7 +111,8 @@ export function insertOneImages(imgInfo) {
             if (err) {
                 return console.log(err.message);
             }
-            console.log(`A row has been inserted with rowid ${this.lastID}`);
+            // console.log(`sqlite: A row has been inserted with rowid ${this.lastID} `);
+            console.log(`sqlite: compressed_md5 ${compressed_md5} existed`)
         })
 
 }
@@ -157,6 +173,59 @@ export function getImagesRows(startIndex = 0, endIndex = 100) {
         })
     })
 
+}
+
+/**
+ * @description 插入一条快捷方式记录
+ * @param {Object} shortcutInfo 快捷方式信息
+ * @param {string} shortcutInfo.md5 源文件的md5
+ * @param {path} shortcutInfo.origin 快捷方式所在的绝对路径
+ * @param {path} shortcutInfo.target 源文件的绝对路径
+ * @param {number} shortcutInfo.hotkey 热键
+ * @param {number} shortcutInfo.runStyle 运行方式
+ * @param {string} shortcutInfo.icon 图标
+ * @param {string} shortcutInfo.desc 描述
+ * @param {path} shortcutInfo.workingDir 快捷方式 上次保存/创建 所在的文件夹，变更的时候可以根据这个/origin判断
+ */
+export function insertOneShortcut(shortcutInfo) {
+    db.run(`INSERT OR IGNORE INTO images (
+        md5, origin, target, hotkey, runStyle, icon, desc, workingDir)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        [shortcutInfo.md5, shortcutInfo.origin, shortcutInfo.target, shortcutInfo.hotkey,
+        shortcutInfo.runStyle, shortcutInfo.icon, shortcutInfo.desc, shortcutInfo.workingDir],
+        function (err) {
+            if (err) {
+                return console.log(err.message);
+            }
+            console.log(`sqlite: origin ${shortcutInfo.origin} existed`)
+        })
+}
+
+/**
+ * @description 更新一条快捷方式记录
+ * @param {Object} shortcutInfo 快捷方式信息
+ * @param {string} shortcutInfo.md5 源文件的md5
+ * @param {path} shortcutInfo.origin 快捷方式 当前 所在的绝对路径
+ * @param {path} shortcutInfo.target 源文件的绝对路径
+ * @param {number} shortcutInfo.hotkey 热键
+ * @param {number} shortcutInfo.runStyle 运行方式
+ * @param {string} shortcutInfo.icon 图标
+ * @param {string} shortcutInfo.desc 描述
+ * @param {path} shortcutInfo.workingDir 快捷方式 上次保存/创建 所在的文件夹
+ * @param {path} newWorkingDir 快捷方式 当前 所在的文件夹
+ */
+export function editOneShortcut(shortcutInfo, newWorkingDir) {
+    db.run(`UPDATE images SET origin = ?, , hotkey = ?, runStyle = ?, icon = ?, desc = ?, workingDir = ? 
+    WHERE md5 = ? AND target = ? AND workingDir = ?`,
+        [shortcutInfo.origin, shortcutInfo.hotkey, shortcutInfo.runStyle, shortcutInfo.icon,
+        shortcutInfo.desc, newWorkingDir, shortcutInfo.md5, shortcutInfo.target, shortcutInfo.workingDir],
+        function (err) {
+            if (err) {
+                return console.log(err.message);
+            }
+            console.log(`sqlite: updated: ${shortcutInfo.origin}`)
+            console.log(`Row(s) updated: ${this.changes}`);
+        })
 }
 
 

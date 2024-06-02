@@ -45,7 +45,8 @@ export function archiveHandle(myfile, callback = () => { }) {
 
     if (!fs.existsSync(myfile.archiveData.filePath)) {
         // 拷贝文件
-        file.copyFile(myfile.rawData.filePath, myfile.archiveData.filePath)
+        let res = file.copyFile(myfile.rawData.filePath, myfile.archiveData.filePath)
+        if(res !== true) throw(res) 
     }
     // // 更新 归档目录/JSON数据库/YYYYMM.json
     // json.updateFileJSON(yyyymmpath, fileObject)

@@ -57,7 +57,7 @@ async function fileHandle(fullpath) {
         myFile.rawData.fileName.replace(myFile.rawData.extName, myFile.archiveData.extName)
     ].join("-")
     myFile.archiveData.filePath = path.join(myFile.archiveData.dir, myFile.archiveData.fileName)
-    console.log(myFile)
+    // console.log("fileHandle: ", myFile)
     return myFile
 }
 
