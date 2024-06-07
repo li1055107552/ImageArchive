@@ -94,8 +94,8 @@ function byexec() {
 
 
 
-// import listenShortCut from "./handles/shortcutHandle.js";
-// listenShortCut()
+// import listenShortcut from "./handles/shortcutHandle.js";
+// listenShortcut()
 
 import fs from "fs"
 let res = (()=>{

@@ -24,7 +24,7 @@ async function main() {
     // revertStart()
 
     /** 从归档还原出所有快捷方式 */
-    // revertShotLink()
+    // revertShortcut()
 
     // await test_dialog()
     // test_stdio()

@@ -33,7 +33,7 @@ export function revertStart_fromJSON(working_dir = WORKING_DIR) {
  * @description 根据JSON数据库 从归档生成快捷方式
  * @param {path} working_dir 工作目录，默认`WORKING_DIR`
  */
-export function revertShotLink_fromJSON(working_dir = WORKING_DIR) {
+export function revertShortcut_fromJSON(working_dir = WORKING_DIR) {
     readJSON((item) => {
         if (fs.existsSync(item.archiveData.filePath)) {
             let dir = path.join(working_dir, ...item.labels)
@@ -101,7 +101,7 @@ export async function revertFile_fromSQLite(archive_dir = "", working_dir = WORK
  * @param {path} working_dir 生成到指定目录，默认`WORKING_DIR`
  * @returns {Promise<void>}
  */
-export async function revertShortLink_fromSQLite(archive_dir = "", working_dir = WORKING_DIR) {
+export async function revertShortcut_fromSQLite(archive_dir = "", working_dir = WORKING_DIR) {
     let filePath_archive = function(){
         return archive_dir === "" ? 
         (item) => item.filePath_archive :
@@ -140,9 +140,9 @@ export default {
     /** 根据JSON数据库 从归档还原文件 */
     revertStart_fromJSON,
     /** 根据JSON数据库 从归档生成快捷方式 */
-    revertShotLink_fromJSON,
+    revertShotcut_fromJSON,
     /** 根据SQLite数据库，从归档还原文件到指定目录 */
     revertFile_fromSQLite,
     /** 根据SQLite数据库，生成`归档文件的快捷方式`到 指定目录 */
-    revertShortLink_fromSQLite
+    revertShortcut_fromSQLite
 }

@@ -1,12 +1,14 @@
 import fs from "fs"
+import path from "path"
 import file from "../file/file.js"
 import folder from "../utils/folder.js"
 import { ARCHIVE_DIR, WORKING_DIR } from "../config.js"
+import sqlite from "../archive/sqlite/sqlite.js"
 
-function listenShortCut(archive_dir = ARCHIVE_DIR, working_dir = WORKING_DIR) {
+function listenShortcut(archive_dir = ARCHIVE_DIR, working_dir = WORKING_DIR) {
 
-    let shortcut_pathArr = folder.listfile(working_dir).filter(filePath => {
-        return file.isShotLink(filePath)
+    let shortcut_pathArr = folder.listfile(working_dir, true).filter(filePath => {
+        return file.isShortcut(filePath)
     })
     let shortcuts = []
 
@@ -19,6 +21,7 @@ function listenShortCut(archive_dir = ARCHIVE_DIR, working_dir = WORKING_DIR) {
         for (let i = 0; i < res.length; i++) {
             const info = res[i];
             res[i] = {
+                md5: path.basename(info.target).split("-")[1],
                 origin: info.origin,
                 target: info.target,
                 icon: info.icon,
@@ -27,6 +30,12 @@ function listenShortCut(archive_dir = ARCHIVE_DIR, working_dir = WORKING_DIR) {
                 runStyle: info.runStyle,
                 desc: info.desc
             }
+
+            // if(path.dirname(res[i].origin) !== res[i].workingDir){
+                sqlite.upsertShortcut(res[i], path.dirname(res[i].origin))
+                file.editShortcutsMsg(res[i])
+            // }
+    
         }
         console.log(res)
         // console.log(shortcut);
@@ -35,9 +44,11 @@ function listenShortCut(archive_dir = ARCHIVE_DIR, working_dir = WORKING_DIR) {
         // console.log('Description:', shortcut.desc);
         // console.log('Icon Path:', shortcut.icon);
         // console.log('Working Directory:', shortcut.workingDir);
+        
+
         console.log('finish')
     })
 }
 
-export default listenShortCut
-listenShortCut()
+export default listenShortcut
+listenShortcut()

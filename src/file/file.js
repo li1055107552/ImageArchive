@@ -289,7 +289,7 @@ function getFileMD5(filepath) {
  * @param {path} fullpath 文件路径
  * @returns Boolean
  */
-function isShotLink(fullpath) {
+function isShortcut(fullpath) {
     const ext = path.extname(fullpath);
     if (process.platform === 'win32') {
         return ext.toLowerCase() === '.lnk';
@@ -358,6 +358,39 @@ function getShortcutsMsg(lnkFilePath) {
         : Promise.reject("OS is not win32")
 }
 
+/**
+ * @description 更新快捷方式的信息（windows）
+ * @param {Object} shortcutInfo 快捷方式信息
+ * @param {path} shortcutInfo.origin 快捷方式 当前 所在的绝对路径
+ * @param {path} shortcutInfo.target 源文件的绝对路径
+ * @param {number} shortcutInfo.hotkey 热键
+ * @param {number} shortcutInfo.runStyle 运行方式
+ * @param {string} shortcutInfo.icon 图标
+ * @param {string} shortcutInfo.desc 描述
+ * @param {path} shortcutInfo.workingDir 快捷方式 上次保存/创建 所在的文件夹
+ */
+export function editShortcutsMsg(shortcutInfo){
+    return process.platform === 'win32'
+        ? new Promise((resolve, reject) => {
+            ws.edit(shortcutInfo.origin, {
+                target: shortcutInfo.target,
+                args: "",
+                runStyle: shortcutInfo.runStyle, // 打开窗口状态，ws.NORMAL(1) 普通, ws.MAX (3) 最大化, or ws.MIN (7) 最小化
+                desc: shortcutInfo.desc,
+                workingDir: path.dirname(shortcutInfo.origin)
+            }, function (err) {
+                if (err) {
+                    console.log(err)
+                    reject(err)
+                    return
+                }
+                console.log(`edited '${shortcutInfo.origin}'`);
+                resolve(true)
+            })
+        })
+        : Promise.reject("OS is not win32")
+}
+
 export default {
     /** 复制文件 */
     copyFile,
@@ -366,11 +399,13 @@ export default {
     /** 判断是否为图片类型 */
     getImageSuffix,
     /** 判断文件是否为快捷方式 */
-    isShotLink,
+    isShortcut,
     /** 获取快捷方式的信息（windows） */
     getShortcutsMsg,
     /** 创建快捷方式（windows） */
     createShortcuts,
+    /** 更新快捷方式的信息（windows） */
+    editShortcutsMsg,
     /** 判断文件是否已归档 */
     isArchived
 }

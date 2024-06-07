@@ -65,6 +65,7 @@ export function init() {
         // icon TEXT,           // 图标
         // desc TEXT,           // 描述
         // workingDir TEXT      // 快捷方式 上次保存/创建 所在的文件夹，变更的时候可以根据这个/origin判断
+        // UNIQUE(md5, target, workingDir)  // 确保表结构允许这种操作。确保 md5 和 target 和 workingDir 是唯一约束：
         dbInit.run(`CREATE TABLE IF NOT EXISTS shortcut (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             md5 TEXT,
@@ -74,7 +75,8 @@ export function init() {
             runStyle INTEGER,
             icon TEXT,
             desc TEXT,
-            workingDir TEXT
+            workingDir TEXT,
+            UNIQUE(md5, target, workingDir)
         )`);
         dbInit.run(`CREATE INDEX IF NOT EXISTS idx_md5 ON shortcut (md5)`);
         dbInit.run(`CREATE INDEX IF NOT EXISTS idx_target ON shortcut (target)`);
@@ -188,14 +190,15 @@ export function getImagesRows(startIndex = 0, endIndex = 100) {
  * @param {path} shortcutInfo.workingDir 快捷方式 上次保存/创建 所在的文件夹，变更的时候可以根据这个/origin判断
  */
 export function insertOneShortcut(shortcutInfo) {
-    db.run(`INSERT OR IGNORE INTO images (
+    db.run(`INSERT OR IGNORE INTO shortcut (
         md5, origin, target, hotkey, runStyle, icon, desc, workingDir)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
         [shortcutInfo.md5, shortcutInfo.origin, shortcutInfo.target, shortcutInfo.hotkey,
         shortcutInfo.runStyle, shortcutInfo.icon, shortcutInfo.desc, shortcutInfo.workingDir],
         function (err) {
             if (err) {
-                return console.log(err.message);
+                console.error(err.message);
+                return err.message
             }
             console.log(`sqlite: origin ${shortcutInfo.origin} existed`)
         })
@@ -215,7 +218,7 @@ export function insertOneShortcut(shortcutInfo) {
  * @param {path} newWorkingDir 快捷方式 当前 所在的文件夹
  */
 export function editOneShortcut(shortcutInfo, newWorkingDir) {
-    db.run(`UPDATE images SET origin = ?, , hotkey = ?, runStyle = ?, icon = ?, desc = ?, workingDir = ? 
+    db.run(`UPDATE shortcut SET origin = ?, hotkey = ?, runStyle = ?, icon = ?, desc = ?, workingDir = ? 
     WHERE md5 = ? AND target = ? AND workingDir = ?`,
         [shortcutInfo.origin, shortcutInfo.hotkey, shortcutInfo.runStyle, shortcutInfo.icon,
         shortcutInfo.desc, newWorkingDir, shortcutInfo.md5, shortcutInfo.target, shortcutInfo.workingDir],
@@ -228,6 +231,37 @@ export function editOneShortcut(shortcutInfo, newWorkingDir) {
         })
 }
 
+/**
+ * @description 插入或更新一条快捷方式记录
+ * @param {Object} shortcutInfo 快捷方式信息
+ * @param {string} shortcutInfo.md5 源文件的md5
+ * @param {path} shortcutInfo.origin 快捷方式 当前 所在的绝对路径
+ * @param {path} shortcutInfo.target 源文件的绝对路径
+ * @param {number} shortcutInfo.hotkey 热键
+ * @param {number} shortcutInfo.runStyle 运行方式
+ * @param {string} shortcutInfo.icon 图标
+ * @param {string} shortcutInfo.desc 描述
+ * @param {path} shortcutInfo.workingDir 快捷方式 上次保存/创建 所在的文件夹
+ * @param {path} newWorkingDir 快捷方式 当前 所在的文件夹
+ */
+export function upsertShortcut(shortcutInfo, newWorkingDir) {
+    const checkSql = `SELECT 1 FROM shortcut WHERE md5 = ? AND target = ? AND workingDir = ?`;
+
+    db.get(checkSql, [shortcutInfo.md5, shortcutInfo.target, shortcutInfo.workingDir], (err, row) => {
+        if (err) {
+            return console.error(err.message);
+        }
+        if (row) {
+            // 存在，执行更新
+            editOneShortcut(shortcutInfo, newWorkingDir)
+        }
+        else {
+            // 不存在，执行插入
+            shortcutInfo.workingDir = newWorkingDir
+            insertOneShortcut(shortcutInfo)
+        }
+    });
+}
 
 export default {
     /** 数据库初始化 */
@@ -239,5 +273,11 @@ export default {
     /** 取images表中的所有记录 */
     getImagesAllRows,
     /** 获取images表中指定范围的下标记录 */
-    getImagesRows
+    getImagesRows,
+    /** 插入一条快捷方式记录 */
+    insertOneShortcut,
+    /** 更新一条快捷方式记录 */
+    editOneShortcut,
+    /** 插入或更新一条快捷方式记录 */
+    upsertShortcut
 }

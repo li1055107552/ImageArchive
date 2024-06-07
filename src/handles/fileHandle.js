@@ -13,7 +13,7 @@ import {WORKING_DIR, ARCHIVE_DIR} from "../config.js"
 async function fileHandle(fullpath) {
 
     let myFile = new fileClass()
-    if (file.isShotLink(fullpath)) {
+    if (file.isShortcut(fullpath)) {
         console.log(`快捷方式: ${fullpath}`);
         return myFile
     }
