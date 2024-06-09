@@ -16,7 +16,7 @@ function listenShortcut(archive_dir = ARCHIVE_DIR, working_dir = WORKING_DIR) {
         shortcuts.push(file.getShortcutsMsg(filePath))
     })
 
-    Promise.all(shortcuts).then(res => {
+    Promise.all(shortcuts).then(async res => {
         console.log(res)
         for (let i = 0; i < res.length; i++) {
             const info = res[i];
@@ -28,13 +28,17 @@ function listenShortcut(archive_dir = ARCHIVE_DIR, working_dir = WORKING_DIR) {
                 hotkey: info.hotkey,
                 workingDir: info.workingDir,
                 runStyle: info.runStyle,
-                desc: info.desc
+                desc: info.desc,
+                labels: folder.getChildPath(working_dir, info.origin).join(",")
             }
-
-            // if(path.dirname(res[i].origin) !== res[i].workingDir){
-                sqlite.upsertShortcut(res[i], path.dirname(res[i].origin))
-                file.editShortcutsMsg(res[i])
-            // }
+            try {
+                let result = await sqlite.upsertShortcut(res[i], path.dirname(res[i].origin))
+                if (result.operation !== "none") {
+                    file.editShortcutsMsg(res[i])
+                }
+            } catch (error) {
+                
+            }
     
         }
         console.log(res)

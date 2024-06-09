@@ -5,7 +5,7 @@ import {init as sqliteInit} from "../archive/sqlite/sqlite.js"
 import {ARCHIVE_DIR} from "../config.js"
 
 /** 项目初始化 */
-function init() {
+async function init() {
     console.log("尝试初始化...")
 
     // 归档目录，不存在则创建
@@ -15,7 +15,7 @@ function init() {
     // jsonInit()
 
     // 初始化数据库
-    sqliteInit()
+    await sqliteInit()
 
     console.log('初始化已完成...')
 }

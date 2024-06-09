@@ -17,7 +17,7 @@ async function main() {
     global.ignore = ["Music", "音频", "视频", "压缩包", "分类整理", "$RECYCLE.BIN", "System Volume Information", ".git", "node_modules", "back", "font"]
 
     /** 进行归档的 */
-    init()
+    await init()
     archiveStart()
 
     /** 归档还原 从归档目录+名字还原 || 从Databases+归档目录还原 */

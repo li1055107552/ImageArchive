@@ -1,7 +1,8 @@
 import fs from "fs"
 import path from "path"
 import file from "../file/file.js"
-import { DelOriginFile, CreateShortcut, ChangeRawName } from "../config.js"
+import folder from "../utils/folder.js"
+import { WORKING_DIR, DelOriginFile, CreateShortcut, ChangeRawName } from "../config.js"
 import {insertOneShortcut} from "../archive/sqlite/sqlite.js"
 
 /**
@@ -26,7 +27,8 @@ function afterArchive(myfile) {
             runStyle: 1,
             icon: "",
             desc: "",
-            workingDir: path.dirname(myfile.rawData.filePath)
+            workingDir: path.dirname(myfile.rawData.filePath),
+            labels: folder.getChildPath(WORKING_DIR, myfile.archiveData.filePath).join(",")
         })
     }
     // 是否改名
